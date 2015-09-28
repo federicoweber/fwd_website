@@ -4,11 +4,37 @@ activate :views
 activate :directory_indexes
 
 set :relative_links, true
-set :css_dir, 'assets/stylesheets'
-set :js_dir, 'assets/javascripts'
+set :css_dir, 'assets/style'
+set :js_dir, 'assets/js'
 set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
 set :layout, 'layouts/application'
+
+activate :blog do |blog|
+  # This will add a prefix to all links, template references and source paths
+  blog.prefix = "weblog"
+
+  blog.permalink = "{title}.html"
+  # Matcher for blog source files
+  blog.sources = "{year}-{month}-{day}-{title}.html"
+  # blog.taglink = "tags/{tag}.html"
+  blog.layout = "layouts/blog"
+  # blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 250
+  # blog.year_link = "{year}.html"
+  # blog.month_link = "{year}/{month}.html"
+  # blog.day_link = "{year}/{month}/{day}.html"
+  # blog.default_extension = ".markdown"
+
+  # blog.tag_template = "tag.html"
+  # blog.calendar_template = "calendar.html"
+
+  # Enable pagination
+  # blog.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/{num}"
+end
+
 
 configure :development do
  activate :livereload

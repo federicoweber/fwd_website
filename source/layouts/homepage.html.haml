@@ -8,9 +8,12 @@
     = stylesheet_link_tag "application"
 
   %body{class: page_classes}
+    
     .wrapper
       = partial "partials/header"
+      
       .content
+        %h1.-uppercase Federico Weber
         = yield
   
     = javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application"

@@ -1,0 +1,5 @@
+// This is used to avoid the hover effects on mobile
+@mixin hover_on_desktop
+  @media screen and (min-width: 1024px)
+    &:hover
+      @content

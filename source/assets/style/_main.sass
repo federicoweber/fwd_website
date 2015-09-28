@@ -1,0 +1,53 @@
+body
+  color: $black
+  background-color: $bg_color
+
+a 
+  text-decoration: none
+  color: $black
+  
+  &:visited, &:active
+    color: $black
+  
+  &:active
+    border-bottom: 2px solid $black
+  
+  +hover_on_desktop
+    border-bottom: 2px solid $black
+    
+
+.wrapper
+  +outer-container
+  
+.content
+  +fill-parent()
+
+// main Header
+#mainHeader
+  h1
+    @extend %font_size_0
+    @extend .-uppercase
+    @extend %font_monserrat_bold
+    
+    margin: 0
+    +span-columns(3)
+    
+    display: inline
+    
+  nav
+    +span-columns(9)
+    +omega
+
+    ol
+      float: right
+      list-style: none
+      margin: 0
+      
+      li
+        @extend %font_fira_reg
+        display: inline
+        margin-left: 1em
+        
+        &:first-child
+          margin-left: 0em
+        

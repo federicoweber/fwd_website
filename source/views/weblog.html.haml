@@ -1,0 +1,9 @@
+---
+title: federicoweber
+---
+
+%ol
+  - blog.articles.each do |article|
+    %li
+      = link_to article.title, article
+      %span – #{article.date.strftime('%b %e')}
