@@ -1,8 +1,10 @@
 %header#main_header
   #main_header--content
     %nav#main_nav
+      
       %h1#main_header--title
         %a{href: "/"} Federico Weber
+      
       %ol
         %li
           %a{class: [('-active' if current_page.url.split('/')[1] == 'work')], href: "/work"} work
@@ -12,3 +14,5 @@
           %a{class: [('-active' if current_page.url.split('/')[1] == 'library')], href: "/library"} reading
         %li
           %a{class: [('-active' if current_page.url.split('/')[1] == 'hire_me')], href: "/hire_me"} hire me
+      
+      #main_nav--marker

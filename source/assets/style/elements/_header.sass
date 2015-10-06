@@ -24,26 +24,31 @@
       color: $black
 
 #main_nav
-
   +display(flex)
   +align-items(baseline)
   
   margin-left: auto
+  position: relative
   
-  ol
+  > ol
     margin: 0 0 0 auto
     padding: 0
     list-style: none
     +display(flex)
-    +align-items(baseline)
+    +flex-direction(column)
+    
+    +min_tablet
+      +flex-direction(row)
+      
     
     li
       display: block
-      float: left
-      +pad(0 0 0 1.618em)
-      
-      &:first-child
-        +pad(0 0 0 0)
+        
+      +min_tablet
+        +pad(0 0 0 1.618em)
+        
+        &:first-child
+          +pad(0 0 0 0)
       
       a
         @extend  .-uppercase
@@ -62,3 +67,37 @@
         
         +hover_on_desktop
           color: $black
+          
+
+    +max_mobile
+      li
+        +transition(all 250ms $ease-out-cubic)
+        overflow: hidden
+        height: 3px
+        margin-bottom: 3px
+        background-color: $black
+        
+        a
+          +transition(all 250ms $ease-out-cubic)
+          font-size: 0.3em
+          color: transparent
+          pointer-events: none
+        
+      &.-js-expand
+        li
+          height: 18px
+          background-color: transparent
+          a
+            +font_size_-1
+            color: $gray
+            pointer-events: all
+            
+            &:active, &.-active
+              color: $black
+        
+// this is managed by the js
+#main_nav--marker
+  border-bottom: 2px solid #1bb7cc
+  bottom: -3px
+  position: absolute
+  right: 200px

@@ -1,36 +1,20 @@
-$min_breakpoints: (huge: 1400px, desktop: 1280px, tablet: 768px)
-$max_breakpoints: (huge: 1400px, desktop: 1280px, mobile: 768px, tablet: 1024px)
-
-@mixin min_tablet
-  +media(map-get($min_breakpoints, tablet))
-    @content
-
-@mixin min_desktop
-  +media(map-get($min_breakpoints, desktop))
-    @content
-
-@mixin min_huge
-  +media(map-get($min_breakpoints, huge))
-    @content
-    
-@mixin max_mobile
-  +media(map-get($max_breakpoints, mobile))
-    @content
-    
-
-
 // main colors
 $white: #ffffff
 $red: #FF5335
-$blue: #3E92A3
+$blue: #1bb7cc
 $gray: #b0b0b0
 $light-gray: #F7F7F7
 $black: #353940
 
 $bg_color: $light-gray
 
+$modular-scale-ratio: $minor-third !global
+$modular-scale-base: 1em !global
+
 // neat vars
 $visual-grid: false
 $max-width: 100%
 $visual-grid-index: front
 $visual-grid-opacity: 0.2
+$gutter: 0em
+$padding: modular-scale(1)

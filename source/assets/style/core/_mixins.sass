@@ -1,5 +1,24 @@
+$min_breakpoints: (huge: 1400px, desktop: 1280px, tablet: 768px)
+$max_breakpoints: (huge: 1400px, desktop: 1280px, tablet: 1024px, mobile: 768px)
+
+@mixin min_tablet
+  +media(map-get($min_breakpoints, tablet))
+    @content
+
+@mixin min_desktop
+  +media(map-get($min_breakpoints, desktop))
+    @content
+
+@mixin min_huge
+  +media(map-get($min_breakpoints, huge))
+    @content
+    
+@mixin max_mobile
+  +media(max-width map-get($max_breakpoints, mobile))
+    @content
+    
 // This is used to avoid the hover effects on mobile
 @mixin hover_on_desktop
-  @media screen and (min-width: 1024px)
+  @media screen and (min-width:  map-get($max_breakpoints, tablet))
     &:hover
       @content
