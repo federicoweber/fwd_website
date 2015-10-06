@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <title>From Twitter and RSS to OmniFocus</title>
+    <link href="../assets/style/application.css" rel="stylesheet" />
+  </head>
+  <body class='weblog weblog_workflow-hazel-ifttt'>
+    <div class='wrapper'>
+      <header id='main_header'>
+        <div id='main_header--content'>
+          <nav id='main_nav'>
+            <h1 id='main_header--title'>
+              <a href='/'>Federico Weber</a>
+            </h1>
+            <ol>
+              <li>
+                <a href='/work'>work</a>
+              </li>
+              <li>
+                <a class='-active' href='/weblog'>notes</a>
+              </li>
+              <li>
+                <a href='/library'>reading</a>
+              </li>
+              <li>
+                <a href='/hire_me'>hire me</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </header>
+      <div class='content'>
+        <p>I'm a voracious user of Flipboard, and during my daily reading I often stumble upon news that I wish to do more with: softwares I wish to try, news to writing about, etc.
+        To accomplish that i was using a series of <a href="http://ifttt.com">IFTTT</a> rules to send this content to my email; with the result of ending up with a quite polluted email inbox.</p>
+        
+        <p>Today <a href="https://twitter.com/viticci">Federico Viticci</a> published it's, IFTTT and <a href="http://www.noodlesoft.com/hazel.php">Hazel</a>, <a href="http://www.macstories.net/tutorials/send-favorite-tweets-to-omnifocus-inbox/">workflow</a> to save starred tweets to OmniFocus, leveraging IFTTT and Hazel.
+        Inspired by that I've created two IFTTT recipes and two Hazel rules to achieve the same for both twitter and google reader.</p>
+        
+        <p>The IFTTT recieps are the following:</p>
+        
+        <ul>
+          <li>one for <a href="https://ifttt.com/recipes/54060">twitter</a></li>
+          <li>one for <a href="https://ifttt.com/recipes/54062">google reader</a></li>
+        </ul>
+        
+        <p>Both are structured to create a text file inside a specified dropbox folder. The output is designed as a multiline text files.
+        The first first of which is used as the OF entry <strong>title</strong> and the rest of the content is passed in as the <strong>note</strong>.</p>
+        
+        <p>The first of the Hazel rules is conceived to run an <strong>appleScript</strong> to the content of the file—to encode the text in <strong>UTF-8</strong>, parse it and create the new entry in the OmniFocus <strong>inBox</strong>.—, set the label to green (to know which files have been processed) and confirm the entry via Notification Center (using the automator action provided by <a href="http://www.automatedworkflows.com/2012/08/26/display-notification-center-alert-automator-action-1-0-0/">Automated Workflows</a>).</p>
+        
+        <p><img alt="The Hazel rule to watch the files" src="https://dl.dropbox.com/u/116832/federicoweber.com/20120831-205446-NT-0-hazel.png" /></p>
+        
+        <p>The appleScript to parse the conent:</p>
+        
+        <pre><code>-- This script is meant to be executed from Hazel
+        -- It is used to create a new task inside omnifocus 
+        -- The first paragraph is used for the title, the others are passed in the notes
+        -- by Federico Weber | http://federicoweber.com
+        
+        on hazelProcessFile(theFile)
+        	-- get the Title of the task
+        	set content to read theFile as «class utf8»
+        	set title to first paragraph of content
+        	
+        	-- Get the note of the Task
+        	set noteContent to get replaceText(title, "", content)
+        	
+        	tell application "OmniFocus"
+        		set theDoc to first document
+        		tell theDoc
+        			make new inbox task with properties {name:title, note:noteContent}
+        		end tell
+        	end tell
+        	
+        	return true
+        end hazelProcessFile
+        
+        -- replaceText method by Buce Phillis 
+        -- http://foolsworkshop.com/applescript/2008/05/an-applescript-replace-text-method/
+        on replaceText(find, replace, subject)
+        	set prevTIDs to text item delimiters of AppleScript
+        	set text item delimiters of AppleScript to find
+        	set subject to text items of subject
+        	
+        	set text item delimiters of AppleScript to replace
+        	set subject to "" &amp; subject
+        	set text item delimiters of AppleScript to prevTIDs
+        	
+        	return subject
+        end replaceText
+        </code></pre>
+        
+        <p>The second rules is used to erase the file after one week if the file have been properly parsed. I could have used just one rule and delete the content after it have been parsed, but I prefer to keep the files longer to fallback if something goes bad.</p>
+        
+        <p>If you found this useful please let me know via <a href="http://twitter.com/FedericoWeber">twitter</a> or <a href="https://alpha.app.net/federicoweber">app.net</a>.</p>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../assets/js/application.js"></script>
+  </body>
+</html>
