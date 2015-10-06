@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700)
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic)
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:900,900italic)
 
+%font_playfair
+  font-family: 'Playfair Display', serif
 
 %font_fira
   font-family: 'Fira Sans', sans-serif
@@ -13,8 +16,12 @@
   @extend %font_fira
   font-weight: 700
 
+%font_lato
+  font-family: 'Lato', sans-serif
+
 %font_monserrat
   font-family: 'Montserrat', sans-serif
+  letter-spacing: 0.1618em
 
 %font_monserrat_reg
   @extend %font_monserrat
@@ -24,57 +31,49 @@
   @extend %font_monserrat
   font-weight: 700
 
-%font_size_11
+@mixin font_size_11
   font-size: 7.43em
-  letter-spacing: 0.1618em
 
-%font_size_10
+@mixin font_size_10
   font-size: 6.192em
-  letter-spacing: 0.1618em
 
-%font_size_9
+@mixin font_size_9
   font-size: 5.16em
-  letter-spacing: 0.1618em
 
-%font_size_8
+@mixin font_size_8
   font-size: 4.3em
-  letter-spacing: 0.1618em
 
-%font_size_7
+@mixin font_size_7
   font-size: 3.583em
-  letter-spacing: 0.1618em
 
-%font_size_6
+@mixin font_size_6
   font-size: 2.986em
-  letter-spacing: 0.1618em
 
-%font_size_5
+@mixin font_size_5
   font-size: 2.488em
-  letter-spacing: 0.1618em
 
-%font_size_4
+@mixin font_size_4
   font-size: 2.074em
-  letter-spacing: 0.1618em
 
-%font_size_3
+@mixin font_size_3
   font-size: 1.728em
 
-%font_size_2
+@mixin font_size_2
   font-size: 1.44em
 
-%font_size_1
+@mixin font_size_1
   font-size: 1.2em
 
-%font_size_0
+@mixin font_size_0
   font-size: 1em
 
-%font_size_-1
+@mixin font_size_-1
   font-size: 0.833em
 
-%font_size_-2
+@mixin font_size_-2
   font-size: 0.694em
 
-%font_size_-3
+@mixin font_size_-3
   font-size: 0.579em
 
 
@@ -85,11 +84,11 @@ h1, h2, h3, h4, h5, h6
 
 h1
   @extend %font_monserrat_reg
-  @extend %font_size_5
+  +font_size_5
   
 p
   @extend %font_fira_reg
-  @extend %font_size_1
+  +font_size_1
 
 .-uppercase
   text-transform: uppercase

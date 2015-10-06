@@ -1,0 +1,78 @@
+#homepage--about
+  +span-columns(12 of 12)
+  +display(flex)
+  +align-items(center)
+  
+  background-image: url(image_path('20140910-desk-1990-1600x900.jpg'))
+  +min_tablet
+    background-image: url(image_path('20140910-desk-1990-4896x3264.jpg'))
+  background-color: $white
+  background-size: cover
+  min-height: 600px
+  position: relative
+  
+  // lets add an overlay to the image for better readability
+  &:before
+    background-color: rgba(0, 0, 0, .3)
+    bottom: 0
+    content: ''
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 0
+  
+.homepage--about--content
+  @extend .-uppercase
+  +border-width(3px 0 3px 0)
+    
+  border-color: $white
+  border-style: solid 
+  color: $white
+  margin: 0 auto 
+  text-align: center
+  z-index: 1
+
+  +min_tablet
+    +border-width(5px 0 5px 0)
+
+#about_plate
+  +font_size_2
+  
+  +min_tablet
+    +font_size_5
+  
+  +min_huge
+    +font_size_6
+  
+  line-height: 1em
+  text-align: left
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .3)
+  overflow: hidden
+  
+  #about_plate--content
+    display: block
+    margin-left: 1em
+    
+    span
+      display: block
+  
+  #about_plate--dev
+    letter-spacing: .618em
+    margin-top: .1em
+  
+  #about_plate--des
+    letter-spacing: 0.54em
+  
+  #about_plate--hand,
+  #about_plate--web
+    +font_size_-2
+    
+  #about_plate--hand
+    letter-spacing: 0.692em
+    
+  #about_plate--web
+    letter-spacing: 0.435em
+    margin-left: .1em
+    margin-top: -.2em
+  

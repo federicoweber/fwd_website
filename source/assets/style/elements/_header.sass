@@ -1,0 +1,64 @@
+// main Header
+#main_header
+  +span-columns(12)
+  +omega
+  +pad(1.618em 0 1.618em 0)
+  background: $white
+
+#main_header--content
+  +span-columns(10 of 12)
+  +shift(1)
+
+#main_header--title
+  @extend  .-uppercase
+  @extend %font_monserrat
+  +font_size_-1
+  display: inline
+  margin: 0
+  
+  a
+    color: $black
+    text-transform: uppercase
+    
+    &:hover, &:active, &:visited
+      color: $black
+
+#main_nav
+
+  +display(flex)
+  +align-items(baseline)
+  
+  margin-left: auto
+  
+  ol
+    margin: 0 0 0 auto
+    padding: 0
+    list-style: none
+    +display(flex)
+    +align-items(baseline)
+    
+    li
+      display: block
+      float: left
+      +pad(0 0 0 1.618em)
+      
+      &:first-child
+        +pad(0 0 0 0)
+      
+      a
+        @extend  .-uppercase
+        @extend %font_monserrat
+        +font_size_-1
+        
+        color: $gray
+        white-space: nowrap
+        +transition(color 150ms $ease-out-cubic)
+        
+        &:visited
+          color: $gray
+        
+        &:active, &.-active
+          color: $black
+        
+        +hover_on_desktop
+          color: $black

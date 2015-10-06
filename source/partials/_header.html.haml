@@ -1,11 +1,14 @@
-%header#mainHeader
-  %h1
-    %a{href: "/"} Federico Weber
-  %nav
-    %ol
-      %li
-        %a{href: "/weblog"} weblog
-      %li
-        %a{href: "/library"} library
-      %li
-        %a{href: "/work"} work
+%header#main_header
+  #main_header--content
+    %nav#main_nav
+      %h1#main_header--title
+        %a{href: "/"} Federico Weber
+      %ol
+        %li
+          %a{class: [('-active' if current_page.url.split('/')[1] == 'work')], href: "/work"} work
+        %li
+          %a{class: [('-active' if current_page.url.split('/')[1] == 'weblog')], href: "/weblog"} notes
+        %li
+          %a{class: [('-active' if current_page.url.split('/')[1] == 'library')], href: "/library"} reading
+        %li
+          %a{class: [('-active' if current_page.url.split('/')[1] == 'hire_me')], href: "/hire_me"} hire me
