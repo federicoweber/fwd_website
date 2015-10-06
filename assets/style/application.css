@@ -681,7 +681,7 @@ a {
 /* line 39, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
 #about_plate {
   font-size: 1.44em;
-  line-height: 1.2em;
+  line-height: 1em;
   text-align: left;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   overflow: hidden; }
@@ -697,20 +697,25 @@ a {
   #about_plate #about_plate--content {
     display: block;
     margin-left: 1em; }
-  /* line 57, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
-  #about_plate #about_plate--dev {
-    letter-spacing: 0.618em; }
+    /* line 57, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
+    #about_plate #about_plate--content span {
+      display: block; }
   /* line 60, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
+  #about_plate #about_plate--dev {
+    letter-spacing: 0.618em;
+    margin-top: 0.1em; }
+  /* line 64, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
   #about_plate #about_plate--des {
     letter-spacing: 0.54em; }
-  /* line 63, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
+  /* line 67, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
   #about_plate #about_plate--hand,
   #about_plate #about_plate--web {
     font-size: 0.694em; }
-  /* line 67, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
+  /* line 71, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
   #about_plate #about_plate--hand {
     letter-spacing: 0.692em; }
-  /* line 70, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
+  /* line 74, /Users/federicoweber/Sites/fwd/source/assets/style/pages/_homepage.sass */
   #about_plate #about_plate--web {
     letter-spacing: 0.435em;
-    margin-left: 0.1em; }
+    margin-left: 0.1em;
+    margin-top: -0.2em; }
