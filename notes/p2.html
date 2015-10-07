@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <title>Notes – Federico Weber</title>
+    <link href="../assets/style/application.css" rel="stylesheet" />
+  </head>
+  <body class='notes notes_p2'>
+    <div id='wrapper'>
+      <header id='main_header'>
+        <div id='main_header--content'>
+          <nav id='main_nav'>
+            <h1 id='main_header--title'>
+              <a href='/'>Federico Weber</a>
+            </h1>
+            <ol>
+              <li>
+                <a href='/work'>work</a>
+              </li>
+              <li>
+                <a class='-active' href='/notes'>notes</a>
+              </li>
+              <li>
+                <a href='/library'>reading</a>
+              </li>
+              <li>
+                <a href='/hire_me'>hire me</a>
+              </li>
+            </ol>
+            <div id='main_nav--marker'></div>
+          </nav>
+        </div>
+      </header>
+      <div id='main_content'>
+        <div class='section' id='notes'>
+          <h1 class='-hide_text'>
+            <a href='/notes'>Notes</a>
+          </h1>
+          <ol class='posts_collection'>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="Twitter.html">The dusk of Twitter as a platform</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-08-17 00:00:00 UTC'>Aug 17 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Yesterday, <a href="https://twitter.com/sippey">Michael Sippey</a>, the Director of consumer product at Twitter, <a href="https://dev.twitter.com/blog/changes-coming-to-twitter-api">announced</a> some obscure changes in the upcoming v1.1 of the Twitter API.
+                  The majority of which is related to limit the API availability to third party clients.</p>
+                  
+                  <h2 id="the-dusk-of-the-platform">The dusk of the platform</h2>
+                  <p>What was great about Twitter was it’s openness, simplicity, and it’s reliability<sup id="fnref:data"><a href="#fn:data" class="footnote">1</a></sup>.
+                  But right now, in order to be independent, Twitter have to make money. And in the process of reshaping the company they figured out that, to be appealing for advertisers, they have to control the entire user experience, becoming the endpoint of the discussion and not just the vector. They need to be sure that the advertisement they sell will arrive to the users and they can achieve this only with a strict control on what their users see. They decided to do so by prohibiting new third party clients.</p>
+                  
+                  <blockquote>
+                    <p>Nearly eighteen months ago, we gave developers guidance that they should not build client apps that mimic or reproduce the mainstream Twitter consumer client experience.</p>
+                  </blockquote>
+                  
+                  <p>As far as there is an existing Twitter interface for that specific platform. In fact Twitter is still welcoming to <em>officially approved</em>, native mobile client.</p>
+                  
+                  <blockquote>
+                    <p>With v1.1 we will require developers that are building client applications that are pre-installed on mobile handsets, SIM cards, chipsets or other consumer electronics devices to have their application certified by Twitter.</p>
+                  </blockquote>
+                  
+                  <p>By making the old ones choke in their user base</p>
+                  
+                  <blockquote>
+                    <p>if you are building a Twitter client application that is accessing the home timeline, account settings or direct messages API endpoints (typically used by traditional client applications) or are using our User Streams product, you will need our permission if your application will require more than 100,000 individual user tokens.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                    <p>We will not be shutting down client applications that use those endpoints and are currently over those token limits. If your application already has more than 100,000 individual user tokens, you'll be able to maintain and add new users to your application until you reach 200% of your current user token count (as of today) — as long as you comply with our Rules of the Road. Once you reach 200% of your current user token count, you'll be able to maintain your application to serve your users, but you will not be able to add additional users without our permission.</p>
+                  </blockquote>
+                  
+                  <p>And by prohibiting integration with different social networks
+                  &gt; No other social or 3rd party actions may be attached to a Tweet.</p>
+                  
+                  <h2 id="the-dawn-of-the-apps">The dawn of the apps</h2>
+                  <p>I consider myself more a Tweetbot user than a Twitter user, and I do believe that like me many other users are more tightened to the apps they do use daily to interact with twitter than with the platform itself. 
+                  I would like to see what will happen if those apps implement support for other similar platforms [^app.net]. I will surely appreciate.</p>
+                  
+                  <div class="footnotes">
+                    <ol>
+                      <li id="fn:data">
+                        <p>The lightweight structure of the tweet data, make it extremely fast to load even on congested or slow network. <a href="#fnref:data" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="film.html">Robot & Frank</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-08-16 00:00:00 UTC'>Aug 16 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <iframe src="http://player.vimeo.com/video/44742356?title=0&amp;byline=0&amp;portrait=0&amp;color=f2de05" width="657" height="369" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/typography graph.html">An OpenType hack to design simple graphs</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-08-14 00:00:00 UTC'>Aug 14 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Designed by <a href="https://twitter.com/traviskochel">@traviskochel</a> <a href="https://www.fontfont.com/how-to-use-ff-chartwell">FF Chartwell</a> is a smart font hack that leverage the OpenType features to convert numbers into graphs.
+                  The process of creating a graph with Chartwell is as simple as turning on the <em>Stylistic Alternates</em>. By doing so a series of, plus separated, numbers are converted into the corresponding graph.</p>
+                  
+                  <p><img alt="FF Chartwell Radar" src="https://www.fontfont.com/staticcontent/inuseimages/original/FF_Chartwell_SC-all_7_symbols-Radar.png?1336379581" /></p>
+                  
+                  <p>It's possible to create the following type of graphs: bars vertical, bars horizontal, lines, pies, radar, rings, rose.</p>
+                  
+                  <p>The font is quite useful as it is and the guys at <a href="https://www.fontfont.com/">FontFont</a> are already working on a web version of it.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/videogames graphic.html">CryEngine 3</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-08-12 14:59:42 UTC'>Aug 12 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <iframe width="640" height="360" src="http://www.youtube.com/embed/JWvgETOo5ek" frameborder="0" allowfullscreen=""></iframe>
+                  
+                  <p>Beautiful tech demo of the amazing scenery and graphics in Crysis 3 powerd by CryEngine3.</p>
+                  
+                  <p>Also make sure to watch the Official single player interactive <a href="http://www.youtube.com/watch?v=_2LX8bEmhDc&amp;feature=player_embedded">demo</a></p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/frontend development tool node front.html">Front-end development with Nodefront</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-08-08 22:35:22 UTC'>Aug  8 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>I've just discovered <a href="http://karthikv.github.com/nodefront/">Nodefront</a>, a command-line tools, developed by <a href="http://karthikv.net">Karthik Viswanathan</a>, that ease front-end development by compiling and watching <strong>.jade</strong>, <strong>.styl</strong> and <strong>coffeescript</strong> files.</p>
+                  
+                  <p>Among the other features it did offer i do find the <strong>live compile</strong> option particularly useful.</p>
+                  
+                  <p>If you are curios here is a <a href="https://vimeo.com/46197434">screencast</a> of it in action</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="microsoft.html">Steve Ballmer was right...</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-08-03 12:47:45 UTC'>Aug  3 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <blockquote>
+                    <p>Microsoft has been using the "Metro" name to describe the new geometric, typography-heavy look-and-feel that is central to Windows 8—and is spreading across the company's entire range of products—ever since it first showed off Windows Phone.</p>
+                  </blockquote>
+                  
+                  <p>Never ever adopt a product name that does not contain <strong>Windows</strong> in it.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/apple AppStore Sandboxing.html">Present and future of the App Store and Gatekeeper</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-26 22:54:11 UTC'>Jul 26 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>In a recent post, <a href="http://www.marco.org/2012/07/26/mac-app-store-future"><em>The Mac App Store’s future of irrelevance</em></a> , Marco Arment make some points on the actual state of App Store, and it's possible future.</p>
+                  
+                  <p><a href="@marcoarment">Marco Arment</a>:
+                  &gt; But now, I’ve lost all confidence that the apps I buy in the App Store today will still be there next month or next year. The advantages of buying from the App Store are mostly gone now. My confidence in the App Store, as a customer, has evaporated.</p>
+                  
+                  <blockquote>
+                    <p>The Mac App Store is in significant danger of becoming an irrelevant, low-traffic flea market where buyers rarely venture for serious purchases. And I bet that’s not what Apple had in mind at all.</p>
+                  </blockquote>
+                  
+                  <p>I believe Marco is somehow right, and unluckily for some kind of apps the best option is to buy them outside of the app store. 
+                  As of today the App Store, and the Gatekeeper are far from perfect and the impossibility for a developer properly market, updates and discounts. Combined with the strict sandboxing is a great obstacle for an everlasting and healthy adoption both for users and developers.</p>
+                  
+                  <p>Yet  I do think the App Store is still a far superior shopping experience. In fact, it's so delightful that, many of us bought the same software twice, once the App Store came out, just to have it connected to it, and relieving the pain of dealing with licenses and updates.</p>
+                  
+                  <p>But Apple can easily fix that. For example they could grant certified developers the rights to both, use iClouds APIs and sell, on the App Store, non sandboxed apps. They can achieve this by properly marking the app and, maybe, <em>hiding</em> it beyond an option in the Security and Privacy settings. By doing so the will ensure the security of the App Store, but also allow those of us who are willing, or need to, use non sandboxed apps to leverage it's power and simplicity.</p>
+                  
+                  <p>Also I do believe that on the long run, as it's happing on the iOS, the terms and conditions, for an app to be considered sandboxed, will get more flexible. Allowing more of them to jump in.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/meteor fundRaising.html">Meteor Raises $11.2M from Andreessen Horowitz</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-25 15:25:36 UTC'>Jul 25 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Congratulations to the <a href="http://meteor.com/">Meteor</a> team for raising such a big sum for an open source project.</p>
+                  
+                  <p>For those new with the matter Meteor is an open-source platform for building web apps in javascript. What is differentiating it from the competitors is the availability of the same APIs for both the front-end and the back-end, allowing super fast development.
+                  You should really take a look at the  live updating leaderboard <a href="http://meteor.com/examples/leaderboard">example</a>.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="design.html">Good design is invisible</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-24 21:35:05 UTC'>Jul 24 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>The Verge interviewed Oliver Reichenstein on design typography and OS GUI.</p>
+                  
+                  <p><a href="https://twitter.com/iA">Oliver Reichenstein</a>:
+                  &gt;  Good user interface design takes care of irritations before they appear</p>
+                  
+                  <p>This is something that should be true on regular basis.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/sparrow acquisitions appstore.html">An analysis of sparrow sales</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-24 05:10:52 UTC'>Jul 24 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p><a href="https://twitter.com/drbarnard">David Barnard</a>:
+                  &gt; Sparrow did everything right. They built an incredible email app with broad appeal and released it into the hottest software market the world has ever seen. And yet it was a financial flop.</p>
+                  
+                  <p>After a comparison based on App Store ranking and it's own experience selling Launch Center Pro, David made the point on why the Sparrow team, who had to repay for investments, had to sell to google to keep the team going.</p>
+                  
+                  <p>One of the main point on the <a href="http://news.ycombinator.com/item?id=4283307">HackerNews</a> discussion is that they should have adopted a <strong>recurring revenue model</strong>.
+                  I do think that what they did tried with the yearly subscription <a href="http://blog.sparrowmailapp.com/post/23034702297/sparrowiphone12">proposal</a> for the push notification was an attempt to steer in that direction. But as it turned out it wasn't such a <a href="http://www.macgasm.net/2012/05/16/ask-and-tell-sparrows-subscription-plan-for-push-services-not-a-popular-idea/">popular</a> move.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/acquisitions facebook.html">Acrylic acquired by facebook</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-21 08:54:01 UTC'>Jul 21 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>I didn't notice at first, but also <a href="http://blog.acrylicapps.com/post/27635101056/our-next-project-facebook">acrylic got acquired</a> yesterday. This time the buyer is Facebook</p>
+                  
+                  <blockquote>
+                    <p>Our products and services have not been acquired by Facebook, and while there are <strong>no plans for further development</strong> on them, Wallet and Pulp will continue to remain available for download and purchase in their current form. We’ll certainly be the first to let you know of any updates or changes here in the future.</p>
+                  </blockquote>
+                  
+                  <p>So In one day I'we lost future updates for both a great e-mail client and a good password manager.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/sparrow google acquisitions.html">Google buy Sparrow</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-20 18:18:35 UTC'>Jul 20 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Dom Leca:
+                  &gt; We will continue to make available our existing products,
+                    and we will provide support and critical updates to our
+                    users. However, <strong>as we’ll be busy with new projects at
+                    Google, we do not plan to release new features for the
+                    Sparrow apps</strong>.</p>
+                  
+                  <p>It's a good move for the Sparrow team, but it's also sad that such a well crafted app will not see future improvements.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="quote.html">Digital Literacy</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-19 21:44:04 UTC'>Jul 19 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Alan Kay, <em>“User Interface: A Personal View”</em>:
+                  &gt; The ability to “read” a medium means you can access materials and tools created by others. The ability to “write” in a medium means you can generate materials and tools for others. You must have both to be literate.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/opensource cURL.html">HTTPie - cURL for humans</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-19 21:35:15 UTC'>Jul 19 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p><a href="https://twitter.com/jkbrzt">@jkbrzt</a>:
+                  &gt; HTTPie is a CLI HTTP utility built out of frustration with existing tools. The goal is to make CLI interaction with HTTP-based services as human-friendly as possible.</p>
+                  
+                  <blockquote>
+                    <p>HTTPie does so by providing an http command that allows for issuing arbitrary HTTP requests using a simple and natural syntax and displaying colorized responses</p>
+                  </blockquote>
+                  
+                  <p>A very nice finding that eased my day.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="RaspberryPi.html">Raspberry Pi goes bulk</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-18 09:49:16 UTC'>Jul 18 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Great news, I'm looking forward to get one to play with.
+                  &gt; According to a statement published today by the <a href="http://www.raspberrypi.org/">Raspberry Pi</a> foundation, the manufacturers are producing approximately 4,000 units every day.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/google privacy.html">Google is moving  from the web to our life</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-17 22:29:14 UTC'>Jul 17 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p><a href="https://twitter.com/stshank">Stephen Shankland</a> :
+                  &gt; The more powerful Google’s services become, the more intrusive they become, too. Now is not a time to blithely grant Google whatever it wants. Perhaps one or two people will think about that in the coming years as “googling” means, well, living.</p>
+                  
+                  <p>Interesting thoughts about Google future plan and our lives.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="automation.html">bootstrapping projects</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-17 14:03:46 UTC'>Jul 17 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <h2 id="automate-project-creation">Automate project creation</h2>
+                  <p>Lately I'm doing a lot of small web projects that, more ore less, have the same folder structure, are based on the same framework, and leverage the same version control system, clearly <strong>Git</strong>.
+                  Therefore I've decided to spend some time to automate the project setup process.</p>
+                  
+                  <h2 id="meet-projectbootstrap">Meet projectBootstrap</h2>
+                  <p>The result of my tinkering is <a href="https://github.com/federicoweber/projectBootstrap">projectBootstrap</a>, a small script in <strong>node.js</strong>, that given a target folder and a configuration file. Take care of populating it, downloading the dependencies, init the Git repo and crete a .taskpaper file to hold the project todo list.</p>
+                  
+                  <p>When the script is executed it will look for an <strong>init.json</strong> file inside the target folder. If this is not provided the script will use the default one, that do exist in the script root folder.</p>
+                  
+                  <h3 id="initjson">init.json</h3>
+                  <p>The init.json is the configuration file used to bootstrap the project, and it's where  the components for the projects are specified. 
+                  It is possible to request the following elements:</p>
+                  
+                  <ul>
+                    <li>a <strong>boilerplate</strong>, used to setup the initial folder and files structure</li>
+                    <li>one ore more <strong>Git submodules</strong></li>
+                    <li>a series of <strong>libraries</strong></li>
+                    <li>a <strong>folder name</strong> to organize the libraries in</li>
+                    <li>the initial <strong>commit message</strong></li>
+                    <li>and the name of the <strong>todo list file</strong></li>
+                  </ul>
+                  
+                  <p>This is the default init.json you can find on  the github project:</p>
+                  
+                  <pre><code>{
+                  		"boilerplate": "https://github.com/federicoweber/vgHear/raw/master/boilerplate.zip"
+                  	,	"subModules": [
+                  			"https://github.com/federicoweber/vgHear.git"
+                  		]
+                  	, 	"libs": [
+                  
+                  		]
+                  	,	"commit": "init Repo"
+                  	,	"libsPath": "app/js/libs"
+                  	,	"todoName": "todo.taskpaper"
+                  
+                  }
+                  </code></pre>
+                  
+                  <h2 id="running-the-script">Running the script</h2>
+                  <p>The target folder is passed with a <strong>target</strong> environment variable when the script is executed.</p>
+                  
+                  <p>Ex.</p>
+                  
+                  <pre><code>$ target=PROJECT_FOLDER node projectBootstrapp.js
+                  </code></pre>
+                  
+                  <p>To make the process faster I'm also leverging a <a href="http://www.keyboardmaestro.com/main/">keyboard maestro</a> macro to run the script on the current selected folder in <em>finder</em>.</p>
+                  
+                  <p><img alt="here is the macro" src="https://dl.dropbox.com/u/116832/federicoweber.com/20120717-185936-RC-1-automation%20keyboardMaestro.png" /></p>
+                  
+                  <p>You can find the script on <a href="https://github.com/federicoweber/projectBootstrap">Github</a>.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/webGl minecraft.html">Minecraft in webGl</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-16 09:35:42 UTC'>Jul 16 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Daniel Ribeiro attempt to replicate <a href="http://www.minecraft.net/">Minecraft</a> in the browser using webGl.
+                  Here is the <a href="http://danielribeiro.github.com/WebGLCraft/">demo</a>.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/github socialnetwork.html">Is Github the most important social network?</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-15 11:41:01 UTC'>Jul 15 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>John G. Norman:
+                  &gt; TL;DR: GitHub is the largest public repository of the everyday experience of work. Ever. If you’re a scholar or journalist interested in collaboration, this is perhaps the most important archive you will find regarding what actually happens as people work together.</p>
+                  
+                  <p>I do think Github is great and on the long run it is a rich <strong>log</strong> of the history and evolution of software development. That is one of the fields that is pushing the human race forward.
+                  But on a mass scale, it can not be as relevant as Twitter, Facebook or Linkein.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/busnessModel writing.html">The new TBR 7 days content delay business model</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-07-11 22:06:56 UTC'>Jul 11 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>New interesting approach on payment subscription for opinion based websites by the Ben Brooks.
+                  Please read the original <a href="http://brooksreview.net/2012/07/new-tbr/">article</a> for a better insight.</p>
+                  
+                  <blockquote>
+                    <p>All non-members of the site will have access to every post that members have access too, with one caveat: non-members won’t see those posts until seven days after I posted them.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                    <p>I realize this isn’t ideal, but being as what I write is not time relevant, I feel that this is a decent tradeoff. If you aren’t a member you won’t be able to see what you are, in fact, missing — thus the content is indeed new to you when it does become “unlocked”. (This is the plan at least.)</p>
+                  </blockquote>
+                </div>
+              </article>
+            </li>
+          </ol>
+          <div class='posts_collection_nav'>
+            <a href='/notes/'>prev</a>
+            <a href='/notes/p3.html'>next</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../assets/js/application.js"></script>
+  </body>
+</html>

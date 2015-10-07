@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <title>Notes – Federico Weber</title>
+    <link href="../assets/style/application.css" rel="stylesheet" />
+  </head>
+  <body class='notes notes_index'>
+    <div id='wrapper'>
+      <header id='main_header'>
+        <div id='main_header--content'>
+          <nav id='main_nav'>
+            <h1 id='main_header--title'>
+              <a href='/'>Federico Weber</a>
+            </h1>
+            <ol>
+              <li>
+                <a href='/work'>work</a>
+              </li>
+              <li>
+                <a class='-active' href='/notes'>notes</a>
+              </li>
+              <li>
+                <a href='/library'>reading</a>
+              </li>
+              <li>
+                <a href='/hire_me'>hire me</a>
+              </li>
+            </ol>
+            <div id='main_nav--marker'></div>
+          </nav>
+        </div>
+      </header>
+      <div id='main_content'>
+        <div class='section' id='notes'>
+          <h1 class='-hide_text'>
+            <a href='/notes'>Notes</a>
+          </h1>
+          <ol class='posts_collection'>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/EC2 nodejitsu server gestalt.html">Migrating from Amazon EC2 to Nodejitsu PaaS</a>
+                  </h1>
+                  <span>
+                    <time datetime='2013-02-10 00:00:00 UTC'>Feb 10 2013</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Last year I decided to renew my website, and cause I was also studying Node.js I decided to develop from scratch the publishing platform—you can read more about it in <a href="http://federicoweber.com/gestaltapp/20120625-142551-pi-3-introducinggestalt">here</a>—and self host it on Amazon EC2 to get a grip on the platform.</p>
+                  
+                  <p>As my first attempt to self manage a server, setting up the EC2 instance was far from an easy task for me. It took me a couple of days of studying official documentation and tutorials to successfully setup the EC2 instance, deploy Gestalt via GIT and have the server run it as a demon.</p>
+                  
+                  <p>During this time, while Gestalt grown in capabilities and performance, I discovered myself to be a terrible SisAdmin. Therefor when I received the notification that my free tier<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> was about to expire I quickly decided to migrate everything to a managed platform where my only concern would bee to work on the Gestalt.</p>
+                  
+                  <p>Looking for the perfect match for my needs I decided to give a try at <a href="http://nodejitsu.com/paas.html">Nodejitsu's Platform as a Service</a> (Paas)—being attracted from their convenient fees, with the cheapest plan, for individuals, starting at $3 a month. 
+                  Prepared for a long and painful migration I created an account studied their documentation, installed jitsu CLI via npm and in <strong>less then 10 minutes</strong> Gestalt was running smoothly from their servers. Once I've been sure that everything was stable I update the DNS records and shutted down  the EC2 instance.</p>
+                  
+                  <p>It's early for me to comment on their service reliability, but with such a pleasant startup I can not help but recommend their service.</p>
+                  
+                  <hr />
+                  
+                  <p>I hope you found this useful if you have questions or comments feel free to contact me on <a href="http://twitter.com/FedericoWeber">Twitter</a> or <a href="https://alpha.app.net/federicoweber">ADN</a>.</p>
+                  
+                  <div class="footnotes">
+                    <ol>
+                      <li id="fn:1">
+                        <p>During this time (from February 28 2012) I've been able to use their services for free leveraging the <a href="http://aws.amazon.com/free/faqs/">Free Tier Period</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/podcast makers.html">The New Disruptors</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-12-14 00:00:00 UTC'>Dec 14 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Hosted by Glenn Fleishman, <a href="http://www.muleradio.net/newdisruptors/">The New Disruptors</a> is brilliant weekly podcast, on Mule Radio Syndicate, that investigate the new economy of Makers and Crowdfunding.</p>
+                  
+                  <p>Unfortunately the audio quality is poor(that was true at the time of writing <em>12/14/2012</em> but audio quality of the new episodes is remarkable), but the content is remarkable and the pace is engaging. If you are into self-production you must subscribe to this podcast.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/skateboard video drone.html">Firefly, a skateboarding movie shooted with a drone</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-12-12 00:00:00 UTC'>Dec 12 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <iframe src="http://player.vimeo.com/video/55094977?color=ffffff" width="658" height="370" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/css3 images.html">Smart images responsive crop with CSS3</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-12-04 00:00:00 UTC'>Dec  4 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Explore the source code on Github</p>
+                  
+                  <p>[github]https://github.com/adamdbradley/focal-point#readme</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/videogames Crysis3.html">Behind The Scenes of Crysis 3</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-12-01 00:00:00 UTC'>Dec  1 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <iframe width="658" height="370" src="http://www.youtube.com/embed/rdGmH2AFvQo" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/art experience.html">Rain Room at the Barbican</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-11-20 00:00:00 UTC'>Nov 20 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <iframe src="http://player.vimeo.com/video/51830893?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" width="657" height="369" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                  
+                  <blockquote>
+                    <p>Rain Room is a hundred square metre field of falling water through which it is possible to walk, trusting that a path can be navigated, without being drenched in the process.</p>
+                  </blockquote>
+                  
+                  <p>A simple yet amazing concept well executed by <a href="http://random-international.com">Randon International</a>. This is truly the kind of experience in which technology become magic.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/display tech.html">Super Retina display</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-11-09 00:00:00 UTC'>Nov  9 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <blockquote>
+                    <p>Japan Display has developed a prototype 651ppi LCD panel. First announced in June 2012, this display has a resolution of 1280x800 pixels, equivalent to that in a regular notebook PC, but in a screen size of only 2.3 inches</p>
+                  </blockquote>
+                  
+                  <p>Now imagine an iPad mini equipped with one of those.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/video making.html">The art of making</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-10-08 00:00:00 UTC'>Oct  8 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <iframe src="http://player.vimeo.com/video/43005056?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="657" height="369" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/programming web.html">Validating your Local Storage Data</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-10-01 00:00:00 UTC'>Oct  1 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Local storage is a powerfull tool to cache data computed by web apps for later reuse or non critical persistency<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. For example I do used it on a recent project, to reduce both the data loaded from the server and the computational cost of sorting a huge list of articles by filters.</p>
+                  
+                  <p>Cause the local storage will persiste on the browser for a long time to safely use this data we have to be sure that they are reliable and up to date. Usually the data can get useless for two main reasons: they are based on data produce by the server, that has been updated; or they have been stored by a previous version of the web app which data model have long changed.</p>
+                  
+                  <h2 id="getting-the-timestamp">Getting the timestamp</h2>
+                  <p>To check the data against the server a good option is to have it provide a timestamp<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> for the latest time the data have been changed.</p>
+                  
+                  <p>If the web page, is rendered by the same server we are getting the data from, we can pass this information around as a <strong>Custom data attributes</strong> in the DOM element that hold the app.</p>
+                  
+                  <pre><code>&lt;div id="appHolder" data-timestamp="2012-10-02T20:17:08.780Z"&gt;&lt;/div&gt;
+                  </code></pre>
+                  
+                  <p>Otherwise, if the data are coming from a different server, we can get the information as a lightweight JSON.</p>
+                  
+                  <pre><code>{
+                  	"updated": "2012-10-02T18:30:30.179Z"
+                  }
+                  </code></pre>
+                  
+                  <h2 id="versioning-your-web-app">Versioning your web app</h2>
+                  <p>To match the data against an updated version of your app the best option is to have a the version number as constant in your app namespace, and save it with your data on the Local Storage.</p>
+                  
+                  <pre><code>myApp = {}
+                  myApp.VERSION = "0.0.4"
+                  </code></pre>
+                  
+                  <h2 id="wrapping-it-up">Wrapping it up</h2>
+                  <p>It's best to run this test as soon as the app is inited, if both of this test succeed you are usually safe to trust the stored data, otherwise it's reccomended to recreate it.</p>
+                  
+                  <hr />
+                  
+                  <p>I hope you found this useful if you have questions or comments feel free to contact me on <a href="http://twitter.com/FedericoWeber">Twitter</a> or <a href="https://alpha.app.net/federicoweber">ADN</a>.</p>
+                  
+                  <div class="footnotes">
+                    <ol>
+                      <li id="fn:1">
+                        <p>With non critical persistency I intend any kind of data that can be reconstructed without causing damages or requiring serius effort from the end user. Like a precompiled set of filters for a search. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                      <li id="fn:2">
+                        <p>Although not mandatory I reccomend you to store this data in the ISO format <em>"2012-10-02T20:17:08.780Z"</em> to better reuse it in javascript passing it as an argument of a new Date object. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/tutorial backbone pantarhei javascript.html">Front end middleware with Backbone and PantaRhei</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-09-25 00:00:00 UTC'>Sep 25 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <h2 id="a-middleware-primer">A middleware primer</h2>
+                  
+                  <p>The first time I've stumbled upon  the middleware pattern it was in <a href="http://expressjs.com">Express.js</a>, while developing the backend for <a href="http://federicoweber.com/gestaltapp/20120625-142551-pi-3-introducinggestalt">Gestalt</a>.</p>
+                  
+                  <p>The concept of middleware it's quite straight forward, it's nothing more than a function that handle a request. What make it so interesting is the possibility to create a stack of middleware. By doing so each middleware will be able to process the request, and call the next one in the stack.</p>
+                  
+                  <p>A typical middleware will look like this:</p>
+                  
+                  <pre><code>var foo = function(req, res, next) {
+                  	// all your logic goes in here
+                  	
+                  	// proceed to the next middleware
+                  	next();
+                  };
+                  </code></pre>
+                  
+                  <p>If a middleware have to signal an error, it can do so passing it to the first argument of the next().</p>
+                  
+                  <pre><code>var bar = function(req, res, next) {
+                  	// signal an error
+                  	next( "Something went wrong!" );
+                  };
+                  </code></pre>
+                  
+                  <p>To append a stack of middleware to a request in <a href="http://www.senchalabs.org/connect/">Connect</a> you have to declare them with the <strong>use</strong> method<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+                  
+                  <pre><code>// Example from http://www.senchalabs.org/connect/
+                  var app = connect()
+                  	.use(connect.logger('dev'))
+                  	.use(connect.static('public'))
+                  	.use(function(req, res){
+                  		res.end('hello world\n');
+                  	})
+                  	.listen(3000);
+                  </code></pre>
+                  
+                  <p>What I really like about this pattern is that by simply reading the <strong>use</strong> stack you can get a grip on the logics behind the application. Also structuring your application as a cascade of middleware you are encouraged to split it in small,  self contained, modules and avoid nasty callbacks. With the added benefit of a enhancing both the readability maintainability of your code.</p>
+                  
+                  <h2 id="introducing-pantarheijs">Introducing PantaRhei.js</h2>
+                  
+                  <p><a href="http://github.com/federicoweber/PantaRhei">PantaRhei.js</a> is my front end implementation of the middleware pattern . I structured it as an extension for <a href="http://backbonejs.org">Backbone.js</a> because it is awesome, I'm using it on the wast majority of my projects, and I want to leverage it's <strong>Events</strong> module and the simple inheritance style provided by the <strong>extend()</strong> method.</p>
+                  
+                  <p>PantaRhei is written in CoffeeScript and distributed with the MIT license. You can find the coffeescript sources and the compiled and minified javascript files on <a href="http://github.com/federicoweber/PantaRhei">Github</a>.</p>
+                  
+                  <p>The purpose of PantaRhei is to ease the creation and the execution of queues of tasks, like fetching and manipulating data, managing the transitions between pages and so on.
+                  Right now PantaRhei is composed by two modules: the <strong>Flow</strong>, that is responsible for the execution of the queue and the <strong>Worker</strong>, that describe one of the possible structure of middleware<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> that the Flow can handle.</p>
+                  
+                  <h3 id="the-worker">The Worker</h3>
+                  <p>The <strong>Worker</strong> module is more a convention than a real module, and it's meant to be extended. 
+                  It describe two methods: the former is the <strong>run</strong> it's invoked by the Flow to execute the worker and accept a <strong>shared</strong> object ( which purpose is to act as a place for workers to share data ) and the <strong>next</strong> callback as arguments; the latter is the <strong>kill</strong>, that is invoked by the Flow when the worker execution is completed to safely remove it.
+                  The worker constructor also accept an option <strong>id</strong> as an argument.</p>
+                  
+                  <p>To create a new Worker you need to extend it and implement it's methods:</p>
+                  
+                  <pre><code>var Delay = PantaRhei.Worker.extend({
+                  	constructor: function(duration, id){
+                  		this.duration = duration;
+                  		this.id = id;
+                  	},
+                  	run: function(shared, next) {
+                  		onTimeout = function(){
+                  			next();
+                  		};
+                  		setTimeout(onTimeout, duration);
+                  	},
+                  	kill: function(){
+                  		// all your logics to remove the worker
+                  	}
+                  });
+                  
+                  var shortDelay = new Delay(1000, 'shortDelay');
+                  </code></pre>
+                  
+                  <p>PantaRhei also include, under the PantaRhei.workers namespace, a series of workers<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup> JsonLoader and LoadAssets.</p>
+                  
+                  <h3 id="the-flow">The Flow</h3>
+                  <p>The <strong>Flow</strong> module is our middleware manager, and handle for you all the logic to create and run the queue.
+                  To create a new flow all you have to do is to call it's constructor and optionally pass two parameters: an <strong>id</strong> and a array containing the list of <strong>workers</strong> to use.</p>
+                  
+                  <pre><code>var flow = new PantaRhei.Flow( 'myFirstFlow', [task1, task2] );
+                  </code></pre>
+                  
+                  <p>You can also append a worker to the flow passing it  as an argument of the <strong>use</strong> method.</p>
+                  
+                  <pre><code>var task1 = function(shared, next){
+                  		console.log( "task one completed" );
+                  		next();
+                  	},
+                  flow =  new PantaRhei.Flow( );
+                  flow.use(task1);
+                  </code></pre>
+                  
+                  <p>To execute the flow you have to invoke the <strong>run</strong> method. The flow can also accept an optional <strong>shared</strong> object. This is passed around to all the workers in the queue and it's returned by the flow on complete, it's actually the place for storing and passing data between workers. If this is not provided the Flow will create a empty object to use.</p>
+                  
+                  <pre><code>// create our workers
+                  var task1 = function(shared, next){
+                  	shared.data = "the data have been processed"
+                  	next();
+                  },
+                  task2 = function(shared, next){
+                  	shared.newData = "we got some new data for you"
+                  	next();
+                  },
+                  
+                  // create our flow and workers passing the first task on the constructor
+                  flow = new PantaRhei.Flow(  'myFirstFlow', [ task1 ]);
+                  
+                  flow
+                  	// append the second task
+                  	.use( task2 )
+                  	// run the flow
+                  	.run({data: "the data is new"});
+                  </code></pre>
+                  
+                  <h4 id="events">Events</h4>
+                  <p>PantaRhei make use of the Backbone Events, so the  Flow can dispatch the following events: run, pause, resume, error and complete. Apart from the error all the other events pass the shared object as an argument to the listener.
+                  So to get notified when a flow have been successfully executed you can catch the complete event.</p>
+                  
+                  <pre><code>var onComplete = function( shared ){
+                  	console.log(shared);
+                  };
+                  
+                  flow
+                  	.on( 'complete', onComplete)
+                  	.run();
+                  </code></pre>
+                  
+                  <h4 id="error-handling">Error handling</h4>
+                  <p>PantaRhei leave the responsibility to properly handle the errors to you. If any of the worker in the queue pass and error to the next callback, the Flow is paused and dispatch an <strong>error</strong> event. 
+                  Once you have  done with the error handling and you are ready to resume the flow you can call the <strong>resume</strong> method to move to the next worker in the queue.</p>
+                  
+                  <pre><code>var onError = function( err ){
+                  	//handle the error in here
+                  	this.resume();
+                  };
+                  
+                  flow
+                  	.on( 'error', onError)
+                  	.run();
+                  </code></pre>
+                  
+                  <hr />
+                  
+                  <p>I hope you will find this useful, if you have questions or suggestion you can reach me via <a href="http://twitter.com/FedericoWeber">Twitter</a> or <a href="https://alpha.app.net/federicoweber">ADN</a>.</p>
+                  
+                  <div class="footnotes">
+                    <ol>
+                      <li id="fn:1">
+                        <p>If you are looking for an introduction to the use of middle wares in Connect I suggest you to check this short <a href="http://stephensugden.com/middleware_guide/">guide</a> written by Stephen Sugden. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                      <li id="fn:2">
+                        <p>The other one is a simple function that accept as arguments the <strong>shared</strong> object and the <strong>next</strong> callback. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                      <li id="fn:3">
+                        <p>More to follow soon. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="kickstarter.html">Kickstarter is not a store</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-09-21 00:00:00 UTC'>Sep 21 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Recently there have been a lot of disillusionment about a series of successfully backed Kickstarter projects who failed to ship. Therefor Kickstarter decide to <a href="http://www.kickstarter.com/blog/kickstarter-is-not-a-store">clarify</a> their position and enforce a new series of rules especially targeted to physical product.</p>
+                  
+                  <blockquote>
+                    <p>It's hard to know how many people feel like they're shopping at a store when they're backing projects on Kickstarter, but we want to make sure that it's no one. Today we're introducing a number of changes to reinforce that Kickstarter isn’t a store.</p>
+                  </blockquote>
+                  
+                  <p>While the <strong>Risks and Challenges</strong> section is a correct move, I have mixed feelings about the new measures for Hardware and Product Design projects. Surely demanding a working prototype is a step in the right direction, but completely prohibit the 3D rendering is a poor choice. And neither of this help backers to understand if the product they are going to support can be realistically manufactured.</p>
+                  
+                  <h2 id="working-prototype">Working prototype</h2>
+                  <p>A working prototype is a necessary step for the creators to figure out how o produce a real product out of their amazing concept. But it's not enough to assure the backers that it's actually possible produce the same product in large quantity, leveraging industrial facilities, neither it's a good estimation of the real production costs—which can also vary by a significant amount based on the number of peaces that are going to be manufactured.</p>
+                  
+                  <p>Especially for complicated products that require a combination of different technologies and draconian manufacturing and distribution lines<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+                  
+                  <h2 id="renderings-and-simulations">Renderings and simulations</h2>
+                  <p>The case against rendering is a complete non sense to me. Simulations and renderings are powerful tools for creators both to  design and iterate the product and to show the backers what the product it's going to look like and the possible colors and trim customizations.</p>
+                  
+                  <h2 id="is-founding-cap-an-option">Is founding cap an option?</h2>
+                  <p>An interesting point Kickstarter raise in their post is to fix to one the amount of quantities that a project can offer to a single backer.</p>
+                  
+                  <blockquote>
+                    <p>Offering multiple quantities of a reward is prohibited. Hardware and Product Design projects can only offer rewards in single quantities or a sensible set</p>
+                  </blockquote>
+                  
+                  <p>This kind of choice make sense considering that over a certain amount of product to produce it could become necessary to reconsider the entire manufacturing line—that could not be convenient probably till a new order of magnitude is reached—and keep manufacturing the product using a line produced for smaller quantity is not always possible or desirable.</p>
+                  
+                  <p>This kind of consideration also open the road to another possibility, a founding cap. Clearly this is not something Kickstarter should force to the product, most of the projects founded don't have real issues with over founding, but could be a nice option that the creators can decide to adopt.</p>
+                  
+                  <p>Even better would be to have <strong>progressive founding goals</strong>; it's quite a common practice, for creators, to promise increased sets of features based on the amount of money (over the initial founding goal) the project manage to raise<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Kickstarter could officially support this kind of initiative by charging late bakers only when the next goal is reached.</p>
+                  
+                  <div class="footnotes">
+                    <ol>
+                      <li id="fn:1">
+                        <p>I do honestly doubt that the <a href="http://www.kickstarter.com/projects/ouya/ouya-a-new-kind-of-video-game-console/posts/275869">Ouya</a> will ship in time for Mar 2013. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                      <li id="fn:2">
+                        <p>The <a href="http://www.kickstarter.com/projects/659943965/planetary-annihilation-a-next-generation-rts">Planetary Annihilation</a> project had an interesting take on this, adding game enhancements and orchestral sound track. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/bag design.html">My new tailor made leather bag</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-09-11 00:00:00 UTC'>Sep 11 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>My new tailor made bag, by <a href="http://www.etsy.com/shop/webag?ref=seller_info">WeBag</a>, just arrived and it's awesome.
+                  The quality of the materials and fabrication is excellent; it truly is the kind of product that will last forever.</p>
+                  
+                  <p><img alt="tailor made WeBag" src="http://img0.etsystatic.com/005/0/6714672/il_fullxfull.373916680_prus.jpg" /></p>
+                  
+                  <p>If you are in the market for a new leather bag you better check <a href="http://www.etsy.com/shop/webag?ref=seller_info">WeBag</a></p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/RIP BillMoggridge.html">RIP Bill Moggridge</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-09-10 00:00:00 UTC'>Sep 10 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Sad but true Bill Moggridge passed away at the age of 69.
+                  Among the other things he was the designer of the first laptop. If it's work it's unknown to you please do yourself a favor and read  <a href="http://www.amazon.com/Designing-Interactions-Bill-Moggridge/dp/0262134748/ref=sr_1_1?ie=UTF8&amp;qid=1347287007&amp;sr=8-1&amp;keywords=bill+moggridge">Design Interaction</a>.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/css3 filters adobe.html">Adobe's CSS Shaders rolled into CSS Filter Effects Specification as an official web standard.</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-09-05 00:00:00 UTC'>Sep  5 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Great news for those among us who wish to bring more exciting effects on the web. Adobe's CSS Shaders proposal have been approved approved by <strong>W3C</strong>  as a part of the <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html">Filter Effects</a>. 
+                  For the ones new with the matter here is an <a href="http://www.adobe.com/devnet/html5/articles/css-shaders.html">introduction</a> and a series of <a href="http://adobe.github.com/web-platform/samples/css-customfilters/">examples</a><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+                  
+                  <div class="footnotes">
+                    <ol>
+                      <li id="fn:1">
+                        <p>A special prototype webkit browser by Adobe is required. You can download it <a href="https://github.com/downloads/adobe/webkit/PrototypeEnhancementsForChromiumMac-may2012-f2f.zip">here</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/jquery typography.html">Fine tune your headers typography with SlabText.js</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-09-03 00:00:00 UTC'>Sep  3 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Based on Erik Loyer's <a href="http://erikloyer.com/index.php/blog/the_slabtype_algorithm_part_1_background/">slabtype algorithm</a> <a href="http://www.frequency-decoder.com/demo/slabText/">SlabText</a> is a nice jQuery plugin to achieve the popular slab header effect. 
+                  I especially like to be able to manually set word combinations and the possibility to set a break point, to disable the effect, if the view port reach a chosen minimum resolution.
+                  Get the source on <a href="https://github.com/freqDec/slabText/">github</a></p>
+                  
+                  <p><img alt="SlabTetx js in action" src="https://dl.dropbox.com/u/116832/federicoweber.com/20120903-113939-NT-3-jquery%20slabTetx.jpg" /></p>
+                  
+                  <p>If you are interested in javascript and typography you should also check Paravel's <a href="http://letteringjs.com">lettering.js</a> to fine tune each single letter of a given text.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/jquery plugins.html">Avgrund Modal</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-09-02 00:00:00 UTC'>Sep  2 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>Nice jQuery plugin, based on the <a href="http://lab.hakim.se/avgrund/">Avgrund</a> concept by <a href="http://hakim.se">Hakim</a>, to display a modal layers showing the depth between it and the page.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/workflow hazel ifttt.html">From Twitter and RSS to OmniFocus</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-08-31 00:00:00 UTC'>Aug 31 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>I'm a voracious user of Flipboard, and during my daily reading I often stumble upon news that I wish to do more with: softwares I wish to try, news to writing about, etc.
+                  To accomplish that i was using a series of <a href="http://ifttt.com">IFTTT</a> rules to send this content to my email; with the result of ending up with a quite polluted email inbox.</p>
+                  
+                  <p>Today <a href="https://twitter.com/viticci">Federico Viticci</a> published it's, IFTTT and <a href="http://www.noodlesoft.com/hazel.php">Hazel</a>, <a href="http://www.macstories.net/tutorials/send-favorite-tweets-to-omnifocus-inbox/">workflow</a> to save starred tweets to OmniFocus, leveraging IFTTT and Hazel.
+                  Inspired by that I've created two IFTTT recipes and two Hazel rules to achieve the same for both twitter and google reader.</p>
+                  
+                  <p>The IFTTT recieps are the following:</p>
+                  
+                  <ul>
+                    <li>one for <a href="https://ifttt.com/recipes/54060">twitter</a></li>
+                    <li>one for <a href="https://ifttt.com/recipes/54062">google reader</a></li>
+                  </ul>
+                  
+                  <p>Both are structured to create a text file inside a specified dropbox folder. The output is designed as a multiline text files.
+                  The first first of which is used as the OF entry <strong>title</strong> and the rest of the content is passed in as the <strong>note</strong>.</p>
+                  
+                  <p>The first of the Hazel rules is conceived to run an <strong>appleScript</strong> to the content of the file—to encode the text in <strong>UTF-8</strong>, parse it and create the new entry in the OmniFocus <strong>inBox</strong>.—, set the label to green (to know which files have been processed) and confirm the entry via Notification Center (using the automator action provided by <a href="http://www.automatedworkflows.com/2012/08/26/display-notification-center-alert-automator-action-1-0-0/">Automated Workflows</a>).</p>
+                  
+                  <p><img alt="The Hazel rule to watch the files" src="https://dl.dropbox.com/u/116832/federicoweber.com/20120831-205446-NT-0-hazel.png" /></p>
+                  
+                  <p>The appleScript to parse the conent:</p>
+                  
+                  <pre><code>-- This script is meant to be executed from Hazel
+                  -- It is used to create a new task inside omnifocus 
+                  -- The first paragraph is used for the title, the others are passed in the notes
+                  -- by Federico Weber | http://federicoweber.com
+                  
+                  on hazelProcessFile(theFile)
+                  	-- get the Title of the task
+                  	set content to read theFile as «class utf8»
+                  	set title to first paragraph of content
+                  	
+                  	-- Get the note of the Task
+                  	set noteContent to get replaceText(title, "", content)
+                  	
+                  	tell application "OmniFocus"
+                  		set theDoc to first document
+                  		tell theDoc
+                  			make new inbox task with properties {name:title, note:noteContent}
+                  		end tell
+                  	end tell
+                  	
+                  	return true
+                  end hazelProcessFile
+                  
+                  -- replaceText method by Buce Phillis 
+                  -- http://foolsworkshop.com/applescript/2008/05/an-applescript-replace-text-method/
+                  on replaceText(find, replace, subject)
+                  	set prevTIDs to text item delimiters of AppleScript
+                  	set text item delimiters of AppleScript to find
+                  	set subject to text items of subject
+                  	
+                  	set text item delimiters of AppleScript to replace
+                  	set subject to "" &amp; subject
+                  	set text item delimiters of AppleScript to prevTIDs
+                  	
+                  	return subject
+                  end replaceText
+                  </code></pre>
+                  
+                  <p>The second rules is used to erase the file after one week if the file have been properly parsed. I could have used just one rule and delete the content after it have been parsed, but I prefer to keep the files longer to fallback if something goes bad.</p>
+                  
+                  <p>If you found this useful please let me know via <a href="http://twitter.com/FedericoWeber">twitter</a> or <a href="https://alpha.app.net/federicoweber">app.net</a>.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/movie samsara.html">Samsara</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-08-26 00:00:00 UTC'>Aug 26 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <iframe src="http://player.vimeo.com/video/46273869?title=0&amp;byline=0&amp;portrait=0&amp;color=da9315" width="657" height="274" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                  
+                  <p>When I first hear about <a href="http://www.barakasamsara.com/baraka/about">Baraka</a>, almost 5 years ago, I was quite skeptical about it—96 minutes of photographs and music is not something to take lightly—but while watching it I was mesmerized by the experience and beauty of the images. And at today I still consider it one of my favorites movies of all the times.</p>
+                  
+                  <p><a href="http://www.barakasamsara.com">Samsara</a>, also directed by Ron Fricke and  produced by Mark Magidson, expand the themes developed in <a href="http://www.barakasamsara.com/baraka/about">Baraka</a> and take us on an extraordinary trip around the world  showing "<em>the ever turning wheel of life</em>". 
+                  The movie have been shoot for almost five years on something like one hundred of location, spanned across twenty-five countries, and have been photographed entirely in 70mm film using a custom build motion control time-lapse camera.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/IL digitalMagazines.html">IL magazine landed on the iPad, and it's awful</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-08-23 00:00:00 UTC'>Aug 23 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <p>This morning I was looking at twitter feed and I did stumbled upon a tweet from <a href="The current art director of the  IL magazine">Francesco Franchi</a>, announcing that the <strong>IL</strong> magazine is finally on the iPad Newsstand and that the current issue it's available for download.
+                  Being a long time supporter<sup id="fnref:collecting"><a href="#fn:collecting" class="footnote">1</a></sup>, I was more than excited about it, imagining the incredible things the staff have pulled out leveraging the possibilities offered by the iPad—Especially considering the intensive use of info-graphics the magazine do, that lead them to won a more than rewarding list of awards, including a <em>Compasso D'oro</em>—. And I decided to welcomely spend the increased price<sup id="fnref:price"><a href="#fn:price" class="footnote">2</a></sup> to enjoy the experience of reading it on my iPad.</p>
+                  
+                  <p><img alt="IL August cover on the iPad" src="https://dl.dropbox.com/u/116832/federicoweber.com/Photo%2023-08-12%2013%2017%2014.png" /></p>
+                  
+                  <p>Unfortunately the magazine is not only far for great—not featuring any interactive content—but it' completely awful. Residing in that terrible editorial space defined by those magazine that, in order to quickly get to the iPad, are presented as a collection of static images and neither went through the effort of adapting the content to the different ration of the layout.</p>
+                  
+                  <p>This was bad enough when the first iPad magazines comes out, almost two years ago. But if an awarded magazine like <strong>IL</strong> pull out something so poor in quality, and charge a premium price for it, I do fell steamed.</p>
+                  
+                  <p><img alt="poor pages alignment" src="https://dl.dropbox.com/u/116832/federicoweber.com/Photo%2023-08-12%2014%2003%2007.png?w=1f396c19" /></p>
+                  
+                  <p>I do really want to read the current issue properly, so right now I'm heading to the nearest newsagent to buy a paper version of the magazine, and i suggest you to do the same. Or better completely skip the digital one if you haven't bought it yet.</p>
+                  
+                  <p>For the future I will patiently wait for a proper digital edition that I'm sure <em>Il Sole 24 Ore</em> have the expertise—being also the publisher of the nice and free iPad magazine <a href="http://itunes.apple.com/it/app/la-vita-nova/id395924638?mt=8">la vita nòva</a>— and the willingness to craft for us.</p>
+                  
+                  <p><img alt="rane" src="https://dl.dropbox.com/u/116832/federicoweber.com/Photo%2023-08-12%2013%2018%2010.png?w=750ef65b" /></p>
+                  
+                  <div class="footnotes">
+                    <ol>
+                      <li id="fn:collecting">
+                        <p>I'm regularly collecting the IL magazine since 2009, and I've always been pleased by it's content quality and it's extraordinary visual appeal. <a href="#fnref:collecting" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                      <li id="fn:price">
+                        <p>The regular price, for the paper edition, is € 2,00 if you buy it with <em>Il Sole 24 Ore</em>, the day it is published, or € 0,50 from the day after. The price for the iPad version is € 2,39. <a href="#fnref:price" class="reversefootnote">&#8617;</a></p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='posts_collection--post'>
+                <header>
+                  <h1>
+                    <a href="/notes/dna storage.html">Harvard cracks DNA storage</a>
+                  </h1>
+                  <span>
+                    <time datetime='2012-08-18 00:00:00 UTC'>Aug 18 2012</time>
+                  </span>
+                </header>
+                <div class='article--body'>
+                  <blockquote>
+                    <p>The work, carried out by George Church and Sri Kosuri, basically treats DNA as just another digital storage device. Instead of binary data being encoded as magnetic regions on a hard drive platter, strands of DNA that store 96 bits are synthesized, with each of the bases (TGAC) representing a binary value (T and G = 1, A and C = 0).</p>
+                  </blockquote>
+                </div>
+              </article>
+            </li>
+          </ol>
+          <div class='posts_collection_nav'>
+            <a href='/notes/p2.html'>next</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../assets/js/application.js"></script>
+  </body>
+</html>
