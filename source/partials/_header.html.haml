@@ -7,12 +7,12 @@
       
       %ol
         %li
-          %a{class: [('-active' if current_page.url.split('/')[1] == 'work')], href: "/work"} work
+          %a{class: [('-active' if current_page.url.split('/')[1] == 'work')], href: url_for("/work")} work
         %li
-          %a{class: [('-active' if current_page.url.split('/')[1] == 'weblog')], href: "/weblog"} notes
+          %a{class: [('-active' if current_page.url.split('/')[1] == 'notes')], href: url_for('/notes')} notes
         %li
-          %a{class: [('-active' if current_page.url.split('/')[1] == 'library')], href: "/library"} reading
+          %a{class: [('-active' if current_page.url.split('/')[1] == 'library')], href: url_for("/library")} reading
         %li
-          %a{class: [('-active' if current_page.url.split('/')[1] == 'hire_me')], href: "/hire_me"} hire me
+          %a{class: [('-active' if current_page.url.split('/')[1] == 'hire_me')], href: url_for("/hire_me")} hire me
       
       #main_nav--marker

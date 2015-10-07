@@ -17,7 +17,26 @@ sizeHomepage = ->
   height = $(window).height() - $('#main_header').outerHeight(true)
   $('#homepage--about').height height
 
-# Expand menu on mobile
+sizeIframes = ->
+  targetWidth = $('iframe').first().parent().width()
+  $('iframe').each ->
+    ratio = $(this).data 'ratio'
+    unless ratio
+      ratio = $(this).width() / $(this).height()
+      $(this).data 'ratio', ratio
+    
+    targetHeight = targetWidth / ratio
+    
+    $(this)
+      .width(targetWidth)
+      .height(targetHeight)
+
+sizeAllThings = ->
+  sizeSquareBlocks()
+  sizeIframes()
+  sizeHomepage()
+
+# mobile nav
 mainNavMobileExpand = ->
   if $(window).width() <= MOBILE_BREAK_POINT
     $('#main_nav > ol').addClass '-js-expand'
@@ -30,10 +49,6 @@ mainNavMobilecollapse = ->
 bindMainNavMobilecollapse = ->
   $(window).on 'scroll', mainNavMobilecollapse
 
-sizeAllThings = ->
-  sizeSquareBlocks()
-  sizeHomepage()
-
 # here we bind it all
 $ ->
   sizeAllThings()
@@ -41,3 +56,4 @@ $ ->
   $(window).on 'resize', sizeAllThings
   
   $('#main_nav > ol').on 'click', mainNavMobileExpand
+  

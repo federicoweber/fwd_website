@@ -41,6 +41,8 @@ GEM
     eventmachine (1.0.8)
     execjs (2.6.0)
     ffi (1.9.10)
+    font-awesome-sass (4.4.0)
+      sass (>= 3.2)
     haml (4.0.7)
       tilt
     hike (1.2.3)
@@ -93,6 +95,9 @@ GEM
       sprockets (~> 2.12.1)
       sprockets-helpers (~> 1.1.0)
       sprockets-sass (~> 1.3.0)
+    middleman-syntax (2.0.0)
+      middleman-core (~> 3.2)
+      rouge (~> 1.0)
     mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.1)
@@ -120,6 +125,8 @@ GEM
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    redcarpet (3.3.3)
+    rouge (1.10.1)
     sass (3.4.18)
     sprockets (2.12.4)
       hike (~> 1.2)
@@ -148,11 +155,14 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
+  font-awesome-sass
   middleman
   middleman-blog
   middleman-deploy
   middleman-livereload
+  middleman-syntax
   neat
+  redcarpet
 
 BUNDLED WITH
    1.10.6

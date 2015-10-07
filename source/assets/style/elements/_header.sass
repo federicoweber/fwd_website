@@ -4,6 +4,25 @@
   +omega
   +pad(1.618em 0 1.618em 0)
   background: $white
+  +transition(box-shadow 200ms $ease-out-cubic)
+  
+  // Experiment with isolation effects on Hover
+  // &:after
+  //   background-color: transparent
+  //   content: ""
+  //   display: block
+  //   position: fixed
+  //   top: 4.4em
+  //   bottom: 0px
+  //   left: 0
+  //   right: 0
+  //   pointer-events: none
+  //   +transition(background-color 250ms $ease-out-cubic)
+  // 
+  // +hover_on_desktop
+  //   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2)
+  //   &:after
+  //     background-color: rgba(0,0,0,.1)
 
 #main_header--content
   +span-columns(10 of 12)
@@ -70,11 +89,13 @@
           
 
     +max_mobile
+      cursor: pointer
       li
         +transition(all 250ms $ease-out-cubic)
         overflow: hidden
         height: 3px
         margin-bottom: 3px
+        border-radius: 3px
         background-color: $black
         
         a
@@ -87,6 +108,7 @@
         li
           height: 18px
           background-color: transparent
+          border-radius: 0px
           a
             +font_size_-1
             color: $gray

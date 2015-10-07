@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700)
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic)
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display:900,900italic)
-
-%font_playfair
-  font-family: 'Playfair Display', serif
 
 %font_fira
   font-family: 'Fira Sans', sans-serif
@@ -16,12 +12,8 @@
   @extend %font_fira
   font-weight: 700
 
-%font_lato
-  font-family: 'Lato', sans-serif
-
 %font_monserrat
   font-family: 'Montserrat', sans-serif
-  letter-spacing: 0.1618em
 
 %font_monserrat_reg
   @extend %font_monserrat
@@ -67,19 +59,12 @@
 @mixin font_size_-3
   font-size: modular-scale(-3)
 
+@mixin font_size_-4
+  font-size: modular-scale(-4)
+
+@mixin font_size_-5
+  font-size: modular-scale(-5)
+
 
 body
   font-size: 16px
-  
-h1, h2, h3, h4, h5, h6
-
-h1
-  @extend %font_monserrat_reg
-  +font_size_5
-  
-p
-  @extend %font_fira_reg
-  +font_size_1
-
-.-uppercase
-  text-transform: uppercase

@@ -1,0 +1,30 @@
+---
+title: Notes – Federico Weber
+pageable: true
+---
+.section#notes
+  %h1.-hide_text
+    %a{href: '/notes'} Notes
+  
+  %ol.notes_collection
+    - page_articles.each do |article|
+      %li
+        %article.note
+          %header.note--header
+            %h1
+              = link_to article.title, article
+            .note--meta
+              %time{datetime: article.date} #{article.date.strftime('%B %Y')}
+              - if article.data.source
+                %a.note--meta--source_url{href: article.data.source, title: "source"}
+                  %i.fa.fa-external-link
+          .article--body
+            = article.body
+
+.notes_collection_nav
+  - if prev_page
+    %a.notes_collection_nav--newer{href: prev_page.url, title: 'newer notes'}
+      %i.fa.fa-calendar-plus-o
+  - if next_page
+    %a.notes_collection_nav--older{href: next_page.url, title: 'older notes'}
+      %i.fa.fa-calendar-minus-o

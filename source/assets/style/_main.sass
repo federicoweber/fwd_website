@@ -2,31 +2,88 @@ body
   color: $black
   background-color: $bg_color
 
-
 a 
   text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+  @extend %font_monserrat_reg
+  
+  a
+    +animate_color
     
+    color: $black !important
+    
+    &:visited, &:active
+      color: $black !important
+    
+    &:after
+      display: none !important
+  
+h1
+  +font_size_1
+  letter-spacing: 0.1618em
+  margin-top: +modular-scale(6)
+  margin-bottom: 0
+  
+  +min_tablet
+    +font_size_3
+  
+  +min_desktop
+    +font_size_5 
+
+h2, h3
+  +font_size_1
+  color: $red
+  margin-top: +modular-scale(1)
+  margin-bottom: 0
+  
+  +min_tablet
+    margin-top: +modular-scale(2)
+    +font_size_2
+  
+  +min_desktop
+    margin-top: +modular-scale(4)
+    
+  &:first-child
+    margin-top: +modular-scale(1)
+    
+h4, h5, h6
+  +font_size_1
+  color: $red
+  
+p
+  @extend %font_fira_reg
+  +font_size_0
+  
+  +min_tablet
+    +font_size_1
+
+ol, ul
+  list-style: none
+  padding: 0
+
+
 // shared modifiers
+.-uppercase
+  text-transform: uppercase
+
 .-hide_text
-  display: none
+  +hide_text
+  margin: 0 !important
     
 
 #wrapper
   +outer-container
 
-#main_content
+.main_content
   +span-columns(12)
+  +transition(all 450ms $ease-out-cubic)
   
   a 
-    text-decoration: none
-    color: $blue
-    +transition(color 250 $ease-out-cubic)
+    color: $black
     
     &:visited, &:active
-      color: $blue
-    
-    &:active
-      color: $blue
+      color: $black
     
     +hover_on_desktop
-      text-decoration: underline
+      color: $red

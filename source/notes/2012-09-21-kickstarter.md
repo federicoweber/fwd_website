@@ -1,7 +1,7 @@
 ---
 title: Kickstarter is not a store
 date: 2012-09-21
-----
+---
 
 Recently there have been a lot of disillusionment about a series of successfully backed Kickstarter projects who failed to ship. Therefor Kickstarter decide to [clarify](http://www.kickstarter.com/blog/kickstarter-is-not-a-store) their position and enforce a new series of rules especially targeted to physical product.
 

@@ -12,9 +12,5 @@ Prepared for a long and painful migration I created an account studied their doc
 
 It's early for me to comment on their service reliability, but with such a pleasant startup I can not help but recommend their service.
 
----
-
-I hope you found this useful if you have questions or comments feel free to contact me on [Twitter](http://twitter.com/FedericoWeber) or [ADN](https://alpha.app.net/federicoweber).
-
 
 [^1]:During this time (from February 28 2012) I've been able to use their services for free leveraging the [Free Tier Period](http://aws.amazon.com/free/faqs/) 

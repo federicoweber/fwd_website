@@ -22,3 +22,7 @@ $max_breakpoints: (huge: 1400px, desktop: 1280px, tablet: 1024px, mobile: 768px)
   @media screen and (min-width:  map-get($max_breakpoints, tablet))
     &:hover
       @content
+
+// some useful placeholders
+@mixin animate_color
+  +transition(color 200ms $ease-out-cubic)

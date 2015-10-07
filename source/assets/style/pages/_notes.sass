@@ -1,0 +1,164 @@
+#notes
+  +span-columns(10 of 12)
+  +shift(1)
+  z-index: 1
+
+.notes_collection
+  overflow: hidden
+
+.note
+  
+  +span-columns(10 of 12)
+  +shift(1)
+  margin-bottom: +modular-scale(2)
+  
+  +min_tablet
+    +span-columns(8 of 10)
+    +shift(1)
+    margin-bottom: +modular-scale(4)
+  
+  +min_desktop
+    +span-columns(6 of 10)
+    +shift(2)
+    margin-bottom: +modular-scale(10)
+  
+  img
+    max-width: 100%
+    width: 100%
+  
+  hr
+    border-style: solid
+    border-width: 1px
+    border-color: $gray
+    border-bottom: 0
+  
+  a
+    position: relative
+    display: inline-block
+    
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      bottom: .15em
+      width: 99%
+      border-bottom: 1px dotted $red
+    &:visited, &:active
+      &:after
+        border-color: $gray
+    
+    &[rel=footnote],
+    &[rev=footnote]
+      color: $gray
+      &:after
+        display: none
+    
+    &[rel=footnote]
+      color: $red
+  
+  blockquote
+    padding: 0 +modular-scale(0)
+    
+    +min_tablet
+      padding: 0 +modular-scale(2)
+    
+    +min_desktop
+      padding: 0 +modular-scale(3)
+    
+    color: $gray
+    margin: 0
+    font-style: italic
+  
+  .highlight
+    +pad(0)
+    
+    +min_tablet
+      +pad(+modular-scale(2))
+  
+  .footnotes
+    +font_size_-2
+    +pad(0)
+    
+    +min_tablet
+      +pad(+modular-scale(2))
+    
+    margin-top: +modular-scale(4)
+  
+.note--header
+  margin-bottom: +modular-scale(2)
+  h1
+    text-transform: uppercase
+  
+
+.note--meta
+  @extend .-uppercase
+  +font_size_-2
+  
+  color: $gray
+  margin-top: +modular-scale(1)
+
+a.note--meta--source_url
+  color: $gray
+  margin-left: +modular-scale(-1)
+  
+  &:visited, &:active
+    color: $gray
+  
+  +hover_on_desktop
+    color: $red
+  
+  &:after
+    display: none
+
+.notes_collection_nav
+  pointer-events: none
+  +span-columns(10 of 12)
+  +shift(1)
+  
+  margin-bottom: +modular-scale(4)
+  z-index: 0
+  
+  +min_tablet
+    position: fixed
+    top: 50%
+    
+
+%collection_nav_tag
+  @extend .-uppercase
+  @extend %font_monserrat
+  +font_size_-3
+  +animate_color
+  
+  color: $gray
+  content: attr(title)
+  
+  +min_tablet
+    content: ''
+  
+  +min_desktop
+    +font_size_-3
+    content: attr(title)
+    &:hover
+      color: $red
+
+
+.notes_collection_nav--newer
+  +font_size_2
+  pointer-events: all
+
+  &:after
+    @extend  %collection_nav_tag
+    
+  i
+    color: $black
+
+.notes_collection_nav--older
+  +font_size_2
+  pointer-events: all
+  float: right
+  
+  &:before
+    @extend  %collection_nav_tag
+
+  i
+    color: $black

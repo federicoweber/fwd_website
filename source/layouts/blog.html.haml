@@ -8,9 +8,22 @@
     = stylesheet_link_tag "application"
 
   %body{class: page_classes}
-    .wrapper
+    #wrapper
       = partial "partials/header"
-      .content
-        = yield
+      .main_content
+        %article.note.-single_note
+          %header.note--header
+            %h1
+              = current_article.title
+            .note--meta
+              %time{datetime: current_article.date} #{current_article.date.strftime('%B %Y')}
+              - if current_article.data.source
+                %a.note--meta--source_url{href: current_article.data.source, title: "source"}
+                  %i.fa.fa-external-link
+          
+          = yield
+      
+      = partial "partials/footer"
   
     = javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application"
+    = stylesheet_link_tag "code"
