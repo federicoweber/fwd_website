@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href='/feed.xml' rel='alternate' type='application/atom+xml'>
+    <link href='favicon.ico' rel='icon' type='image/ico'>
+    <title>Notes – Federico Weber</title>
+    <link href="../assets/style/application.css" rel="stylesheet" />
+  </head>
+  <body class='notes notes_p5'>
+    <div id='wrapper'>
+      <header id='main_header'>
+        <div id='main_header--content'>
+          <nav id='main_nav'>
+            <h1 id='main_header--title'>
+              <a href='/'>Federico Weber</a>
+            </h1>
+            <ol>
+              <li>
+                <a href='/about_me'>about me</a>
+              </li>
+              <li>
+                <a class='-active' href='/notes'>notes</a>
+              </li>
+              <li>
+                <a href='https://www.goodreads.com/user/show/17488758-federico'>reading</a>
+              </li>
+            </ol>
+            <div id='main_nav--marker'></div>
+          </nav>
+        </div>
+      </header>
+      <div class='main_content'>
+        <section id='notes'>
+          <h1 class='-hide_text'>
+            <a href='/notes'>Notes</a>
+          </h1>
+          <ol class='notes_collection'>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/github_socialnetwork.html">Is Github the most important social network?</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-07-15 11:41:01 UTC'>July 2012</time>
+                    <a class='note--meta--source_url' href='http://7fff.com/2012/07/14/the-most-important-social-network-github/' title='source'>
+                      <i class='fa fa-external-link'></i>
+                    </a>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p>John G. Norman:</p>
+                  
+                  <blockquote>
+                  <p>TL;DR: GitHub is the largest public repository of the everyday experience of work. Ever. If you’re a scholar or journalist interested in collaboration, this is perhaps the most important archive you will find regarding what actually happens as people work together.</p>
+                  </blockquote>
+                  
+                  <p>I do think Github is great and on the long run it is a rich <strong>log</strong> of the history and evolution of software development. That is one of the fields that is pushing the human race forward.
+                  But on a mass scale, it can not be as relevant as Twitter, Facebook or Linkein.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/busnessModel_writing.html">The new TBR 7 days content delay business model</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-07-11 22:06:56 UTC'>July 2012</time>
+                    <a class='note--meta--source_url' href='http://brooksreview.net/2012/07/new-tbr/' title='source'>
+                      <i class='fa fa-external-link'></i>
+                    </a>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p>New interesting approach on payment subscription for opinion based websites by the Ben Brooks.
+                  Please read the original <a href="http://brooksreview.net/2012/07/new-tbr/">article</a> for a better insight.</p>
+                  
+                  <blockquote>
+                  <p>All non-members of the site will have access to every post that members have access too, with one caveat: non-members won’t see those posts until seven days after I posted them.</p>
+                  
+                  <p>I realize this isn’t ideal, but being as what I write is not time relevant, I feel that this is a decent tradeoff. If you aren’t a member you won’t be able to see what you are, in fact, missing — thus the content is indeed new to you when it does become “unlocked”. (This is the plan at least.)</p>
+                  </blockquote>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/javascript_mousetrap.html">Street Fighter, combos like, keyboard shortcuts in javascript</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-07-06 14:48:58 UTC'>July 2012</time>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p><a href="http://craig.is/killing/mice">MouseTrap</a> is a lightweight, 1.4kb <em>minified</em> and <em>gzipped</em>, javascript library. Developed by <a href="http://craig.is/">Creaig Campbell</a>. That allow you to, easily create, and listen to keyboard shortcuts.</p>
+                  
+                  <p>The sintax for the implementation is as simple as:</p>
+                  <pre class="highlight plaintext"><code>Mousetrap.bind(['command+s', 'ctrl+s'],function(){
+                      //callback goes here
+                  });
+                  </code></pre>
+                  
+                  <p>And it also allow you to declare sequences of keys like this:</p>
+                  <pre class="highlight plaintext"><code>Mousetrap.bind('up up down down left right left right b a enter', function() {
+                      //callback goes here
+                  });
+                  </code></pre>
+                  
+                  <p>You can find it on <a href="https://github.com/ccampbell/mousetrap">github</a>, or test it&rsquo;s awesomeness firing an <strong>Hadoken</strong> <em>(down down right right a)</em></p>
+                  
+                  <div id="hadokenHolder"></div>
+                  
+                  <script src="https://raw.github.com/ccampbell/mousetrap/master/mousetrap.min.js"></script>
+                  
+                  <script>
+                  var init = function(){
+                      if(typeof $ != 'undefined'){
+                          loadPlayer();
+                      } else {
+                          setTimeout(init,2000)
+                      }
+                  };
+                  
+                  var loadPlayer = function(){
+                      //Load player api asynchronously.
+                      var tag = document.createElement('script');
+                      tag.src = "http://www.youtube.com/player_api";
+                      var firstScriptTag = document.getElementsByTagName('script')[0];
+                      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                      var done = false;
+                      var player;
+                      onYouTubePlayerAPIReady = function onYouTubePlayerAPIReady() {
+                          player = new YT.Player('hadokenHolder', {
+                              height: '0',
+                              width: '640',
+                              videoId: 'pHJKS3r_YUg'
+                          });
+                          
+                          //Listen to combo press
+                          Mousetrap.bind('down down right right a',function(){
+                              console.log("now playing")
+                              $('#hadokenHolder').addClass('play').css({'height': '390px'})
+                              player.stopVideo()
+                              player.seekTo(9, false)
+                              player.playVideo()
+                              setTimeout(function(){closeHadoken(player)},3000);
+                          });
+                          }   
+                  }
+                  
+                  var closeHadoken = function(player){
+                      var currentTime = player.getCurrentTime();
+                      
+                      if(currentTime >= 12){
+                          $('#hadokenHolder').removeClass('play').css({'height': '0'})
+                          player.stopVideo()
+                      } else {
+                          var timeDif = (12 - currentTime )*1000
+                          setTimeout(function(){closeHadoken(player)},timeDif);
+                      }
+                  };
+                  
+                  init();
+                  </script>
+                  
+                  <STYLE type="text/css">
+                      #hadokenHolder{
+                          opacity: 0;
+                          width: 100%;
+                          overflow: hidden;
+                          -webkit-transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+                          -moz-transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+                          -o-transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+                          transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+                      }
+                      
+                      #hadokenHolder.play{
+                          opacity: 1;
+                      }
+                  </STYLE>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/Chrome_iOS.html">Google Chrome for iOS</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-06-28 21:22:11 UTC'>June 2012</time>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p>Google have just released Chrome for iOS on the <a href="http://itunes.apple.com/us/app/chrome/id535886823">App Store</a>.
+                  Unfortunately it&rsquo;s not running on v8, Apple is not allowing that, and it&rsquo;s significatively slower than mobile safari. Still it do pack some interesting features. Like the unified address and search bar, and the synchronization of  current opened tabs between multiple devices.
+                  <img src="https://dl.dropbox.com/u/116832/federicoweber.com/20120628-221534-NT-0-ios-chrome.png" /></p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/workFlow_notes_hazel_automation.html">My mobile notes taking workflow</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-06-28 18:33:02 UTC'>June 2012</time>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p>When I stumbled upon <a href="http://agiletortoise.com/drafts">Drafts</a>, by Agile Tortoise, I dediced to use it as my mobile note taking app. My choise was dictated by three main reasons:</p>
+                  
+                  <ul>
+                  <li>it&rsquo;s among the fastest writing app on iOS, ready to write as soon as you start it</li>
+                  <li>it support textExpander</li>
+                  <li>it can save the entries to dropbox</li>
+                  </ul>
+                  
+                  <h2>Integrate it in the overall workflow</h2>
+                  
+                  <p>The only problem was to integrate it within my workflow.
+                  On the mac I am an <a href="http://brettterpstra.com/project/nvalt/">nvAlt</a> user and I&rsquo;m also using a strict naming convention for my files.
+                  More or less all my notes files names look like this <strong>20120628-193211-NT-0-tag</strong>, where the third element <em>NT</em> is the type of the file, in this case a <em>note</em>. Unfortunately drafts did not allow me to specify the file name and it can only save the file on the sandboxed <em>/Apps/Drafts</em> folder inside dropbox.</p>
+                  
+                  <h2>Hazel comes to rescue</h2>
+                  
+                  <p>I did fixed that with the help of <a href="http://smilesoftware.com/TextExpander/">TextExpander</a>, <a href="http://www.noodlesoft.com/hazel.php">Hazel</a> and a little bit of appleScript.</p>
+                  
+                  <p>The file name problem is solved using the first paragraph of the note to write it down, the date is included thanks to TextExpander.</p>
+                  
+                  <p>Then on the mac i do have an hazel rule that watch the file content for the notes related tokens, run an appleScipt on it and finally move the files to my main notes folder.
+                  <img src="https://dl.dropbox.com/u/116832/federicoweber.com/20120628-195122-SP-1-workflow%20hazel.jpg" /></p>
+                  
+                  <p>Here is the script. I think it can be done better, but I&rsquo;ve just started learning appleScript.</p>
+                  <pre class="highlight plaintext"><code>-- This script is meant to be executed from Hazel
+                  -- it will change the file name to the first paragraph 
+                  -- set the extension to .md
+                  -- and delete the filename from the file content
+                  -- by Federico Weber | http://federicoweber.com
+                  
+                  on hazelProcessFile(theFile)
+                      -- get the file name
+                      set content to read theFile
+                      set newFileName to first paragraph of content
+                  
+                      -- rename the file
+                      tell application "Finder"
+                          set name of theFile to newFileName &amp; ".md"
+                      end tell
+                  
+                      -- delete the name of the file from the content 
+                      set newContent to get replaceText(newFileName, "", content)
+                      set openFile to open for access theFile with write permission
+                      set eof of openFile to 0
+                      write newContent to openFile starting at eof as text
+                      close access openFile
+                      return true
+                  end hazelProcessFile
+                  
+                  -- replaceText method by Buce Phillis 
+                  -- http://foolsworkshop.com/applescript/2008/05/an-applescript-replace-text-method/
+                  on replaceText(find, replace, subject)
+                      set prevTIDs to text item delimiters of AppleScript
+                      set text item delimiters of AppleScript to find
+                      set subject to text items of subject
+                  
+                      set text item delimiters of AppleScript to replace
+                      set subject to "" &amp; subject
+                      set text item delimiters of AppleScript to prevTIDs
+                  
+                      return subject
+                  end replaceText
+                  </code></pre>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/walrus_javascript.html">Walrus.js</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-06-28 15:21:29 UTC'>June 2012</time>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p><a href="http://documentup.com/jeremyruppel/walrus/">Walrus</a> is a new templating library with a interesting twist on <strong>presentation logic</strong>, and an useful collection of <strong>view helpers</strong>.</p>
+                  
+                  <p>I&rsquo;m currently testing it to use it as the default templating language in <a href="https://github.com/federicoweber/vgHear">vgHear</a></p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/sublimeText_sofware.html">SublimeText 2</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-06-26 20:48:36 UTC'>June 2012</time>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p><a href="http://www.sublimetext.com/">SublimeText</a> 2.0 is officially out, and it&rsquo;s great. If you do write code for living, do yourself a favor and get it.</p>
+                  
+                  <p>Here is the official <a href="http://www.sublimetext.com/blog/articles/sublime-text-2-0-released">article</a> and the 
+                  <a href="http://news.ycombinator.com/item?id=4161610">comments</a> on HakerNews.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/wthr_iOS_app.html">WTHR, wheather app with great style</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-06-26 06:01:48 UTC'>June 2012</time>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p><a href="http://www.wthr.co/">WTHR</a> is a simple and beautifull approach to weather apps by <a href="https://twitter.com/#!/DavidElgena">David Elgena</a>.</p>
+                  
+                  <p><img alt="wthr" src="https://dl.dropbox.com/u/116832/federicoweber.com/wthr.png" /></p>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </section>
+        <div class='notes_collection_nav'>
+          <a class='notes_collection_nav--newer' href='/notes/p4.html' title='newer notes'>
+            <i class='fa fa-calendar-plus-o'></i>
+          </a>
+        </div>
+      </div>
+      <footer id='main_footer'>
+        <ul>
+          <li>
+            <a href='https://github.com/federicoweber' title='github'>
+              <i class='fa fa-github'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://instagram.com/federicoweber' title='instagram'>
+              <i class='fa fa-instagram'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://www.pinterest.com/federicoweber/' title='pinterest'>
+              <i class='fa fa-pinterest'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://twitter.com/federicoweber' title='twitter'>
+              <i class='fa fa-twitter'></i>
+            </a>
+          </li>
+          <li>
+            <a href='http://federicoweber.vsco.co' title='vsco'>
+              <img src='http://assets.vsco.co/assets/images/assets/Grid_black_16.png'>
+            </a>
+          </li>
+          <li class='-with_text -push_right'>
+            <a href='mailto:federicoweber@gmail.com' title='email'>
+              <span class='text'>email me</span>
+              <i class='fa fa-envelope-o'></i>
+            </a>
+          </li>
+          <li class='-with_text'>
+            <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike 4.0 International'>
+              <span class='text'>license</span>
+              <i class='fa fa-creative-commons'></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../assets/js/application.js"></script>
+    <link href="../assets/style/code.css" rel="stylesheet" />
+  </body>
+</html>

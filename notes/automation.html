@@ -4,6 +4,8 @@
     <meta charset='utf-8'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href='/feed.xml' rel='alternate' type='application/atom+xml'>
+    <link href='favicon.ico' rel='icon' type='image/ico'>
     <title>bootstrapping projects</title>
     <link href="../assets/style/application.css" rel="stylesheet" />
   </head>
@@ -17,77 +19,128 @@
             </h1>
             <ol>
               <li>
-                <a href='/work'>work</a>
+                <a href='/about_me'>about me</a>
               </li>
               <li>
                 <a class='-active' href='/notes'>notes</a>
               </li>
               <li>
-                <a href='/library'>reading</a>
-              </li>
-              <li>
-                <a href='/hire_me'>hire me</a>
+                <a href='https://www.goodreads.com/user/show/17488758-federico'>reading</a>
               </li>
             </ol>
             <div id='main_nav--marker'></div>
           </nav>
         </div>
       </header>
-      <div id='main_content'>
-        <h2 id="automate-project-creation">Automate project creation</h2>
-        <p>Lately I'm doing a lot of small web projects that, more ore less, have the same folder structure, are based on the same framework, and leverage the same version control system, clearly <strong>Git</strong>.
-        Therefore I've decided to spend some time to automate the project setup process.</p>
-        
-        <h2 id="meet-projectbootstrap">Meet projectBootstrap</h2>
-        <p>The result of my tinkering is <a href="https://github.com/federicoweber/projectBootstrap">projectBootstrap</a>, a small script in <strong>node.js</strong>, that given a target folder and a configuration file. Take care of populating it, downloading the dependencies, init the Git repo and crete a .taskpaper file to hold the project todo list.</p>
-        
-        <p>When the script is executed it will look for an <strong>init.json</strong> file inside the target folder. If this is not provided the script will use the default one, that do exist in the script root folder.</p>
-        
-        <h3 id="initjson">init.json</h3>
-        <p>The init.json is the configuration file used to bootstrap the project, and it's where  the components for the projects are specified. 
-        It is possible to request the following elements:</p>
-        
-        <ul>
+      <div class='main_content'>
+        <article class='note -single_note'>
+          <header class='note--header'>
+            <h1>
+              bootstrapping projects
+            </h1>
+            <div class='note--meta'>
+              <time datetime='2012-07-17 14:03:46 UTC'>July 2012</time>
+            </div>
+          </header>
+          <h2>Automate project creation</h2>
+          
+          <p>Lately I&rsquo;m doing a lot of small web projects that, more ore less, have the same folder structure, are based on the same framework, and leverage the same version control system, clearly <strong>Git</strong>.
+          Therefore I&rsquo;ve decided to spend some time to automate the project setup process.</p>
+          
+          <h2>Meet projectBootstrap</h2>
+          
+          <p>The result of my tinkering is <a href="https://github.com/federicoweber/projectBootstrap">projectBootstrap</a>, a small script in <strong>node.js</strong>, that given a target folder and a configuration file. Take care of populating it, downloading the dependencies, init the Git repo and crete a .taskpaper file to hold the project todo list.</p>
+          
+          <p>When the script is executed it will look for an <strong>init.json</strong> file inside the target folder. If this is not provided the script will use the default one, that do exist in the script root folder.</p>
+          
+          <h3>init.json</h3>
+          
+          <p>The init.json is the configuration file used to bootstrap the project, and it&rsquo;s where  the components for the projects are specified. 
+          It is possible to request the following elements:</p>
+          
+          <ul>
           <li>a <strong>boilerplate</strong>, used to setup the initial folder and files structure</li>
           <li>one ore more <strong>Git submodules</strong></li>
           <li>a series of <strong>libraries</strong></li>
           <li>a <strong>folder name</strong> to organize the libraries in</li>
           <li>the initial <strong>commit message</strong></li>
           <li>and the name of the <strong>todo list file</strong></li>
-        </ul>
-        
-        <p>This is the default init.json you can find on  the github project:</p>
-        
-        <pre><code>{
-        		"boilerplate": "https://github.com/federicoweber/vgHear/raw/master/boilerplate.zip"
-        	,	"subModules": [
-        			"https://github.com/federicoweber/vgHear.git"
-        		]
-        	, 	"libs": [
-        
-        		]
-        	,	"commit": "init Repo"
-        	,	"libsPath": "app/js/libs"
-        	,	"todoName": "todo.taskpaper"
-        
-        }
-        </code></pre>
-        
-        <h2 id="running-the-script">Running the script</h2>
-        <p>The target folder is passed with a <strong>target</strong> environment variable when the script is executed.</p>
-        
-        <p>Ex.</p>
-        
-        <pre><code>$ target=PROJECT_FOLDER node projectBootstrapp.js
-        </code></pre>
-        
-        <p>To make the process faster I'm also leverging a <a href="http://www.keyboardmaestro.com/main/">keyboard maestro</a> macro to run the script on the current selected folder in <em>finder</em>.</p>
-        
-        <p><img alt="here is the macro" src="https://dl.dropbox.com/u/116832/federicoweber.com/20120717-185936-RC-1-automation%20keyboardMaestro.png" /></p>
-        
-        <p>You can find the script on <a href="https://github.com/federicoweber/projectBootstrap">Github</a>.</p>
+          </ul>
+          
+          <p>This is the default init.json you can find on  the github project:</p>
+          <pre class="highlight json"><code><span class="p">{</span><span class="w">
+                  </span><span class="nt">"boilerplate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/federicoweber/vgHear/raw/master/boilerplate.zip"</span><span class="w">
+              </span><span class="p">,</span><span class="w">   </span><span class="nt">"subModules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                      </span><span class="s2">"https://github.com/federicoweber/vgHear.git"</span><span class="w">
+                  </span><span class="p">]</span><span class="w">
+              </span><span class="p">,</span><span class="w">   </span><span class="nt">"libs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          
+                  </span><span class="p">]</span><span class="w">
+              </span><span class="p">,</span><span class="w">   </span><span class="nt">"commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"init Repo"</span><span class="w">
+              </span><span class="p">,</span><span class="w">   </span><span class="nt">"libsPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app/js/libs"</span><span class="w">
+              </span><span class="p">,</span><span class="w">   </span><span class="nt">"todoName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"todo.taskpaper"</span><span class="w">
+          
+          </span><span class="p">}</span><span class="w">
+          </span></code></pre>
+          
+          <h2>Running the script</h2>
+          
+          <p>The target folder is passed with a <strong>target</strong> environment variable when the script is executed.</p>
+          
+          <p>Ex.</p>
+          <pre class="highlight plaintext"><code>$ target=PROJECT_FOLDER node projectBootstrapp.js
+          </code></pre>
+          
+          <p>To make the process faster I&rsquo;m also leverging a <a href="http://www.keyboardmaestro.com/main/">keyboard maestro</a> macro to run the script on the current selected folder in <em>finder</em>.</p>
+          
+          <p><img alt="here is the macro" src="https://dl.dropbox.com/u/116832/federicoweber.com/20120717-185936-RC-1-automation%20keyboardMaestro.png" /></p>
+          
+          <p>You can find the script on <a href="https://github.com/federicoweber/projectBootstrap">Github</a>.</p>
+        </article>
       </div>
+      <footer id='main_footer'>
+        <ul>
+          <li>
+            <a href='https://github.com/federicoweber' title='github'>
+              <i class='fa fa-github'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://instagram.com/federicoweber' title='instagram'>
+              <i class='fa fa-instagram'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://www.pinterest.com/federicoweber/' title='pinterest'>
+              <i class='fa fa-pinterest'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://twitter.com/federicoweber' title='twitter'>
+              <i class='fa fa-twitter'></i>
+            </a>
+          </li>
+          <li>
+            <a href='http://federicoweber.vsco.co' title='vsco'>
+              <img src='http://assets.vsco.co/assets/images/assets/Grid_black_16.png'>
+            </a>
+          </li>
+          <li class='-with_text -push_right'>
+            <a href='mailto:federicoweber@gmail.com' title='email'>
+              <span class='text'>email me</span>
+              <i class='fa fa-envelope-o'></i>
+            </a>
+          </li>
+          <li class='-with_text'>
+            <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike 4.0 International'>
+              <span class='text'>license</span>
+              <i class='fa fa-creative-commons'></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../assets/js/application.js"></script>
+    <link href="../assets/style/code.css" rel="stylesheet" />
   </body>
 </html>

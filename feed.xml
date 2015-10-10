@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href='/feed.xml' rel='alternate' type='application/atom+xml'>
+    <link href='favicon.ico' rel='icon' type='image/ico'>
+    <title>Federico Weber</title>
+    <link href="assets/style/application.css" rel="stylesheet" />
+  </head>
+  <body class='feed'>
+    <div id='wrapper'>
+      <header id='main_header'>
+        <div id='main_header--content'>
+          <nav id='main_nav'>
+            <h1 id='main_header--title'>
+              <a href='/'>Federico Weber</a>
+            </h1>
+            <ol>
+              <li>
+                <a href='/about_me'>about me</a>
+              </li>
+              <li>
+                <a href='/notes'>notes</a>
+              </li>
+              <li>
+                <a href='https://www.goodreads.com/user/show/17488758-federico'>reading</a>
+              </li>
+            </ol>
+            <div id='main_nav--marker'></div>
+          </nav>
+        </div>
+      </header>
+      <div class='main_content'>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom">
+          <title>Federico Weber</title>
+          <subtitle>Notes</subtitle>
+          <id>http://federicoweber.com/notes</id>
+          <link href="http://federicoweber.com/notes"/>
+          <link href="http://federicoweber.com/feed.xml" rel="self"/>
+          <updated>2015-01-01T01:00:00+01:00</updated>
+          <author>
+            <name>Blog Author</name>
+          </author>
+          <entry>
+            <title>Wanderers</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/wanderers.html"/>
+            <id>http://federicoweber.com/notes/wanderers.html</id>
+            <published>2015-01-01T01:00:00+01:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;iframe src="http://player.vimeo.com/video/108650530?color=ffffff" width="658" height="370" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        
+        &lt;blockquote&gt;
+        &lt;p&gt;“As for me, I am tormented with an everlasting itch for things remote. I love to sail forbidden seas, and land on barbarous coasts.”&lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;Wanderers - a short film by Erik Wernquist&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Migrating from Amazon EC2 to Nodejitsu PaaS</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/EC2_nodejitsu_server_gestalt.html"/>
+            <id>http://federicoweber.com/notes/EC2_nodejitsu_server_gestalt.html</id>
+            <published>2013-02-10T01:00:00+01:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Last year I decided to renew my website, and cause I was also studying Node.js I decided to develop from scratch the publishing platform—you can read more about it in &lt;a href="http://federicoweber.com/gestaltapp/20120625-142551-pi-3-introducinggestalt"&gt;here&lt;/a&gt;—and self host it on Amazon EC2 to get a grip on the platform. &lt;/p&gt;
+        
+        &lt;p&gt;As my first attempt to self manage a server, setting up the EC2 instance was far from an easy task for me. It took me a couple of days of studying official documentation and tutorials to successfully setup the EC2 instance, deploy Gestalt via GIT and have the server run it as a demon. &lt;/p&gt;
+        
+        &lt;p&gt;During this time, while Gestalt grown in capabilities and performance, I discovered myself to be a terrible SisAdmin. Therefor when I received the notification that my free tier&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; was about to expire I quickly decided to migrate everything to a managed platform where my only concern would bee to work on the Gestalt.&lt;/p&gt;
+        
+        &lt;p&gt;Looking for the perfect match for my needs I decided to give a try at &lt;a href="http://nodejitsu.com/paas.html"&gt;Nodejitsu&amp;rsquo;s Platform as a Service&lt;/a&gt; (Paas)—being attracted from their convenient fees, with the cheapest plan, for individuals, starting at $3 a month. 
+        Prepared for a long and painful migration I created an account studied their documentation, installed jitsu CLI via npm and in &lt;strong&gt;less then 10 minutes&lt;/strong&gt; Gestalt was running smoothly from their servers. Once I&amp;rsquo;ve been sure that everything was stable I update the DNS records and shutted down  the EC2 instance.&lt;/p&gt;
+        
+        &lt;p&gt;It&amp;rsquo;s early for me to comment on their service reliability, but with such a pleasant startup I can not help but recommend their service.&lt;/p&gt;
+        
+        &lt;p&gt;During this time (from February 28 2012) I&amp;rsquo;ve been able to use their services for free leveraging the &lt;a href="http://aws.amazon.com/free/faqs/"&gt;Free Tier Period&lt;/a&gt; &lt;/p&gt;
+        
+        &lt;div class="footnotes"&gt;
+        &lt;hr&gt;
+        &lt;ol&gt;
+        
+        &lt;li id="fn1"&gt;
+        &lt;/li&gt;
+        
+        &lt;/ol&gt;
+        &lt;/div&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>The New Disruptors</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/podcast_makers.html"/>
+            <id>http://federicoweber.com/notes/podcast_makers.html</id>
+            <published>2012-12-14T01:00:00+01:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Hosted by Glenn Fleishman, &lt;a href="http://www.muleradio.net/newdisruptors/"&gt;The New Disruptors&lt;/a&gt; is brilliant weekly podcast, on Mule Radio Syndicate, that investigate the new economy of Makers and Crowdfunding.&lt;/p&gt;
+        
+        &lt;p&gt;Unfortunately the audio quality is poor(that was true at the time of writing &lt;em&gt;12/14/2012&lt;/em&gt; but audio quality of the new episodes is remarkable), but the content is remarkable and the pace is engaging. If you are into self-production you must subscribe to this podcast.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Firefly, a skateboarding movie shooted with a drone</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/skateboard_video_drone.html"/>
+            <id>http://federicoweber.com/notes/skateboard_video_drone.html</id>
+            <published>2012-12-12T01:00:00+01:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;iframe src="http://player.vimeo.com/video/55094977?color=ffffff" width="658" height="370" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Smart images responsive crop with CSS3</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/css3_images.html"/>
+            <id>http://federicoweber.com/notes/css3_images.html</id>
+            <published>2012-12-04T01:00:00+01:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Explore the source code on Github&lt;/p&gt;
+        
+        &lt;p&gt;[github]https://github.com/adamdbradley/focal-point#readme&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Behind The Scenes of Crysis 3</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/videogames_Crysis3.html"/>
+            <id>http://federicoweber.com/notes/videogames_Crysis3.html</id>
+            <published>2012-12-01T01:00:00+01:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;iframe width="658" height="370" src="http://www.youtube.com/embed/rdGmH2AFvQo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Rain Room at the Barbican</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/art_experience.html"/>
+            <id>http://federicoweber.com/notes/art_experience.html</id>
+            <published>2012-11-20T01:00:00+01:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;iframe src="http://player.vimeo.com/video/51830893?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;badge=0&amp;amp;color=ffffff" width="657" height="369"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        
+        &lt;blockquote&gt;
+        &lt;p&gt;Rain Room is a hundred square metre field of falling water through which it is possible to walk, trusting that a path can be navigated, without being drenched in the process.&lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;A simple yet amazing concept well executed by &lt;a href="http://random-international.com"&gt;Randon International&lt;/a&gt;. This is truly the kind of experience in which technology become magic.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>My quest to Pogonotomy</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/pogonotomy.html"/>
+            <id>http://federicoweber.com/notes/pogonotomy.html</id>
+            <published>2012-11-18T15:48:58+01:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;h2&gt;The art of wet shaving&lt;/h2&gt;
+        
+        &lt;p&gt;My father taught me to shave with a Bic disposable razor and canned foam when I was 14; and for my 16th birthday I received as a present from Gillette, a free Mac3&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; that become my shaving razor for almost a decade.
+        The experience of shaving with it was far from ideal, my neck used to be filled with ingrown hairs and razors burns and I grow up believing that I&amp;rsquo;ve been cursed with a delicate skin.&lt;/p&gt;
+        
+        &lt;h3&gt;Electric shaving&lt;/h3&gt;
+        
+        &lt;p&gt;For Christmas of 2008 my parents gifted me an electric shaver, a shining multi-purpose Braun Cruzer3. As awesome as it look this shaver can be really useful for trimming and refining intricate beard styles but, being almost beardless, I used that to completely shave myself. 
+        The shaving experience with the Cruzer3 have been, if possible, even worst. I&amp;rsquo;ve kept using it for almost six months, hoping that my beard will adapt, before giving up.&lt;/p&gt;
+        
+        &lt;h3&gt;More blades are better&lt;/h3&gt;
+        
+        &lt;p&gt;On that time I decide that my old Mac3 already got enough miles and I bought a Gillette Fusion&lt;sup id="fnref2"&gt;&lt;a href="#fn2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt; and switched to shaving gel in place of the canned foam.&lt;/p&gt;
+        
+        &lt;p&gt;I must admit that the overall shaving experience improved quite a bit, but the shaving costs grown out of control. 
+        To prevent razor burns I had to replace the shaving head every two week, and with a costs of €4,50 each, my beard used to cost me almost €100 a year in blades.&lt;/p&gt;
+        
+        &lt;h3&gt;Shaved by a professional&lt;/h3&gt;
+        
+        &lt;p&gt;On october of 2011 my wife got pregnant and we decided to move to a proper&lt;sup id="fnref3"&gt;&lt;a href="#fn3" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt; apartment in the city center. On the new neighborhood we discovered a small barber shop whose owner, a gentle man from Naples on its 70&amp;rsquo;s, use to provide old manner shaving service with a Shavette razor&lt;sup id="fnref4"&gt;&lt;a href="#fn4" rel="footnote"&gt;4&lt;/a&gt;&lt;/sup&gt;, pre-shave balm and hand mounted foam.
+        That have been by far one of the best shaving experience at that point, and settled the benchmark for all of the following ones.
+        The shaving foam was soft and warm and the razor glided over my tightened skin producing a resolute sound while trimming the whiskers. The result was a smooth and relaxed face on which the beard refused to grown back for the following three days.&lt;/p&gt;
+        
+        &lt;h3&gt;The Straight Razor&lt;/h3&gt;
+        
+        &lt;p&gt;After that experience I&amp;rsquo;ve grown interested in Straight Razors&lt;sup id="fnref5"&gt;&lt;a href="#fn5" rel="footnote"&gt;5&lt;/a&gt;&lt;/sup&gt;, and with my great pleasure, my Father in Law, in accord with my Wife, gave me as a present, for my 29th birthday, a huge 7/8 Straight Razor from Filarmonica&lt;sup id="fnref6"&gt;&lt;a href="#fn6" rel="footnote"&gt;6&lt;/a&gt;&lt;/sup&gt; and a leather strop.
+        My first shave with that razor was a mess, I recursively cutted my self badly, and my skin was so sore that I&amp;rsquo;ve been not able to shave for almost a week. 
+        The experience was so bad that I almost give up, but the memories of that one amazing shave I got in that small barber shop in Milan persuaded me to endure on the path. &lt;/p&gt;
+        
+        &lt;h3&gt;Going pro&lt;/h3&gt;
+        
+        &lt;p&gt;After that first terrible shave it&amp;rsquo;s passed almost one year. In this time  I bought a smaller, shave-ready, razor(5/8 roundpoint Astrale from Dovo); learned how to prepare my face, lather the shaving cream; and take care of my razor.&lt;/p&gt;
+        
+        &lt;p&gt;Now days razors burns and ingrown hairs are distant nightmare, I rarely cut myself and I&amp;rsquo;m able to achieve a wonderful shave that is almost on par with the one I got in that barber shop. But more important than that is the transformation of a painful daily routine in an awesome ritual that I enjoy twice a week and I&amp;rsquo;m on a long life path to hone my skills in the art of pogonotomy.&lt;/p&gt;
+        
+        &lt;p&gt;If you liked what you read please follow me on &lt;a href="http://twitter.com/FedericoWeber"&gt;Twitter&lt;/a&gt; or &lt;a href="https://alpha.app.net/federicoweber"&gt;ADN&lt;/a&gt;.&lt;/p&gt;
+        
+        &lt;div class="footnotes"&gt;
+        &lt;hr&gt;
+        &lt;ol&gt;
+        
+        &lt;li id="fn1"&gt;
+        &lt;p&gt;The Gillette Mach3 is a line of safety razors produced by Gillette and introduced in 1998 after more than $750 million in research and development costs. Gillette used to ship free Mac3 razors as an advertisement around 1999. &lt;a href="http://en.wikipedia.org/wiki/Gillette_Mach3"&gt;Source&lt;/a&gt;&amp;nbsp;&lt;a href="#fnref1" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn2"&gt;
+        &lt;p&gt;The Gillette Fusion is a five-bladed razor released in 2006. The Fusion has five blades on the front, and a single sixth blade on the rear for precision trimming.&amp;nbsp;&lt;a href="#fnref2" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn3"&gt;
+        &lt;p&gt;We used to live in a nice multi level loft in the suburb, and we were imagining our baby jumping out from the open first floor as soon as she start crawling around.&amp;nbsp;&lt;a href="#fnref3" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn4"&gt;
+        &lt;p&gt;A Shavette is a straight razor that takes disposable blades. This is the kind of razor barbers use over a straight razor for hygienic reasons.&amp;nbsp;&lt;a href="#fnref4" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn5"&gt;
+        &lt;p&gt;A straight razor is a razor with a blade that can fold into its handle. They are also called open razors and cut-throat razors. &lt;a href="http://en.wikipedia.org/wiki/Straight_razor"&gt;Source&lt;/a&gt;&amp;nbsp;&lt;a href="#fnref5" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn6"&gt;
+        &lt;p&gt;I later discovered that the brand was a prestigious one from Spain. But it closed out around 1990 and the Razor I got is currently produced in some unknown factory, with an unknown blend of steel and it&amp;rsquo;s almost impossible to hone.  &amp;nbsp;&lt;a href="#fnref6" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;/ol&gt;
+        &lt;/div&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Super Retina display</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/display_tech.html"/>
+            <id>http://federicoweber.com/notes/display_tech.html</id>
+            <published>2012-11-09T01:00:00+01:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;blockquote&gt;
+        &lt;p&gt;Japan Display has developed a prototype 651ppi LCD panel. First announced in June 2012, this display has a resolution of 1280x800 pixels, equivalent to that in a regular notebook PC, but in a screen size of only 2.3 inches&lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;Now imagine an iPad mini equipped with one of those.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>The art of making</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/video_making.html"/>
+            <id>http://federicoweber.com/notes/video_making.html</id>
+            <published>2012-10-08T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;iframe src="http://player.vimeo.com/video/43005056?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=ffffff" width="657" height="369" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt; 
+        </content>
+          </entry>
+          <entry>
+            <title>Validating your Local Storage Data</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/programming_web.html"/>
+            <id>http://federicoweber.com/notes/programming_web.html</id>
+            <published>2012-10-01T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Local storage is a powerfull tool to cache data computed by web apps for later reuse or non critical persistency&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;. For example I do used it on a recent project, to reduce both the data loaded from the server and the computational cost of sorting a huge list of articles by filters.&lt;/p&gt;
+        
+        &lt;p&gt;Cause the local storage will persiste on the browser for a long time to safely use this data we have to be sure that they are reliable and up to date. Usually the data can get useless for two main reasons: they are based on data produce by the server, that has been updated; or they have been stored by a previous version of the web app which data model have long changed.&lt;/p&gt;
+        
+        &lt;h2&gt;Getting the timestamp&lt;/h2&gt;
+        
+        &lt;p&gt;To check the data against the server a good option is to have it provide a timestamp&lt;sup id="fnref2"&gt;&lt;a href="#fn2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt; for the latest time the data have been changed. &lt;/p&gt;
+        
+        &lt;p&gt;If the web page, is rendered by the same server we are getting the data from, we can pass this information around as a &lt;strong&gt;Custom data attributes&lt;/strong&gt; in the DOM element that hold the app.&lt;/p&gt;
+        &lt;pre class="highlight html"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;"appHolder"&lt;/span&gt; &lt;span class="na"&gt;data-timestamp=&lt;/span&gt;&lt;span class="s"&gt;"2012-10-02T20:17:08.780Z"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;p&gt;Otherwise, if the data are coming from a different server, we can get the information as a lightweight JSON.&lt;/p&gt;
+        &lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nt"&gt;"updated"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"2012-10-02T18:30:30.179Z"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+        &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;h2&gt;Versioning your web app&lt;/h2&gt;
+        
+        &lt;p&gt;To match the data against an updated version of your app the best option is to have a the version number as constant in your app namespace, and save it with your data on the Local Storage.&lt;/p&gt;
+        &lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;myApp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{};&lt;/span&gt; &lt;span class="nx"&gt;myApp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;VERSION&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"0.0.4"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;h2&gt;Wrapping it up&lt;/h2&gt;
+        
+        &lt;p&gt;It&amp;rsquo;s best to run this test as soon as the app is inited, if both of this test succeed you are usually safe to trust the stored data, otherwise it&amp;rsquo;s reccomended to recreate it.&lt;/p&gt;
+        
+        &lt;p&gt;With non critical persistency I intend any kind of data that can be reconstructed without causing damages or requiring serius effort from the end user. Like a precompiled set of filters for a search.&lt;/p&gt;
+        
+        &lt;div class="footnotes"&gt;
+        &lt;hr&gt;
+        &lt;ol&gt;
+        
+        &lt;li id="fn1"&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn2"&gt;
+        &lt;p&gt;Although not mandatory I reccomend you to store this data in the ISO format &lt;em&gt;&amp;ldquo;2012-10-02T20:17:08.780Z&amp;rdquo;&lt;/em&gt; to better reuse it in javascript passing it as an argument of a new Date object.&amp;nbsp;&lt;a href="#fnref2" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;/ol&gt;
+        &lt;/div&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Front end middleware with Backbone and PantaRhei</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/tutorial_backbone_pantarhei_javascript.html"/>
+            <id>http://federicoweber.com/notes/tutorial_backbone_pantarhei_javascript.html</id>
+            <published>2012-09-25T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;h2&gt;A middleware primer&lt;/h2&gt;
+        
+        &lt;p&gt;The first time I&amp;rsquo;ve stumbled upon  the middleware pattern it was in &lt;a href="http://expressjs.com"&gt;Express.js&lt;/a&gt;, while developing the backend for &lt;a href="http://federicoweber.com/gestaltapp/20120625-142551-pi-3-introducinggestalt"&gt;Gestalt&lt;/a&gt;. &lt;/p&gt;
+        
+        &lt;p&gt;The concept of middleware it&amp;rsquo;s quite straight forward, it&amp;rsquo;s nothing more than a function that handle a request. What make it so interesting is the possibility to create a stack of middleware. By doing so each middleware will be able to process the request, and call the next one in the stack.&lt;/p&gt;
+        
+        &lt;p&gt;A typical middleware will look like this:&lt;/p&gt;
+        &lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;foo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;// all your logic goes in here&lt;/span&gt;
+        
+            &lt;span class="c1"&gt;// proceed to the next middleware&lt;/span&gt;
+            &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;};&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;p&gt;If a middleware have to signal an error, it can do so passing it to the first argument of the next().&lt;/p&gt;
+        &lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;bar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;// signal an error&lt;/span&gt;
+            &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"Something went wrong!"&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;};&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;p&gt;To append a stack of middleware to a request in &lt;a href="http://www.senchalabs.org/connect/"&gt;Connect&lt;/a&gt; you have to declare them with the &lt;strong&gt;use&lt;/strong&gt; method&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+        &lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="c1"&gt;// Example from http://www.senchalabs.org/connect/&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;logger&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'dev'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+            &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;static&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'public'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+            &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+                &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;end&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'hello world\n'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;})&lt;/span&gt;
+            &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;listen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3000&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;p&gt;What I really like about this pattern is that by simply reading the &lt;strong&gt;use&lt;/strong&gt; stack you can get a grip on the logics behind the application. Also structuring your application as a cascade of middleware you are encouraged to split it in small,  self contained, modules and avoid nasty callbacks. With the added benefit of a enhancing both the readability maintainability of your code.&lt;/p&gt;
+        
+        &lt;h2&gt;Introducing PantaRhei.js&lt;/h2&gt;
+        
+        &lt;p&gt;&lt;a href="http://github.com/federicoweber/PantaRhei"&gt;PantaRhei.js&lt;/a&gt; is my front end implementation of the middleware pattern . I structured it as an extension for &lt;a href="http://backbonejs.org"&gt;Backbone.js&lt;/a&gt; because it is awesome, I&amp;rsquo;m using it on the wast majority of my projects, and I want to leverage it&amp;rsquo;s &lt;strong&gt;Events&lt;/strong&gt; module and the simple inheritance style provided by the &lt;strong&gt;extend()&lt;/strong&gt; method. &lt;/p&gt;
+        
+        &lt;p&gt;PantaRhei is written in CoffeeScript and distributed with the MIT license. You can find the coffeescript sources and the compiled and minified javascript files on &lt;a href="http://github.com/federicoweber/PantaRhei"&gt;Github&lt;/a&gt;. &lt;/p&gt;
+        
+        &lt;p&gt;The purpose of PantaRhei is to ease the creation and the execution of queues of tasks, like fetching and manipulating data, managing the transitions between pages and so on.
+        Right now PantaRhei is composed by two modules: the &lt;strong&gt;Flow&lt;/strong&gt;, that is responsible for the execution of the queue and the &lt;strong&gt;Worker&lt;/strong&gt;, that describe one of the possible structure of middleware&lt;sup id="fnref2"&gt;&lt;a href="#fn2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt; that the Flow can handle.&lt;/p&gt;
+        
+        &lt;h3&gt;The Worker&lt;/h3&gt;
+        
+        &lt;p&gt;The &lt;strong&gt;Worker&lt;/strong&gt; module is more a convention than a real module, and it&amp;rsquo;s meant to be extended. 
+        It describe two methods: the former is the &lt;strong&gt;run&lt;/strong&gt; it&amp;rsquo;s invoked by the Flow to execute the worker and accept a &lt;strong&gt;shared&lt;/strong&gt; object ( which purpose is to act as a place for workers to share data ) and the &lt;strong&gt;next&lt;/strong&gt; callback as arguments; the latter is the &lt;strong&gt;kill&lt;/strong&gt;, that is invoked by the Flow when the worker execution is completed to safely remove it.
+        The worker constructor also accept an option &lt;strong&gt;id&lt;/strong&gt; as an argument.&lt;/p&gt;
+        
+        &lt;p&gt;To create a new Worker you need to extend it and implement it&amp;rsquo;s methods:&lt;/p&gt;
+        &lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;Delay&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;PantaRhei&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Worker&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;extend&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+            &lt;span class="na"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;duration&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+                &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;duration&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;duration&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;},&lt;/span&gt;
+            &lt;span class="na"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;shared&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="nx"&gt;onTimeout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+                    &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+                &lt;span class="p"&gt;};&lt;/span&gt;
+                &lt;span class="nx"&gt;setTimeout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;onTimeout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;duration&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;},&lt;/span&gt;
+            &lt;span class="na"&gt;kill&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+                &lt;span class="c1"&gt;// all your logics to remove the worker&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;});&lt;/span&gt;
+        
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;shortDelay&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Delay&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'shortDelay'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;p&gt;PantaRhei also include, under the PantaRhei.workers namespace, a series of workers&lt;sup id="fnref3"&gt;&lt;a href="#fn3" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt; JsonLoader and LoadAssets.&lt;/p&gt;
+        
+        &lt;h3&gt;The Flow&lt;/h3&gt;
+        
+        &lt;p&gt;The &lt;strong&gt;Flow&lt;/strong&gt; module is our middleware manager, and handle for you all the logic to create and run the queue.
+        To create a new flow all you have to do is to call it&amp;rsquo;s constructor and optionally pass two parameters: an &lt;strong&gt;id&lt;/strong&gt; and a array containing the list of &lt;strong&gt;workers&lt;/strong&gt; to use.&lt;/p&gt;
+        &lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;flow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;PantaRhei&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Flow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s1"&gt;'myFirstFlow'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;task1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;task2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;p&gt;You can also append a worker to the flow passing it  as an argument of the &lt;strong&gt;use&lt;/strong&gt; method.&lt;/p&gt;
+        &lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;task1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;shared&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+                &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"task one completed"&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+                &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="p"&gt;},&lt;/span&gt;
+        &lt;span class="nx"&gt;flow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;PantaRhei&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Flow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="nx"&gt;flow&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;task1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;p&gt;To execute the flow you have to invoke the &lt;strong&gt;run&lt;/strong&gt; method. The flow can also accept an optional &lt;strong&gt;shared&lt;/strong&gt; object. This is passed around to all the workers in the queue and it&amp;rsquo;s returned by the flow on complete, it&amp;rsquo;s actually the place for storing and passing data between workers. If this is not provided the Flow will create a empty object to use. &lt;/p&gt;
+        &lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="c1"&gt;// create our workers&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;task1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;shared&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+            &lt;span class="nx"&gt;shared&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"the data have been processed"&lt;/span&gt;
+            &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;},&lt;/span&gt;
+        &lt;span class="nx"&gt;task2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;shared&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+            &lt;span class="nx"&gt;shared&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;newData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"we got some new data for you"&lt;/span&gt;
+            &lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;},&lt;/span&gt;
+        
+        &lt;span class="c1"&gt;// create our flow and workers passing the first task on the constructor&lt;/span&gt;
+        &lt;span class="nx"&gt;flow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;PantaRhei&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Flow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;  &lt;span class="s1"&gt;'myFirstFlow'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="nx"&gt;task1&lt;/span&gt; &lt;span class="p"&gt;]);&lt;/span&gt;
+        
+        &lt;span class="nx"&gt;flow&lt;/span&gt;
+            &lt;span class="c1"&gt;// append the second task&lt;/span&gt;
+            &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;task2&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="c1"&gt;// run the flow&lt;/span&gt;
+            &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;run&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="na"&gt;data&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"the data is new"&lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;h4&gt;Events&lt;/h4&gt;
+        
+        &lt;p&gt;PantaRhei make use of the Backbone Events, so the  Flow can dispatch the following events: run, pause, resume, error and complete. Apart from the error all the other events pass the shared object as an argument to the listener.
+        So to get notified when a flow have been successfully executed you can catch the complete event.
+        &amp;ldquo;`javascript
+        var onComplete = function( shared ){
+            console.log(shared);
+        };&lt;/p&gt;
+        
+        &lt;p&gt;flow
+            .on( &amp;lsquo;complete&amp;rsquo;, onComplete)
+            .run();
+        &amp;rdquo;`&lt;/p&gt;
+        
+        &lt;h4&gt;Error handling&lt;/h4&gt;
+        
+        &lt;p&gt;PantaRhei leave the responsibility to properly handle the errors to you. If any of the worker in the queue pass and error to the next callback, the Flow is paused and dispatch an &lt;strong&gt;error&lt;/strong&gt; event. 
+        Once you have  done with the error handling and you are ready to resume the flow you can call the &lt;strong&gt;resume&lt;/strong&gt; method to move to the next worker in the queue.&lt;/p&gt;
+        &lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;onError&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nx"&gt;err&lt;/span&gt; &lt;span class="p"&gt;){&lt;/span&gt;
+            &lt;span class="c1"&gt;//handle the error in here&lt;/span&gt;
+            &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;resume&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;};&lt;/span&gt;
+        
+        &lt;span class="nx"&gt;flow&lt;/span&gt;
+            &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s1"&gt;'error'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;onError&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;run&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;p&gt;The other one is a simple function that accept as arguments the &lt;strong&gt;shared&lt;/strong&gt; object and the &lt;strong&gt;next&lt;/strong&gt; callback.&lt;/p&gt;
+        
+        &lt;div class="footnotes"&gt;
+        &lt;hr&gt;
+        &lt;ol&gt;
+        
+        &lt;li id="fn1"&gt;
+        &lt;p&gt;If you are looking for an introduction to the use of middle wares in Connect I suggest you to check this short &lt;a href="http://stephensugden.com/middleware_guide/"&gt;guide&lt;/a&gt; written by Stephen Sugden.&amp;nbsp;&lt;a href="#fnref1" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn2"&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn3"&gt;
+        &lt;p&gt;More to follow soon.&amp;nbsp;&lt;a href="#fnref3" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;/ol&gt;
+        &lt;/div&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Kickstarter is not a store</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/kickstarter.html"/>
+            <id>http://federicoweber.com/notes/kickstarter.html</id>
+            <published>2012-09-21T02:00:00+02:00</published>
+            <updated>2015-10-06T17:12:36+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Recently there have been a lot of disillusionment about a series of successfully backed Kickstarter projects who failed to ship. Therefor Kickstarter decide to &lt;a href="http://www.kickstarter.com/blog/kickstarter-is-not-a-store"&gt;clarify&lt;/a&gt; their position and enforce a new series of rules especially targeted to physical product.&lt;/p&gt;
+        
+        &lt;blockquote&gt;
+        &lt;p&gt;It&amp;rsquo;s hard to know how many people feel like they&amp;rsquo;re shopping at a store when they&amp;rsquo;re backing projects on Kickstarter, but we want to make sure that it&amp;rsquo;s no one. Today we&amp;rsquo;re introducing a number of changes to reinforce that Kickstarter isn’t a store.&lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;While the &lt;strong&gt;Risks and Challenges&lt;/strong&gt; section is a correct move, I have mixed feelings about the new measures for Hardware and Product Design projects. Surely demanding a working prototype is a step in the right direction, but completely prohibit the 3D rendering is a poor choice. And neither of this help backers to understand if the product they are going to support can be realistically manufactured. &lt;/p&gt;
+        
+        &lt;h2&gt;Working prototype&lt;/h2&gt;
+        
+        &lt;p&gt;A working prototype is a necessary step for the creators to figure out how o produce a real product out of their amazing concept. But it&amp;rsquo;s not enough to assure the backers that it&amp;rsquo;s actually possible produce the same product in large quantity, leveraging industrial facilities, neither it&amp;rsquo;s a good estimation of the real production costs—which can also vary by a significant amount based on the number of peaces that are going to be manufactured.&lt;/p&gt;
+        
+        &lt;p&gt;Especially for complicated products that require a combination of different technologies and draconian manufacturing and distribution lines&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;. &lt;/p&gt;
+        
+        &lt;h2&gt;Renderings and simulations&lt;/h2&gt;
+        
+        &lt;p&gt;The case against rendering is a complete non sense to me. Simulations and renderings are powerful tools for creators both to  design and iterate the product and to show the backers what the product it&amp;rsquo;s going to look like and the possible colors and trim customizations.&lt;/p&gt;
+        
+        &lt;h2&gt;Is founding cap an option?&lt;/h2&gt;
+        
+        &lt;p&gt;An interesting point Kickstarter raise in their post is to fix to one the amount of quantities that a project can offer to a single backer.&lt;/p&gt;
+        
+        &lt;blockquote&gt;
+        &lt;p&gt;Offering multiple quantities of a reward is prohibited. Hardware and Product Design projects can only offer rewards in single quantities or a sensible set&lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;This kind of choice make sense considering that over a certain amount of product to produce it could become necessary to reconsider the entire manufacturing line—that could not be convenient probably till a new order of magnitude is reached—and keep manufacturing the product using a line produced for smaller quantity is not always possible or desirable.&lt;/p&gt;
+        
+        &lt;p&gt;This kind of consideration also open the road to another possibility, a founding cap. Clearly this is not something Kickstarter should force to the product, most of the projects founded don&amp;rsquo;t have real issues with over founding, but could be a nice option that the creators can decide to adopt.&lt;/p&gt;
+        
+        &lt;p&gt;Even better would be to have &lt;strong&gt;progressive founding goals&lt;/strong&gt;; it&amp;rsquo;s quite a common practice, for creators, to promise increased sets of features based on the amount of money (over the initial founding goal) the project manage to raise&lt;sup id="fnref2"&gt;&lt;a href="#fn2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;. Kickstarter could officially support this kind of initiative by charging late bakers only when the next goal is reached.&lt;/p&gt;
+        
+        &lt;div class="footnotes"&gt;
+        &lt;hr&gt;
+        &lt;ol&gt;
+        
+        &lt;li id="fn1"&gt;
+        &lt;p&gt;I do honestly doubt that the &lt;a href="http://www.kickstarter.com/projects/ouya/ouya-a-new-kind-of-video-game-console/posts/275869"&gt;Ouya&lt;/a&gt; will ship in time for Mar 2013.&amp;nbsp;&lt;a href="#fnref1" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn2"&gt;
+        &lt;p&gt;The &lt;a href="http://www.kickstarter.com/projects/659943965/planetary-annihilation-a-next-generation-rts"&gt;Planetary Annihilation&lt;/a&gt; project had an interesting take on this, adding game enhancements and orchestral sound track.&amp;nbsp;&lt;a href="#fnref2" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;/ol&gt;
+        &lt;/div&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>My new tailor made leather bag</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/bag_design.html"/>
+            <id>http://federicoweber.com/notes/bag_design.html</id>
+            <published>2012-09-11T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;My new tailor made bag, by &lt;a href="http://www.etsy.com/shop/webag?ref=seller_info"&gt;WeBag&lt;/a&gt;, just arrived and it&amp;rsquo;s awesome.
+        The quality of the materials and fabrication is excellent; it truly is the kind of product that will last forever. &lt;/p&gt;
+        
+        &lt;p&gt;&lt;img alt="tailor made WeBag" src="http://img0.etsystatic.com/005/0/6714672/il_fullxfull.373916680_prus.jpg" /&gt;&lt;/p&gt;
+        
+        &lt;p&gt;If you are in the market for a new leather bag you better check &lt;a href="http://www.etsy.com/shop/webag?ref=seller_info"&gt;WeBag&lt;/a&gt;&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>RIP Bill Moggridge</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/RIP_BillMoggridge.html"/>
+            <id>http://federicoweber.com/notes/RIP_BillMoggridge.html</id>
+            <published>2012-09-10T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Sad but true Bill Moggridge passed away at the age of 69.
+        Among the other things he was the designer of the first laptop. If it&amp;rsquo;s work it&amp;rsquo;s unknown to you please do yourself a favor and read  &lt;a href="http://www.amazon.com/Designing-Interactions-Bill-Moggridge/dp/0262134748/ref=sr_1_1?ie=UTF8&amp;amp;qid=1347287007&amp;amp;sr=8-1&amp;amp;keywords=bill+moggridge"&gt;Design Interaction&lt;/a&gt;.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Adobe's CSS Shaders rolled into CSS Filter Effects Specification as an official web standard.</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/css3_filters_adobe.html"/>
+            <id>http://federicoweber.com/notes/css3_filters_adobe.html</id>
+            <published>2012-09-05T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Great news for those among us who wish to bring more exciting effects on the web. Adobe&amp;rsquo;s CSS Shaders proposal have been approved approved by &lt;strong&gt;W3C&lt;/strong&gt;  as a part of the &lt;a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html"&gt;Filter Effects&lt;/a&gt;. 
+        For the ones new with the matter here is an &lt;a href="http://www.adobe.com/devnet/html5/articles/css-shaders.html"&gt;introduction&lt;/a&gt; and a series of &lt;a href="http://adobe.github.com/web-platform/samples/css-customfilters/"&gt;examples&lt;/a&gt;&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+        
+        &lt;div class="footnotes"&gt;
+        &lt;hr&gt;
+        &lt;ol&gt;
+        
+        &lt;li id="fn1"&gt;
+        &lt;p&gt;A special prototype webkit browser by Adobe is required. You can download it &lt;a href="https://github.com/downloads/adobe/webkit/PrototypeEnhancementsForChromiumMac-may2012-f2f.zip"&gt;here&lt;/a&gt;&amp;nbsp;&lt;a href="#fnref1" rev="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        
+        &lt;/ol&gt;
+        &lt;/div&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Fine tune your headers typography with SlabText.js</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/jquery_typography.html"/>
+            <id>http://federicoweber.com/notes/jquery_typography.html</id>
+            <published>2012-09-03T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Based on Erik Loyer&amp;rsquo;s &lt;a href="http://erikloyer.com/index.php/blog/the_slabtype_algorithm_part_1_background/"&gt;slabtype algorithm&lt;/a&gt; &lt;a href="http://www.frequency-decoder.com/demo/slabText/"&gt;SlabText&lt;/a&gt; is a nice jQuery plugin to achieve the popular slab header effect. 
+        I especially like to be able to manually set word combinations and the possibility to set a break point, to disable the effect, if the view port reach a chosen minimum resolution.
+        Get the source on &lt;a href="https://github.com/freqDec/slabText/"&gt;github&lt;/a&gt;&lt;/p&gt;
+        
+        &lt;p&gt;&lt;img alt="SlabTetx js in action" src="https://dl.dropbox.com/u/116832/federicoweber.com/20120903-113939-NT-3-jquery%20slabTetx.jpg" /&gt;&lt;/p&gt;
+        
+        &lt;p&gt;If you are interested in javascript and typography you should also check Paravel&amp;rsquo;s &lt;a href="http://letteringjs.com"&gt;lettering.js&lt;/a&gt; to fine tune each single letter of a given text.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Avgrund Modal</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/jquery_plugins.html"/>
+            <id>http://federicoweber.com/notes/jquery_plugins.html</id>
+            <published>2012-09-02T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Nice jQuery plugin, based on the &lt;a href="http://lab.hakim.se/avgrund/"&gt;Avgrund&lt;/a&gt; concept by &lt;a href="http://hakim.se"&gt;Hakim&lt;/a&gt;, to display a modal layers showing the depth between it and the page.  &lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>From Twitter and RSS to OmniFocus</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/workflow_hazel_ifttt.html"/>
+            <id>http://federicoweber.com/notes/workflow_hazel_ifttt.html</id>
+            <published>2012-08-31T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;I&amp;rsquo;m a voracious user of Flipboard, and during my daily reading I often stumble upon news that I wish to do more with: softwares I wish to try, news to writing about, etc.
+        To accomplish that i was using a series of &lt;a href="http://ifttt.com"&gt;IFTTT&lt;/a&gt; rules to send this content to my email; with the result of ending up with a quite polluted email inbox.&lt;/p&gt;
+        
+        &lt;p&gt;Today &lt;a href="https://twitter.com/viticci"&gt;Federico Viticci&lt;/a&gt; published it&amp;rsquo;s, IFTTT and &lt;a href="http://www.noodlesoft.com/hazel.php"&gt;Hazel&lt;/a&gt;, &lt;a href="http://www.macstories.net/tutorials/send-favorite-tweets-to-omnifocus-inbox/"&gt;workflow&lt;/a&gt; to save starred tweets to OmniFocus, leveraging IFTTT and Hazel.
+        Inspired by that I&amp;rsquo;ve created two IFTTT recipes and two Hazel rules to achieve the same for both twitter and google reader.&lt;/p&gt;
+        
+        &lt;p&gt;The IFTTT recieps are the following:&lt;/p&gt;
+        
+        &lt;ul&gt;
+        &lt;li&gt;one for &lt;a href="https://ifttt.com/recipes/54060"&gt;twitter&lt;/a&gt; &lt;/li&gt;
+        &lt;li&gt;one for &lt;a href="https://ifttt.com/recipes/54062"&gt;google reader&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        
+        &lt;p&gt;Both are structured to create a text file inside a specified dropbox folder. The output is designed as a multiline text files.
+        The first first of which is used as the OF entry &lt;strong&gt;title&lt;/strong&gt; and the rest of the content is passed in as the &lt;strong&gt;note&lt;/strong&gt;.&lt;/p&gt;
+        
+        &lt;p&gt;The first of the Hazel rules is conceived to run an &lt;strong&gt;appleScript&lt;/strong&gt; to the content of the file—to encode the text in &lt;strong&gt;UTF-8&lt;/strong&gt;, parse it and create the new entry in the OmniFocus &lt;strong&gt;inBox&lt;/strong&gt;.—, set the label to green (to know which files have been processed) and confirm the entry via Notification Center (using the automator action provided by &lt;a href="http://www.automatedworkflows.com/2012/08/26/display-notification-center-alert-automator-action-1-0-0/"&gt;Automated Workflows&lt;/a&gt;).&lt;/p&gt;
+        
+        &lt;p&gt;&lt;img alt="The Hazel rule to watch the files" src="https://dl.dropbox.com/u/116832/federicoweber.com/20120831-205446-NT-0-hazel.png" /&gt;&lt;/p&gt;
+        
+        &lt;p&gt;The appleScript to parse the conent:&lt;/p&gt;
+        &lt;pre class="highlight plaintext"&gt;&lt;code&gt;-- This script is meant to be executed from Hazel
+        -- It is used to create a new task inside omnifocus 
+        -- The first paragraph is used for the title, the others are passed in the notes
+        -- by Federico Weber | http://federicoweber.com
+        
+        on hazelProcessFile(theFile)
+            -- get the Title of the task
+            set content to read theFile as «class utf8»
+            set title to first paragraph of content
+        
+            -- Get the note of the Task
+            set noteContent to get replaceText(title, "", content)
+        
+            tell application "OmniFocus"
+                set theDoc to first document
+                tell theDoc
+                    make new inbox task with properties {name:title, note:noteContent}
+                end tell
+            end tell
+        
+            return true
+        end hazelProcessFile
+        
+        -- replaceText method by Buce Phillis 
+        -- http://foolsworkshop.com/applescript/2008/05/an-applescript-replace-text-method/
+        on replaceText(find, replace, subject)
+            set prevTIDs to text item delimiters of AppleScript
+            set text item delimiters of AppleScript to find
+            set subject to text items of subject
+        
+            set text item delimiters of AppleScript to replace
+            set subject to "" &amp;amp; subject
+            set text item delimiters of AppleScript to prevTIDs
+        
+            return subject
+        end replaceText
+        &lt;/code&gt;&lt;/pre&gt;
+        
+        &lt;p&gt;The second rules is used to erase the file after one week if the file have been properly parsed. I could have used just one rule and delete the content after it have been parsed, but I prefer to keep the files longer to fallback if something goes bad.&lt;/p&gt;
+        
+        &lt;p&gt;If you found this useful please let me know via &lt;a href="http://twitter.com/FedericoWeber"&gt;twitter&lt;/a&gt; or &lt;a href="https://alpha.app.net/federicoweber"&gt;app.net&lt;/a&gt;.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Samsara</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/movie_samsara.html"/>
+            <id>http://federicoweber.com/notes/movie_samsara.html</id>
+            <published>2012-08-26T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;iframe src="http://player.vimeo.com/video/46273869?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=da9315" width="657" height="274" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        
+        &lt;p&gt;When I first hear about &lt;a href="http://www.barakasamsara.com/baraka/about"&gt;Baraka&lt;/a&gt;, almost 5 years ago, I was quite skeptical about it—96 minutes of photographs and music is not something to take lightly—but while watching it I was mesmerized by the experience and beauty of the images. And at today I still consider it one of my favorites movies of all the times.&lt;/p&gt;
+        
+        &lt;p&gt;&lt;a href="http://www.barakasamsara.com"&gt;Samsara&lt;/a&gt;, also directed by Ron Fricke and  produced by Mark Magidson, expand the themes developed in &lt;a href="http://www.barakasamsara.com/baraka/about"&gt;Baraka&lt;/a&gt; and take us on an extraordinary trip around the world  showing &amp;ldquo;&lt;em&gt;the ever turning wheel of life&lt;/em&gt;&amp;rdquo;. 
+        The movie have been shoot for almost five years on something like one hundred of location, spanned across twenty-five countries, and have been photographed entirely in 70mm film using a custom build motion control time-lapse camera.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>IL magazine landed on the iPad, and it's awful</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/IL_digitalMagazines.html"/>
+            <id>http://federicoweber.com/notes/IL_digitalMagazines.html</id>
+            <published>2012-08-23T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;This morning I was looking at twitter feed and I did stumbled upon a tweet from [Francesco Franchi]&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;, announcing that the &lt;strong&gt;IL&lt;/strong&gt; magazine is finally on the iPad Newsstand and that the current issue it&amp;rsquo;s available for download.
+        Being a long time supporter&lt;sup id="fnref2"&gt;&lt;a href="#fn2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;, I was more than excited about it, imagining the incredible things the staff have pulled out leveraging the possibilities offered by the iPad—Especially considering the intensive use of info-graphics the magazine do, that lead them to won a more than rewarding list of awards, including a &lt;em&gt;Compasso D&amp;#39;oro&lt;/em&gt;—. And I decided to welcomely spend the increased price&lt;sup id="fnref3"&gt;&lt;a href="#fn3" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt; to enjoy the experience of reading it on my iPad.&lt;/p&gt;
+        
+        &lt;p&gt;&lt;img alt="IL August cover on the iPad" src="https://dl.dropbox.com/u/116832/federicoweber.com/Photo%2023-08-12%2013%2017%2014.png" /&gt;&lt;/p&gt;
+        
+        &lt;p&gt;Unfortunately the magazine is not only far for great—not featuring any interactive content—but it&amp;rsquo; completely awful. Residing in that terrible editorial space defined by those magazine that, in order to quickly get to the iPad, are presented as a collection of static images and neither went through the effort of adapting the content to the different ration of the layout.&lt;/p&gt;
+        
+        &lt;p&gt;This was bad enough when the first iPad magazines comes out, almost two years ago. But if an awarded magazine like &lt;strong&gt;IL&lt;/strong&gt; pull out something so poor in quality, and charge a premium price for it, I do fell steamed.&lt;/p&gt;
+        
+        &lt;p&gt;&lt;img alt="poor pages alignment" src="https://dl.dropbox.com/u/116832/federicoweber.com/Photo%2023-08-12%2014%2003%2007.png?w=1f396c19" /&gt;&lt;/p&gt;
+        
+        &lt;p&gt;I do really want to read the current issue properly, so right now I&amp;rsquo;m heading to the nearest newsagent to buy a paper version of the magazine, and i suggest you to do the same. Or better completely skip the digital one if you haven&amp;rsquo;t bought it yet.&lt;/p&gt;
+        
+        &lt;p&gt;For the future I will patiently wait for a proper digital edition that I&amp;rsquo;m sure &lt;em&gt;Il Sole 24 Ore&lt;/em&gt; have the expertise—being also the publisher of the nice and free iPad magazine &lt;a href="http://itunes.apple.com/it/app/la-vita-nova/id395924638?mt=8"&gt;la vita nòva&lt;/a&gt;— and the willingness to craft for us.&lt;/p&gt;
+        
+        &lt;p&gt;&lt;img alt="rane" src="https://dl.dropbox.com/u/116832/federicoweber.com/Photo%2023-08-12%2013%2018%2010.png?w=750ef65b" /&gt;&lt;/p&gt;
+        
+        &lt;p&gt;The current art director of the  IL magazine&lt;/p&gt;
+        
+        &lt;p&gt;I&amp;rsquo;m regularly collecting the IL magazine since 2009, and I&amp;rsquo;ve always been pleased by it&amp;rsquo;s content quality and it&amp;rsquo;s extraordinary visual appeal.&lt;/p&gt;
+        
+        &lt;p&gt;The regular price, for the paper edition, is € 2,00 if you buy it with &lt;em&gt;Il Sole 24 Ore&lt;/em&gt;, the day it is published, or € 0,50 from the day after. The price for the iPad version is € 2,39.&lt;/p&gt;
+        
+        &lt;div class="footnotes"&gt;
+        &lt;hr&gt;
+        &lt;ol&gt;
+        
+        &lt;li id="fn1"&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn2"&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn3"&gt;
+        &lt;/li&gt;
+        
+        &lt;/ol&gt;
+        &lt;/div&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Harvard cracks DNA storage</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/dna_storage.html"/>
+            <id>http://federicoweber.com/notes/dna_storage.html</id>
+            <published>2012-08-18T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;blockquote&gt;
+        &lt;p&gt;The work, carried out by George Church and Sri Kosuri, basically treats DNA as just another digital storage device. Instead of binary data being encoded as magnetic regions on a hard drive platter, strands of DNA that store 96 bits are synthesized, with each of the bases (TGAC) representing a binary value (T and G = 1, A and C = 0).&lt;/p&gt;
+        &lt;/blockquote&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>The dusk of Twitter as a platform</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/Twitter.html"/>
+            <id>http://federicoweber.com/notes/Twitter.html</id>
+            <published>2012-08-17T02:00:00+02:00</published>
+            <updated>2015-09-29T09:18:40+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Yesterday, &lt;a href="https://twitter.com/sippey"&gt;Michael Sippey&lt;/a&gt;, the Director of consumer product at Twitter, &lt;a href="https://dev.twitter.com/blog/changes-coming-to-twitter-api"&gt;announced&lt;/a&gt; some obscure changes in the upcoming v1.1 of the Twitter API.
+        The majority of which is related to limit the API availability to third party clients.&lt;/p&gt;
+        
+        &lt;h2&gt;The dusk of the platform&lt;/h2&gt;
+        
+        &lt;p&gt;What was great about Twitter was it’s openness, simplicity, and it’s reliability&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;.
+        But right now, in order to be independent, Twitter have to make money. And in the process of reshaping the company they figured out that, to be appealing for advertisers, they have to control the entire user experience, becoming the endpoint of the discussion and not just the vector. They need to be sure that the advertisement they sell will arrive to the users and they can achieve this only with a strict control on what their users see. They decided to do so by prohibiting new third party clients.&lt;/p&gt;
+        
+        &lt;blockquote&gt;
+        &lt;p&gt;Nearly eighteen months ago, we gave developers guidance that they should not build client apps that mimic or reproduce the mainstream Twitter consumer client experience. &lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;As far as there is an existing Twitter interface for that specific platform. In fact Twitter is still welcoming to &lt;em&gt;officially approved&lt;/em&gt;, native mobile client.&lt;/p&gt;
+        
+        &lt;blockquote&gt;
+        &lt;p&gt;With v1.1 we will require developers that are building client applications that are pre-installed on mobile handsets, SIM cards, chipsets or other consumer electronics devices to have their application certified by Twitter.&lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;By making the old ones choke in their user base&lt;/p&gt;
+        
+        &lt;blockquote&gt;
+        &lt;p&gt;if you are building a Twitter client application that is accessing the home timeline, account settings or direct messages API endpoints (typically used by traditional client applications) or are using our User Streams product, you will need our permission if your application will require more than 100,000 individual user tokens.&lt;/p&gt;
+        
+        &lt;p&gt;We will not be shutting down client applications that use those endpoints and are currently over those token limits. If your application already has more than 100,000 individual user tokens, you&amp;rsquo;ll be able to maintain and add new users to your application until you reach 200% of your current user token count (as of today) — as long as you comply with our Rules of the Road. Once you reach 200% of your current user token count, you&amp;rsquo;ll be able to maintain your application to serve your users, but you will not be able to add additional users without our permission.&lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;And by prohibiting integration with different social networks&lt;/p&gt;
+        
+        &lt;blockquote&gt;
+        &lt;p&gt;No other social or 3rd party actions may be attached to a Tweet. &lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;h2&gt;The dawn of the apps&lt;/h2&gt;
+        
+        &lt;p&gt;I consider myself more a Tweetbot user than a Twitter user, and I do believe that like me many other users are more tightened to the apps they do use daily to interact with twitter than with the platform itself. 
+        I would like to see what will happen if those apps implement support for other similar platforms &lt;sup id="fnref2"&gt;&lt;a href="#fn2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;. I will surely appreciate.&lt;/p&gt;
+        
+        &lt;p&gt;The lightweight structure of the tweet data, make it extremely fast to load even on congested or slow network.&lt;/p&gt;
+        
+        &lt;p&gt;&lt;a href="http://app.net"&gt;App.net&lt;/a&gt; got founded in the last days, the alpha version is running and it&amp;rsquo;s more than a valid candidate.&lt;/p&gt;
+        
+        &lt;div class="footnotes"&gt;
+        &lt;hr&gt;
+        &lt;ol&gt;
+        
+        &lt;li id="fn1"&gt;
+        &lt;/li&gt;
+        
+        &lt;li id="fn2"&gt;
+        &lt;/li&gt;
+        
+        &lt;/ol&gt;
+        &lt;/div&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Robot &amp; Frank</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/film.html"/>
+            <id>http://federicoweber.com/notes/film.html</id>
+            <published>2012-08-16T02:00:00+02:00</published>
+            <updated>2015-09-29T09:18:45+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;iframe src="http://player.vimeo.com/video/44742356?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=f2de05" width="657" height="369" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>An OpenType hack to design simple graphs</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/typography_graph.html"/>
+            <id>http://federicoweber.com/notes/typography_graph.html</id>
+            <published>2012-08-14T02:00:00+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Designed by &lt;a href="https://twitter.com/traviskochel"&gt;@traviskochel&lt;/a&gt; &lt;a href="https://www.fontfont.com/how-to-use-ff-chartwell"&gt;FF Chartwell&lt;/a&gt; is a smart font hack that leverage the OpenType features to convert numbers into graphs.
+        The process of creating a graph with Chartwell is as simple as turning on the &lt;em&gt;Stylistic Alternates&lt;/em&gt;. By doing so a series of, plus separated, numbers are converted into the corresponding graph.&lt;/p&gt;
+        
+        &lt;p&gt;&lt;img alt="FF Chartwell Radar" src="https://www.fontfont.com/staticcontent/inuseimages/original/FF_Chartwell_SC-all_7_symbols-Radar.png?1336379581" /&gt;&lt;/p&gt;
+        
+        &lt;p&gt;It&amp;rsquo;s possible to create the following type of graphs: bars vertical, bars horizontal, lines, pies, radar, rings, rose.&lt;/p&gt;
+        
+        &lt;p&gt;The font is quite useful as it is and the guys at &lt;a href="https://www.fontfont.com/"&gt;FontFont&lt;/a&gt; are already working on a web version of it.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>CryEngine 3</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/videogames_graphic.html"/>
+            <id>http://federicoweber.com/notes/videogames_graphic.html</id>
+            <published>2012-08-12T16:59:42+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;iframe width="640" height="360" src="http://www.youtube.com/embed/JWvgETOo5ek" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+        
+        &lt;p&gt;Beautiful tech demo of the amazing scenery and graphics in Crysis 3 powerd by CryEngine3.&lt;/p&gt;
+        
+        &lt;p&gt;Also make sure to watch the Official single player interactive &lt;a href="http://www.youtube.com/watch?v=_2LX8bEmhDc&amp;amp;feature=player_embedded"&gt;demo&lt;/a&gt;&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Front-end development with Nodefront</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/frontend_development_tool_node_front.html"/>
+            <id>http://federicoweber.com/notes/frontend_development_tool_node_front.html</id>
+            <published>2012-08-09T00:35:22+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;I&amp;rsquo;ve just discovered &lt;a href="http://karthikv.github.com/nodefront/"&gt;Nodefront&lt;/a&gt;, a command-line tools, developed by &lt;a href="http://karthikv.net"&gt;Karthik Viswanathan&lt;/a&gt;, that ease front-end development by compiling and watching &lt;strong&gt;.jade&lt;/strong&gt;, &lt;strong&gt;.styl&lt;/strong&gt; and &lt;strong&gt;coffeescript&lt;/strong&gt; files.&lt;/p&gt;
+        
+        &lt;p&gt;Among the other features it did offer i do find the &lt;strong&gt;live compile&lt;/strong&gt; option particularly useful.&lt;/p&gt;
+        
+        &lt;p&gt;If you are curios here is a &lt;a href="https://vimeo.com/46197434"&gt;screencast&lt;/a&gt; of it in action&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Steve Ballmer was right...</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/microsoft.html"/>
+            <id>http://federicoweber.com/notes/microsoft.html</id>
+            <published>2012-08-03T14:47:45+02:00</published>
+            <updated>2015-09-29T09:19:04+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;blockquote&gt;
+        &lt;p&gt;Microsoft has been using the &amp;ldquo;Metro&amp;rdquo; name to describe the new geometric, typography-heavy look-and-feel that is central to Windows 8—and is spreading across the company&amp;rsquo;s entire range of products—ever since it first showed off Windows Phone.&lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;Never ever adopt a product name that does not contain &lt;strong&gt;Windows&lt;/strong&gt; in it.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Present and future of the App Store and Gatekeeper</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/apple_AppStore_Sandboxing.html"/>
+            <id>http://federicoweber.com/notes/apple_AppStore_Sandboxing.html</id>
+            <published>2012-07-27T00:54:11+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;In a recent post, &lt;a href="http://www.marco.org/2012/07/26/mac-app-store-future"&gt;&lt;em&gt;The Mac App Store’s future of irrelevance&lt;/em&gt;&lt;/a&gt; , Marco Arment make some points on the actual state of App Store, and it&amp;rsquo;s possible future.&lt;/p&gt;
+        
+        &lt;p&gt;&lt;a href="@marcoarment"&gt;Marco Arment&lt;/a&gt;:&lt;/p&gt;
+        
+        &lt;blockquote&gt;
+        &lt;p&gt;But now, I’ve lost all confidence that the apps I buy in the App Store today will still be there next month or next year. The advantages of buying from the App Store are mostly gone now. My confidence in the App Store, as a customer, has evaporated.&lt;/p&gt;
+        
+        &lt;p&gt;The Mac App Store is in significant danger of becoming an irrelevant, low-traffic flea market where buyers rarely venture for serious purchases. And I bet that’s not what Apple had in mind at all.&lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;I believe Marco is somehow right, and unluckily for some kind of apps the best option is to buy them outside of the app store. 
+        As of today the App Store, and the Gatekeeper are far from perfect and the impossibility for a developer properly market, updates and discounts. Combined with the strict sandboxing is a great obstacle for an everlasting and healthy adoption both for users and developers. &lt;/p&gt;
+        
+        &lt;p&gt;Yet  I do think the App Store is still a far superior shopping experience. In fact, it&amp;rsquo;s so delightful that, many of us bought the same software twice, once the App Store came out, just to have it connected to it, and relieving the pain of dealing with licenses and updates.&lt;/p&gt;
+        
+        &lt;p&gt;But Apple can easily fix that. For example they could grant certified developers the rights to both, use iClouds APIs and sell, on the App Store, non sandboxed apps. They can achieve this by properly marking the app and, maybe, &lt;em&gt;hiding&lt;/em&gt; it beyond an option in the Security and Privacy settings. By doing so the will ensure the security of the App Store, but also allow those of us who are willing, or need to, use non sandboxed apps to leverage it&amp;rsquo;s power and simplicity.&lt;/p&gt;
+        
+        &lt;p&gt;Also I do believe that on the long run, as it&amp;rsquo;s happing on the iOS, the terms and conditions, for an app to be considered sandboxed, will get more flexible. Allowing more of them to jump in.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Meteor Raises $11.2M from Andreessen Horowitz</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/meteor_fundRaising.html"/>
+            <id>http://federicoweber.com/notes/meteor_fundRaising.html</id>
+            <published>2012-07-25T17:25:36+02:00</published>
+            <updated>2015-10-10T19:43:39+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;Congratulations to the &lt;a href="http://meteor.com/"&gt;Meteor&lt;/a&gt; team for raising such a big sum for an open source project.&lt;/p&gt;
+        
+        &lt;p&gt;For those new with the matter Meteor is an open-source platform for building web apps in javascript. What is differentiating it from the competitors is the availability of the same APIs for both the front-end and the back-end, allowing super fast development.
+        You should really take a look at the  live updating leaderboard &lt;a href="http://meteor.com/examples/leaderboard"&gt;example&lt;/a&gt;.&lt;/p&gt;
+        </content>
+          </entry>
+          <entry>
+            <title>Good design is invisible</title>
+            <link rel="alternate" href="http://federicoweber.com/notes/design.html"/>
+            <id>http://federicoweber.com/notes/design.html</id>
+            <published>2012-07-24T23:35:05+02:00</published>
+            <updated>2015-09-29T09:19:23+02:00</updated>
+            <author>
+              <name>Federico Weber</name>
+            </author>
+            <content type="html">&lt;p&gt;The Verge interviewed Oliver Reichenstein on design typography and OS GUI.&lt;/p&gt;
+        
+        &lt;p&gt;&lt;a href="https://twitter.com/iA"&gt;Oliver Reichenstein&lt;/a&gt;:&lt;/p&gt;
+        
+        &lt;blockquote&gt;
+        &lt;p&gt;Good user interface design takes care of irritations before they appear&lt;/p&gt;
+        &lt;/blockquote&gt;
+        
+        &lt;p&gt;This is something that should be true on regular basis.&lt;/p&gt;
+        </content>
+          </entry>
+        </feed>
+      </div>
+      <footer id='main_footer'>
+        <ul>
+          <li>
+            <a href='https://github.com/federicoweber' title='github'>
+              <i class='fa fa-github'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://instagram.com/federicoweber' title='instagram'>
+              <i class='fa fa-instagram'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://www.pinterest.com/federicoweber/' title='pinterest'>
+              <i class='fa fa-pinterest'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://twitter.com/federicoweber' title='twitter'>
+              <i class='fa fa-twitter'></i>
+            </a>
+          </li>
+          <li>
+            <a href='http://federicoweber.vsco.co' title='vsco'>
+              <img src='http://assets.vsco.co/assets/images/assets/Grid_black_16.png'>
+            </a>
+          </li>
+          <li class='-with_text -push_right'>
+            <a href='mailto:federicoweber@gmail.com' title='email'>
+              <span class='text'>email me</span>
+              <i class='fa fa-envelope-o'></i>
+            </a>
+          </li>
+          <li class='-with_text'>
+            <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike 4.0 International'>
+              <span class='text'>license</span>
+              <i class='fa fa-creative-commons'></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="assets/js/application.js"></script>
+    <link href="assets/style/code.css" rel="stylesheet" />
+  </body>
+</html>

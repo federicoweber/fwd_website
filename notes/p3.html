@@ -4,6 +4,8 @@
     <meta charset='utf-8'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href='/feed.xml' rel='alternate' type='application/atom+xml'>
+    <link href='favicon.ico' rel='icon' type='image/ico'>
     <title>Notes – Federico Weber</title>
     <link href="../assets/style/application.css" rel="stylesheet" />
   </head>
@@ -17,281 +19,374 @@
             </h1>
             <ol>
               <li>
-                <a href='/work'>work</a>
+                <a href='/about_me'>about me</a>
               </li>
               <li>
                 <a class='-active' href='/notes'>notes</a>
               </li>
               <li>
-                <a href='/library'>reading</a>
-              </li>
-              <li>
-                <a href='/hire_me'>hire me</a>
+                <a href='https://www.goodreads.com/user/show/17488758-federico'>reading</a>
               </li>
             </ol>
             <div id='main_nav--marker'></div>
           </nav>
         </div>
       </header>
-      <div id='main_content'>
-        <div class='section' id='notes'>
+      <div class='main_content'>
+        <section id='notes'>
           <h1 class='-hide_text'>
             <a href='/notes'>Notes</a>
           </h1>
-          <ol class='posts_collection'>
+          <ol class='notes_collection'>
             <li>
-              <article class='posts_collection--post'>
-                <header>
+              <article class='note'>
+                <header class='note--header'>
                   <h1>
-                    <a href="/notes/javascript mousetrap.html">Street Fighter, combos like, keyboard shortcuts in javascript</a>
+                    <a href="/notes/IL_digitalMagazines.html">IL magazine landed on the iPad, and it's awful</a>
                   </h1>
-                  <span>
-                    <time datetime='2012-07-06 14:48:58 UTC'>Jul  6 2012</time>
-                  </span>
+                  <div class='note--meta'>
+                    <time datetime='2012-08-23 00:00:00 UTC'>August 2012</time>
+                  </div>
                 </header>
                 <div class='article--body'>
-                  <p><a href="http://craig.is/killing/mice">MouseTrap</a> is a lightweight, 1.4kb <em>minified</em> and <em>gzipped</em>, javascript library. Developed by <a href="http://craig.is/">Creaig Campbell</a>. That allow you to, easily create, and listen to keyboard shortcuts.</p>
+                  <p>This morning I was looking at twitter feed and I did stumbled upon a tweet from [Francesco Franchi]<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>, announcing that the <strong>IL</strong> magazine is finally on the iPad Newsstand and that the current issue it&rsquo;s available for download.
+                  Being a long time supporter<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup>, I was more than excited about it, imagining the incredible things the staff have pulled out leveraging the possibilities offered by the iPad—Especially considering the intensive use of info-graphics the magazine do, that lead them to won a more than rewarding list of awards, including a <em>Compasso D&#39;oro</em>—. And I decided to welcomely spend the increased price<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup> to enjoy the experience of reading it on my iPad.</p>
                   
-                  <p>The sintax for the implementation is as simple as:</p>
+                  <p><img alt="IL August cover on the iPad" src="https://dl.dropbox.com/u/116832/federicoweber.com/Photo%2023-08-12%2013%2017%2014.png" /></p>
                   
-                  <pre><code>Mousetrap.bind(['command+s', 'ctrl+s'],function(){
-                  	//callback goes here
-                  });
-                  </code></pre>
+                  <p>Unfortunately the magazine is not only far for great—not featuring any interactive content—but it&rsquo; completely awful. Residing in that terrible editorial space defined by those magazine that, in order to quickly get to the iPad, are presented as a collection of static images and neither went through the effort of adapting the content to the different ration of the layout.</p>
                   
-                  <p>And it also allow you to declare sequences of keys like this:</p>
+                  <p>This was bad enough when the first iPad magazines comes out, almost two years ago. But if an awarded magazine like <strong>IL</strong> pull out something so poor in quality, and charge a premium price for it, I do fell steamed.</p>
                   
-                  <pre><code>Mousetrap.bind('up up down down left right left right b a enter', function() {
-                  	//callback goes here
-                  });
-                  </code></pre>
+                  <p><img alt="poor pages alignment" src="https://dl.dropbox.com/u/116832/federicoweber.com/Photo%2023-08-12%2014%2003%2007.png?w=1f396c19" /></p>
                   
-                  <p>You can find it on <a href="https://github.com/ccampbell/mousetrap">github</a>, or test it's awesomeness firing an <strong>Hadoken</strong> <em>(down down right right a)</em></p>
+                  <p>I do really want to read the current issue properly, so right now I&rsquo;m heading to the nearest newsagent to buy a paper version of the magazine, and i suggest you to do the same. Or better completely skip the digital one if you haven&rsquo;t bought it yet.</p>
                   
-                  <div id="hadokenHolder"></div>
-                  <script src="https://raw.github.com/ccampbell/mousetrap/master/mousetrap.min.js"></script>
+                  <p>For the future I will patiently wait for a proper digital edition that I&rsquo;m sure <em>Il Sole 24 Ore</em> have the expertise—being also the publisher of the nice and free iPad magazine <a href="http://itunes.apple.com/it/app/la-vita-nova/id395924638?mt=8">la vita nòva</a>— and the willingness to craft for us.</p>
                   
-                  <script>
-                  var init = function(){
-                  	if(typeof $ != 'undefined'){
-                  		loadPlayer();
-                  	} else {
-                  		setTimeout(init,2000)
-                  	}
-                  };
+                  <p><img alt="rane" src="https://dl.dropbox.com/u/116832/federicoweber.com/Photo%2023-08-12%2013%2018%2010.png?w=750ef65b" /></p>
                   
-                  var loadPlayer = function(){
-                  	//Load player api asynchronously.
-                  	var tag = document.createElement('script');
-                  	tag.src = "http://www.youtube.com/player_api";
-                  	var firstScriptTag = document.getElementsByTagName('script')[0];
-                  	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                  	var done = false;
-                  	var player;
-                  	onYouTubePlayerAPIReady = function onYouTubePlayerAPIReady() {
-                  		player = new YT.Player('hadokenHolder', {
-                  			height: '0',
-                  			width: '640',
-                  			videoId: 'pHJKS3r_YUg'
-                  		});
-                  		
-                  		//Listen to combo press
-                  		Mousetrap.bind('down down right right a',function(){
-                  			console.log("now playing")
-                  			$('#hadokenHolder').addClass('play').css({'height': '390px'})
-                  			player.stopVideo()
-                  			player.seekTo(9, false)
-                  			player.playVideo()
-                  			setTimeout(function(){closeHadoken(player)},3000);
-                  		});
-                  		}	
-                  }
+                  <p>The current art director of the  IL magazine</p>
                   
-                  var closeHadoken = function(player){
-                  	var currentTime = player.getCurrentTime();
-                  	
-                  	if(currentTime >= 12){
-                  		$('#hadokenHolder').removeClass('play').css({'height': '0'})
-                  		player.stopVideo()
-                  	} else {
-                  		var timeDif = (12 - currentTime )*1000
-                  		setTimeout(function(){closeHadoken(player)},timeDif);
-                  	}
-                  };
+                  <p>I&rsquo;m regularly collecting the IL magazine since 2009, and I&rsquo;ve always been pleased by it&rsquo;s content quality and it&rsquo;s extraordinary visual appeal.</p>
                   
-                  init();
-                  </script>
+                  <p>The regular price, for the paper edition, is € 2,00 if you buy it with <em>Il Sole 24 Ore</em>, the day it is published, or € 0,50 from the day after. The price for the iPad version is € 2,39.</p>
                   
-                  <style type="text/css">
-                  	#hadokenHolder{
-                  		opacity: 0;
-                  		width: 100%;
-                  		overflow: hidden;
-                  		-webkit-transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-                  		-moz-transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-                  		-o-transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
-                  		transition: all 400ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
-                  	}
-                  	
-                  	#hadokenHolder.play{
-                  		opacity: 1;
-                  	}
-                  </style>
+                  <div class="footnotes">
+                  <hr>
+                  <ol>
+                  
+                  <li id="fn1">
+                  </li>
+                  
+                  <li id="fn2">
+                  </li>
+                  
+                  <li id="fn3">
+                  </li>
+                  
+                  </ol>
+                  </div>
                 </div>
               </article>
             </li>
             <li>
-              <article class='posts_collection--post'>
-                <header>
+              <article class='note'>
+                <header class='note--header'>
                   <h1>
-                    <a href="/notes/Chrome iOS.html">Google Chrome for iOS</a>
+                    <a href="/notes/dna_storage.html">Harvard cracks DNA storage</a>
                   </h1>
-                  <span>
-                    <time datetime='2012-06-28 21:22:11 UTC'>Jun 28 2012</time>
-                  </span>
+                  <div class='note--meta'>
+                    <time datetime='2012-08-18 00:00:00 UTC'>August 2012</time>
+                    <a class='note--meta--source_url' href='http://www.extremetech.com/extreme/134672-harvard-cracks-dna-storage-crams-700-terabytes-of-data-into-a-single-gram' title='source'>
+                      <i class='fa fa-external-link'></i>
+                    </a>
+                  </div>
                 </header>
                 <div class='article--body'>
-                  <p>Google have just released Chrome for iOS on the <a href="http://itunes.apple.com/us/app/chrome/id535886823">App Store</a>.
-                  Unfortunately it's not running on v8, Apple is not allowing that, and it's significatively slower than mobile safari. Still it do pack some interesting features. Like the unified address and search bar, and the synchronization of  current opened tabs between multiple devices.
-                  <img alt="" src="https://dl.dropbox.com/u/116832/federicoweber.com/20120628-221534-NT-0-ios-chrome.png" /></p>
+                  <blockquote>
+                  <p>The work, carried out by George Church and Sri Kosuri, basically treats DNA as just another digital storage device. Instead of binary data being encoded as magnetic regions on a hard drive platter, strands of DNA that store 96 bits are synthesized, with each of the bases (TGAC) representing a binary value (T and G = 1, A and C = 0).</p>
+                  </blockquote>
                 </div>
               </article>
             </li>
             <li>
-              <article class='posts_collection--post'>
-                <header>
+              <article class='note'>
+                <header class='note--header'>
                   <h1>
-                    <a href="/notes/workFlow notes hazel automation.html">My mobile notes taking workflow</a>
+                    <a href="/notes/Twitter.html">The dusk of Twitter as a platform</a>
                   </h1>
-                  <span>
-                    <time datetime='2012-06-28 18:33:02 UTC'>Jun 28 2012</time>
-                  </span>
+                  <div class='note--meta'>
+                    <time datetime='2012-08-17 00:00:00 UTC'>August 2012</time>
+                  </div>
                 </header>
                 <div class='article--body'>
-                  <p>When I stumbled upon <a href="http://agiletortoise.com/drafts">Drafts</a>, by Agile Tortoise, I dediced to use it as my mobile note taking app. My choise was dictated by three main reasons:</p>
+                  <p>Yesterday, <a href="https://twitter.com/sippey">Michael Sippey</a>, the Director of consumer product at Twitter, <a href="https://dev.twitter.com/blog/changes-coming-to-twitter-api">announced</a> some obscure changes in the upcoming v1.1 of the Twitter API.
+                  The majority of which is related to limit the API availability to third party clients.</p>
                   
-                  <ul>
-                    <li>it's among the fastest writing app on iOS, ready to write as soon as you start it</li>
-                    <li>it support textExpander</li>
-                    <li>it can save the entries to dropbox</li>
-                  </ul>
+                  <h2>The dusk of the platform</h2>
                   
-                  <h2 id="integrate-it-in-the-overall-workflow">Integrate it in the overall workflow</h2>
-                  <p>The only problem was to integrate it within my workflow.
-                  On the mac I am an <a href="http://brettterpstra.com/project/nvalt/">nvAlt</a> user and I'm also using a strict naming convention for my files.
-                  More or less all my notes files names look like this <strong>20120628-193211-NT-0-tag</strong>, where the third element <em>NT</em> is the type of the file, in this case a <em>note</em>. Unfortunately drafts did not allow me to specify the file name and it can only save the file on the sandboxed <em>/Apps/Drafts</em> folder inside dropbox.</p>
+                  <p>What was great about Twitter was it’s openness, simplicity, and it’s reliability<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>.
+                  But right now, in order to be independent, Twitter have to make money. And in the process of reshaping the company they figured out that, to be appealing for advertisers, they have to control the entire user experience, becoming the endpoint of the discussion and not just the vector. They need to be sure that the advertisement they sell will arrive to the users and they can achieve this only with a strict control on what their users see. They decided to do so by prohibiting new third party clients.</p>
                   
-                  <h2 id="hazel-comes-to-rescue">Hazel comes to rescue</h2>
-                  <p>I did fixed that with the help of <a href="http://smilesoftware.com/TextExpander/">TextExpander</a>, <a href="http://www.noodlesoft.com/hazel.php">Hazel</a> and a little bit of appleScript.</p>
+                  <blockquote>
+                  <p>Nearly eighteen months ago, we gave developers guidance that they should not build client apps that mimic or reproduce the mainstream Twitter consumer client experience. </p>
+                  </blockquote>
                   
-                  <p>The file name problem is solved using the first paragraph of the note to write it down, the date is included thanks to TextExpander.</p>
+                  <p>As far as there is an existing Twitter interface for that specific platform. In fact Twitter is still welcoming to <em>officially approved</em>, native mobile client.</p>
                   
-                  <p>Then on the mac i do have an hazel rule that watch the file content for the notes related tokens, run an appleScipt on it and finally move the files to my main notes folder.
-                  <img alt="" src="https://dl.dropbox.com/u/116832/federicoweber.com/20120628-195122-SP-1-workflow%20hazel.jpg" /></p>
+                  <blockquote>
+                  <p>With v1.1 we will require developers that are building client applications that are pre-installed on mobile handsets, SIM cards, chipsets or other consumer electronics devices to have their application certified by Twitter.</p>
+                  </blockquote>
                   
-                  <p>Here is the script. I think it can be done better, but I've just started learning appleScript.</p>
+                  <p>By making the old ones choke in their user base</p>
                   
-                  <pre><code>-- This script is meant to be executed from Hazel
-                  -- it will change the file name to the first paragraph 
-                  -- set the extension to .md
-                  -- and delete the filename from the file content
-                  -- by Federico Weber | http://federicoweber.com
+                  <blockquote>
+                  <p>if you are building a Twitter client application that is accessing the home timeline, account settings or direct messages API endpoints (typically used by traditional client applications) or are using our User Streams product, you will need our permission if your application will require more than 100,000 individual user tokens.</p>
                   
-                  on hazelProcessFile(theFile)
-                  	-- get the file name
-                  	set content to read theFile
-                  	set newFileName to first paragraph of content
-                  	
-                  	-- rename the file
-                  	tell application "Finder"
-                  		set name of theFile to newFileName &amp; ".md"
-                  	end tell
-                  	
-                  	-- delete the name of the file from the content 
-                  	set newContent to get replaceText(newFileName, "", content)
-                  	set openFile to open for access theFile with write permission
-                  	set eof of openFile to 0
-                  	write newContent to openFile starting at eof as text
-                  	close access openFile
-                  	return true
-                  end hazelProcessFile
+                  <p>We will not be shutting down client applications that use those endpoints and are currently over those token limits. If your application already has more than 100,000 individual user tokens, you&rsquo;ll be able to maintain and add new users to your application until you reach 200% of your current user token count (as of today) — as long as you comply with our Rules of the Road. Once you reach 200% of your current user token count, you&rsquo;ll be able to maintain your application to serve your users, but you will not be able to add additional users without our permission.</p>
+                  </blockquote>
                   
-                  -- replaceText method by Buce Phillis 
-                  -- http://foolsworkshop.com/applescript/2008/05/an-applescript-replace-text-method/
-                  on replaceText(find, replace, subject)
-                  	set prevTIDs to text item delimiters of AppleScript
-                  	set text item delimiters of AppleScript to find
-                  	set subject to text items of subject
-                  	
-                  	set text item delimiters of AppleScript to replace
-                  	set subject to "" &amp; subject
-                  	set text item delimiters of AppleScript to prevTIDs
-                  	
-                  	return subject
-                  end replaceText
-                  </code></pre>
+                  <p>And by prohibiting integration with different social networks</p>
+                  
+                  <blockquote>
+                  <p>No other social or 3rd party actions may be attached to a Tweet. </p>
+                  </blockquote>
+                  
+                  <h2>The dawn of the apps</h2>
+                  
+                  <p>I consider myself more a Tweetbot user than a Twitter user, and I do believe that like me many other users are more tightened to the apps they do use daily to interact with twitter than with the platform itself. 
+                  I would like to see what will happen if those apps implement support for other similar platforms <sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup>. I will surely appreciate.</p>
+                  
+                  <p>The lightweight structure of the tweet data, make it extremely fast to load even on congested or slow network.</p>
+                  
+                  <p><a href="http://app.net">App.net</a> got founded in the last days, the alpha version is running and it&rsquo;s more than a valid candidate.</p>
+                  
+                  <div class="footnotes">
+                  <hr>
+                  <ol>
+                  
+                  <li id="fn1">
+                  </li>
+                  
+                  <li id="fn2">
+                  </li>
+                  
+                  </ol>
+                  </div>
                 </div>
               </article>
             </li>
             <li>
-              <article class='posts_collection--post'>
-                <header>
+              <article class='note'>
+                <header class='note--header'>
                   <h1>
-                    <a href="/notes/walrus javascript.html">Walrus.js</a>
+                    <a href="/notes/film.html">Robot & Frank</a>
                   </h1>
-                  <span>
-                    <time datetime='2012-06-28 15:21:29 UTC'>Jun 28 2012</time>
-                  </span>
+                  <div class='note--meta'>
+                    <time datetime='2012-08-16 00:00:00 UTC'>August 2012</time>
+                    <a class='note--meta--source_url' href='http://www.theverge.com/2012/8/15/3244767/film-review-robot-and-frank' title='source'>
+                      <i class='fa fa-external-link'></i>
+                    </a>
+                  </div>
                 </header>
                 <div class='article--body'>
-                  <p><a href="http://documentup.com/jeremyruppel/walrus/">Walrus</a> is a new templating library with a interesting twist on <strong>presentation logic</strong>, and an useful collection of <strong>view helpers</strong>.</p>
-                  
-                  <p>I'm currently testing it to use it as the default templating language in <a href="https://github.com/federicoweber/vgHear">vgHear</a></p>
+                  <iframe src="http://player.vimeo.com/video/44742356?title=0&amp;byline=0&amp;portrait=0&amp;color=f2de05" width="657" height="369" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                 </div>
               </article>
             </li>
             <li>
-              <article class='posts_collection--post'>
-                <header>
+              <article class='note'>
+                <header class='note--header'>
                   <h1>
-                    <a href="/notes/sublimeText sofware.html">SublimeText 2</a>
+                    <a href="/notes/typography_graph.html">An OpenType hack to design simple graphs</a>
                   </h1>
-                  <span>
-                    <time datetime='2012-06-26 20:48:36 UTC'>Jun 26 2012</time>
-                  </span>
+                  <div class='note--meta'>
+                    <time datetime='2012-08-14 00:00:00 UTC'>August 2012</time>
+                  </div>
                 </header>
                 <div class='article--body'>
-                  <p><a href="http://www.sublimetext.com/">SublimeText</a> 2.0 is officially out, and it's great. If you do write code for living, do yourself a favor and get it.</p>
+                  <p>Designed by <a href="https://twitter.com/traviskochel">@traviskochel</a> <a href="https://www.fontfont.com/how-to-use-ff-chartwell">FF Chartwell</a> is a smart font hack that leverage the OpenType features to convert numbers into graphs.
+                  The process of creating a graph with Chartwell is as simple as turning on the <em>Stylistic Alternates</em>. By doing so a series of, plus separated, numbers are converted into the corresponding graph.</p>
                   
-                  <p>Here is the official <a href="http://www.sublimetext.com/blog/articles/sublime-text-2-0-released">article</a> and the 
-                  [comments] (http://news.ycombinator.com/item?id=4161610) on HakerNews.</p>
+                  <p><img alt="FF Chartwell Radar" src="https://www.fontfont.com/staticcontent/inuseimages/original/FF_Chartwell_SC-all_7_symbols-Radar.png?1336379581" /></p>
+                  
+                  <p>It&rsquo;s possible to create the following type of graphs: bars vertical, bars horizontal, lines, pies, radar, rings, rose.</p>
+                  
+                  <p>The font is quite useful as it is and the guys at <a href="https://www.fontfont.com/">FontFont</a> are already working on a web version of it.</p>
                 </div>
               </article>
             </li>
             <li>
-              <article class='posts_collection--post'>
-                <header>
+              <article class='note'>
+                <header class='note--header'>
                   <h1>
-                    <a href="/notes/wthr iOS app.html">WTHR, wheather app with great style</a>
+                    <a href="/notes/videogames_graphic.html">CryEngine 3</a>
                   </h1>
-                  <span>
-                    <time datetime='2012-06-26 06:01:48 UTC'>Jun 26 2012</time>
-                  </span>
+                  <div class='note--meta'>
+                    <time datetime='2012-08-12 14:59:42 UTC'>August 2012</time>
+                    <a class='note--meta--source_url' href='https://www.youtube.com/watch?v=JWvgETOo5ek&amp;feature=player_embedded' title='source'>
+                      <i class='fa fa-external-link'></i>
+                    </a>
+                  </div>
                 </header>
                 <div class='article--body'>
-                  <p><a href="http://www.wthr.co/">WTHR</a> is a simple and beautifull approach to weather apps by <a href="https://twitter.com/#!/DavidElgena">David Elgena</a>.</p>
+                  <iframe width="640" height="360" src="http://www.youtube.com/embed/JWvgETOo5ek" frameborder="0" allowfullscreen></iframe>
                   
-                  <p><img alt="wthr" src="https://dl.dropbox.com/u/116832/federicoweber.com/wthr.png" /></p>
+                  <p>Beautiful tech demo of the amazing scenery and graphics in Crysis 3 powerd by CryEngine3.</p>
+                  
+                  <p>Also make sure to watch the Official single player interactive <a href="http://www.youtube.com/watch?v=_2LX8bEmhDc&amp;feature=player_embedded">demo</a></p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/frontend_development_tool_node_front.html">Front-end development with Nodefront</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-08-08 22:35:22 UTC'>August 2012</time>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p>I&rsquo;ve just discovered <a href="http://karthikv.github.com/nodefront/">Nodefront</a>, a command-line tools, developed by <a href="http://karthikv.net">Karthik Viswanathan</a>, that ease front-end development by compiling and watching <strong>.jade</strong>, <strong>.styl</strong> and <strong>coffeescript</strong> files.</p>
+                  
+                  <p>Among the other features it did offer i do find the <strong>live compile</strong> option particularly useful.</p>
+                  
+                  <p>If you are curios here is a <a href="https://vimeo.com/46197434">screencast</a> of it in action</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/microsoft.html">Steve Ballmer was right...</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-08-03 12:47:45 UTC'>August 2012</time>
+                    <a class='note--meta--source_url' href='http://arstechnica.com/information-technology/2012/08/microsoft-metro-out-windows-8-style-ui-in-amid-rumors-of-a-trademark-dispute/' title='source'>
+                      <i class='fa fa-external-link'></i>
+                    </a>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <blockquote>
+                  <p>Microsoft has been using the &ldquo;Metro&rdquo; name to describe the new geometric, typography-heavy look-and-feel that is central to Windows 8—and is spreading across the company&rsquo;s entire range of products—ever since it first showed off Windows Phone.</p>
+                  </blockquote>
+                  
+                  <p>Never ever adopt a product name that does not contain <strong>Windows</strong> in it.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/apple_AppStore_Sandboxing.html">Present and future of the App Store and Gatekeeper</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-07-26 22:54:11 UTC'>July 2012</time>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p>In a recent post, <a href="http://www.marco.org/2012/07/26/mac-app-store-future"><em>The Mac App Store’s future of irrelevance</em></a> , Marco Arment make some points on the actual state of App Store, and it&rsquo;s possible future.</p>
+                  
+                  <p><a href="@marcoarment">Marco Arment</a>:</p>
+                  
+                  <blockquote>
+                  <p>But now, I’ve lost all confidence that the apps I buy in the App Store today will still be there next month or next year. The advantages of buying from the App Store are mostly gone now. My confidence in the App Store, as a customer, has evaporated.</p>
+                  
+                  <p>The Mac App Store is in significant danger of becoming an irrelevant, low-traffic flea market where buyers rarely venture for serious purchases. And I bet that’s not what Apple had in mind at all.</p>
+                  </blockquote>
+                  
+                  <p>I believe Marco is somehow right, and unluckily for some kind of apps the best option is to buy them outside of the app store. 
+                  As of today the App Store, and the Gatekeeper are far from perfect and the impossibility for a developer properly market, updates and discounts. Combined with the strict sandboxing is a great obstacle for an everlasting and healthy adoption both for users and developers. </p>
+                  
+                  <p>Yet  I do think the App Store is still a far superior shopping experience. In fact, it&rsquo;s so delightful that, many of us bought the same software twice, once the App Store came out, just to have it connected to it, and relieving the pain of dealing with licenses and updates.</p>
+                  
+                  <p>But Apple can easily fix that. For example they could grant certified developers the rights to both, use iClouds APIs and sell, on the App Store, non sandboxed apps. They can achieve this by properly marking the app and, maybe, <em>hiding</em> it beyond an option in the Security and Privacy settings. By doing so the will ensure the security of the App Store, but also allow those of us who are willing, or need to, use non sandboxed apps to leverage it&rsquo;s power and simplicity.</p>
+                  
+                  <p>Also I do believe that on the long run, as it&rsquo;s happing on the iOS, the terms and conditions, for an app to be considered sandboxed, will get more flexible. Allowing more of them to jump in.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class='note'>
+                <header class='note--header'>
+                  <h1>
+                    <a href="/notes/meteor_fundRaising.html">Meteor Raises $11.2M from Andreessen Horowitz</a>
+                  </h1>
+                  <div class='note--meta'>
+                    <time datetime='2012-07-25 15:25:36 UTC'>July 2012</time>
+                    <a class='note--meta--source_url' href='http://meteor.com/blog/2012/07/25/meteors-new-112-million-development-budget' title='source'>
+                      <i class='fa fa-external-link'></i>
+                    </a>
+                  </div>
+                </header>
+                <div class='article--body'>
+                  <p>Congratulations to the <a href="http://meteor.com/">Meteor</a> team for raising such a big sum for an open source project.</p>
+                  
+                  <p>For those new with the matter Meteor is an open-source platform for building web apps in javascript. What is differentiating it from the competitors is the availability of the same APIs for both the front-end and the back-end, allowing super fast development.
+                  You should really take a look at the  live updating leaderboard <a href="http://meteor.com/examples/leaderboard">example</a>.</p>
                 </div>
               </article>
             </li>
           </ol>
-          <div class='posts_collection_nav'>
-            <a href='/notes/p2.html'>prev</a>
-          </div>
+        </section>
+        <div class='notes_collection_nav'>
+          <a class='notes_collection_nav--newer' href='/notes/p2.html' title='newer notes'>
+            <i class='fa fa-calendar-plus-o'></i>
+          </a>
+          <a class='notes_collection_nav--older' href='/notes/p4.html' title='older notes'>
+            <i class='fa fa-calendar-minus-o'></i>
+          </a>
         </div>
       </div>
+      <footer id='main_footer'>
+        <ul>
+          <li>
+            <a href='https://github.com/federicoweber' title='github'>
+              <i class='fa fa-github'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://instagram.com/federicoweber' title='instagram'>
+              <i class='fa fa-instagram'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://www.pinterest.com/federicoweber/' title='pinterest'>
+              <i class='fa fa-pinterest'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://twitter.com/federicoweber' title='twitter'>
+              <i class='fa fa-twitter'></i>
+            </a>
+          </li>
+          <li>
+            <a href='http://federicoweber.vsco.co' title='vsco'>
+              <img src='http://assets.vsco.co/assets/images/assets/Grid_black_16.png'>
+            </a>
+          </li>
+          <li class='-with_text -push_right'>
+            <a href='mailto:federicoweber@gmail.com' title='email'>
+              <span class='text'>email me</span>
+              <i class='fa fa-envelope-o'></i>
+            </a>
+          </li>
+          <li class='-with_text'>
+            <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike 4.0 International'>
+              <span class='text'>license</span>
+              <i class='fa fa-creative-commons'></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../assets/js/application.js"></script>
+    <link href="../assets/style/code.css" rel="stylesheet" />
   </body>
 </html>

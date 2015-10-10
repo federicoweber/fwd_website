@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href='/feed.xml' rel='alternate' type='application/atom+xml'>
+    <link href='favicon.ico' rel='icon' type='image/ico'>
+    <title>Front end middleware with Backbone and PantaRhei</title>
+    <link href="../assets/style/application.css" rel="stylesheet" />
+  </head>
+  <body class='notes notes_tutorial_backbone_pantarhei_javascript'>
+    <div id='wrapper'>
+      <header id='main_header'>
+        <div id='main_header--content'>
+          <nav id='main_nav'>
+            <h1 id='main_header--title'>
+              <a href='/'>Federico Weber</a>
+            </h1>
+            <ol>
+              <li>
+                <a href='/about_me'>about me</a>
+              </li>
+              <li>
+                <a class='-active' href='/notes'>notes</a>
+              </li>
+              <li>
+                <a href='https://www.goodreads.com/user/show/17488758-federico'>reading</a>
+              </li>
+            </ol>
+            <div id='main_nav--marker'></div>
+          </nav>
+        </div>
+      </header>
+      <div class='main_content'>
+        <article class='note -single_note'>
+          <header class='note--header'>
+            <h1>
+              Front end middleware with Backbone and PantaRhei
+            </h1>
+            <div class='note--meta'>
+              <time datetime='2012-09-25 00:00:00 UTC'>September 2012</time>
+            </div>
+          </header>
+          <h2>A middleware primer</h2>
+          
+          <p>The first time I&rsquo;ve stumbled upon  the middleware pattern it was in <a href="http://expressjs.com">Express.js</a>, while developing the backend for <a href="http://federicoweber.com/gestaltapp/20120625-142551-pi-3-introducinggestalt">Gestalt</a>. </p>
+          
+          <p>The concept of middleware it&rsquo;s quite straight forward, it&rsquo;s nothing more than a function that handle a request. What make it so interesting is the possibility to create a stack of middleware. By doing so each middleware will be able to process the request, and call the next one in the stack.</p>
+          
+          <p>A typical middleware will look like this:</p>
+          <pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+              <span class="c1">// all your logic goes in here</span>
+          
+              <span class="c1">// proceed to the next middleware</span>
+              <span class="nx">next</span><span class="p">();</span>
+          <span class="p">};</span>
+          </code></pre>
+          
+          <p>If a middleware have to signal an error, it can do so passing it to the first argument of the next().</p>
+          <pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+              <span class="c1">// signal an error</span>
+              <span class="nx">next</span><span class="p">(</span> <span class="s2">"Something went wrong!"</span> <span class="p">);</span>
+          <span class="p">};</span>
+          </code></pre>
+          
+          <p>To append a stack of middleware to a request in <a href="http://www.senchalabs.org/connect/">Connect</a> you have to declare them with the <strong>use</strong> method<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>.</p>
+          <pre class="highlight javascript"><code><span class="c1">// Example from http://www.senchalabs.org/connect/</span>
+          <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">connect</span><span class="p">()</span>
+              <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">connect</span><span class="p">.</span><span class="nx">logger</span><span class="p">(</span><span class="s1">'dev'</span><span class="p">))</span>
+              <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">'public'</span><span class="p">))</span>
+              <span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+                  <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">'hello world\n'</span><span class="p">);</span>
+              <span class="p">})</span>
+              <span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+          </code></pre>
+          
+          <p>What I really like about this pattern is that by simply reading the <strong>use</strong> stack you can get a grip on the logics behind the application. Also structuring your application as a cascade of middleware you are encouraged to split it in small,  self contained, modules and avoid nasty callbacks. With the added benefit of a enhancing both the readability maintainability of your code.</p>
+          
+          <h2>Introducing PantaRhei.js</h2>
+          
+          <p><a href="http://github.com/federicoweber/PantaRhei">PantaRhei.js</a> is my front end implementation of the middleware pattern . I structured it as an extension for <a href="http://backbonejs.org">Backbone.js</a> because it is awesome, I&rsquo;m using it on the wast majority of my projects, and I want to leverage it&rsquo;s <strong>Events</strong> module and the simple inheritance style provided by the <strong>extend()</strong> method. </p>
+          
+          <p>PantaRhei is written in CoffeeScript and distributed with the MIT license. You can find the coffeescript sources and the compiled and minified javascript files on <a href="http://github.com/federicoweber/PantaRhei">Github</a>. </p>
+          
+          <p>The purpose of PantaRhei is to ease the creation and the execution of queues of tasks, like fetching and manipulating data, managing the transitions between pages and so on.
+          Right now PantaRhei is composed by two modules: the <strong>Flow</strong>, that is responsible for the execution of the queue and the <strong>Worker</strong>, that describe one of the possible structure of middleware<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup> that the Flow can handle.</p>
+          
+          <h3>The Worker</h3>
+          
+          <p>The <strong>Worker</strong> module is more a convention than a real module, and it&rsquo;s meant to be extended. 
+          It describe two methods: the former is the <strong>run</strong> it&rsquo;s invoked by the Flow to execute the worker and accept a <strong>shared</strong> object ( which purpose is to act as a place for workers to share data ) and the <strong>next</strong> callback as arguments; the latter is the <strong>kill</strong>, that is invoked by the Flow when the worker execution is completed to safely remove it.
+          The worker constructor also accept an option <strong>id</strong> as an argument.</p>
+          
+          <p>To create a new Worker you need to extend it and implement it&rsquo;s methods:</p>
+          <pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">Delay</span> <span class="o">=</span> <span class="nx">PantaRhei</span><span class="p">.</span><span class="nx">Worker</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+              <span class="na">constructor</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">duration</span><span class="p">,</span> <span class="nx">id</span><span class="p">){</span>
+                  <span class="k">this</span><span class="p">.</span><span class="nx">duration</span> <span class="o">=</span> <span class="nx">duration</span><span class="p">;</span>
+                  <span class="k">this</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+              <span class="p">},</span>
+              <span class="na">run</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">shared</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+                  <span class="nx">onTimeout</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+                      <span class="nx">next</span><span class="p">();</span>
+                  <span class="p">};</span>
+                  <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">onTimeout</span><span class="p">,</span> <span class="nx">duration</span><span class="p">);</span>
+              <span class="p">},</span>
+              <span class="na">kill</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+                  <span class="c1">// all your logics to remove the worker</span>
+              <span class="p">}</span>
+          <span class="p">});</span>
+          
+          <span class="kd">var</span> <span class="nx">shortDelay</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="s1">'shortDelay'</span><span class="p">);</span>
+          </code></pre>
+          
+          <p>PantaRhei also include, under the PantaRhei.workers namespace, a series of workers<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup> JsonLoader and LoadAssets.</p>
+          
+          <h3>The Flow</h3>
+          
+          <p>The <strong>Flow</strong> module is our middleware manager, and handle for you all the logic to create and run the queue.
+          To create a new flow all you have to do is to call it&rsquo;s constructor and optionally pass two parameters: an <strong>id</strong> and a array containing the list of <strong>workers</strong> to use.</p>
+          <pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">flow</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PantaRhei</span><span class="p">.</span><span class="nx">Flow</span><span class="p">(</span> <span class="s1">'myFirstFlow'</span><span class="p">,</span> <span class="p">[</span><span class="nx">task1</span><span class="p">,</span> <span class="nx">task2</span><span class="p">]</span> <span class="p">);</span>
+          </code></pre>
+          
+          <p>You can also append a worker to the flow passing it  as an argument of the <strong>use</strong> method.</p>
+          <pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">task1</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">shared</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span>
+                  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="s2">"task one completed"</span> <span class="p">);</span>
+                  <span class="nx">next</span><span class="p">();</span>
+              <span class="p">},</span>
+          <span class="nx">flow</span> <span class="o">=</span>  <span class="k">new</span> <span class="nx">PantaRhei</span><span class="p">.</span><span class="nx">Flow</span><span class="p">(</span> <span class="p">);</span>
+          <span class="nx">flow</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">task1</span><span class="p">);</span>
+          </code></pre>
+          
+          <p>To execute the flow you have to invoke the <strong>run</strong> method. The flow can also accept an optional <strong>shared</strong> object. This is passed around to all the workers in the queue and it&rsquo;s returned by the flow on complete, it&rsquo;s actually the place for storing and passing data between workers. If this is not provided the Flow will create a empty object to use. </p>
+          <pre class="highlight javascript"><code><span class="c1">// create our workers</span>
+          <span class="kd">var</span> <span class="nx">task1</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">shared</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span>
+              <span class="nx">shared</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="s2">"the data have been processed"</span>
+              <span class="nx">next</span><span class="p">();</span>
+          <span class="p">},</span>
+          <span class="nx">task2</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">shared</span><span class="p">,</span> <span class="nx">next</span><span class="p">){</span>
+              <span class="nx">shared</span><span class="p">.</span><span class="nx">newData</span> <span class="o">=</span> <span class="s2">"we got some new data for you"</span>
+              <span class="nx">next</span><span class="p">();</span>
+          <span class="p">},</span>
+          
+          <span class="c1">// create our flow and workers passing the first task on the constructor</span>
+          <span class="nx">flow</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PantaRhei</span><span class="p">.</span><span class="nx">Flow</span><span class="p">(</span>  <span class="s1">'myFirstFlow'</span><span class="p">,</span> <span class="p">[</span> <span class="nx">task1</span> <span class="p">]);</span>
+          
+          <span class="nx">flow</span>
+              <span class="c1">// append the second task</span>
+              <span class="p">.</span><span class="nx">use</span><span class="p">(</span> <span class="nx">task2</span> <span class="p">)</span>
+              <span class="c1">// run the flow</span>
+              <span class="p">.</span><span class="nx">run</span><span class="p">({</span><span class="na">data</span><span class="p">:</span> <span class="s2">"the data is new"</span><span class="p">});</span>
+          </code></pre>
+          
+          <h4>Events</h4>
+          
+          <p>PantaRhei make use of the Backbone Events, so the  Flow can dispatch the following events: run, pause, resume, error and complete. Apart from the error all the other events pass the shared object as an argument to the listener.
+          So to get notified when a flow have been successfully executed you can catch the complete event.
+          &ldquo;`javascript
+          var onComplete = function( shared ){
+              console.log(shared);
+          };</p>
+          
+          <p>flow
+              .on( &lsquo;complete&rsquo;, onComplete)
+              .run();
+          &rdquo;`</p>
+          
+          <h4>Error handling</h4>
+          
+          <p>PantaRhei leave the responsibility to properly handle the errors to you. If any of the worker in the queue pass and error to the next callback, the Flow is paused and dispatch an <strong>error</strong> event. 
+          Once you have  done with the error handling and you are ready to resume the flow you can call the <strong>resume</strong> method to move to the next worker in the queue.</p>
+          <pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">onError</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">err</span> <span class="p">){</span>
+              <span class="c1">//handle the error in here</span>
+              <span class="k">this</span><span class="p">.</span><span class="nx">resume</span><span class="p">();</span>
+          <span class="p">};</span>
+          
+          <span class="nx">flow</span>
+              <span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">'error'</span><span class="p">,</span> <span class="nx">onError</span><span class="p">)</span>
+              <span class="p">.</span><span class="nx">run</span><span class="p">();</span>
+          </code></pre>
+          
+          <p>The other one is a simple function that accept as arguments the <strong>shared</strong> object and the <strong>next</strong> callback.</p>
+          
+          <div class="footnotes">
+          <hr>
+          <ol>
+          
+          <li id="fn1">
+          <p>If you are looking for an introduction to the use of middle wares in Connect I suggest you to check this short <a href="http://stephensugden.com/middleware_guide/">guide</a> written by Stephen Sugden.&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+          </li>
+          
+          <li id="fn2">
+          </li>
+          
+          <li id="fn3">
+          <p>More to follow soon.&nbsp;<a href="#fnref3" rev="footnote">&#8617;</a></p>
+          </li>
+          
+          </ol>
+          </div>
+        </article>
+      </div>
+      <footer id='main_footer'>
+        <ul>
+          <li>
+            <a href='https://github.com/federicoweber' title='github'>
+              <i class='fa fa-github'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://instagram.com/federicoweber' title='instagram'>
+              <i class='fa fa-instagram'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://www.pinterest.com/federicoweber/' title='pinterest'>
+              <i class='fa fa-pinterest'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://twitter.com/federicoweber' title='twitter'>
+              <i class='fa fa-twitter'></i>
+            </a>
+          </li>
+          <li>
+            <a href='http://federicoweber.vsco.co' title='vsco'>
+              <img src='http://assets.vsco.co/assets/images/assets/Grid_black_16.png'>
+            </a>
+          </li>
+          <li class='-with_text -push_right'>
+            <a href='mailto:federicoweber@gmail.com' title='email'>
+              <span class='text'>email me</span>
+              <i class='fa fa-envelope-o'></i>
+            </a>
+          </li>
+          <li class='-with_text'>
+            <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike 4.0 International'>
+              <span class='text'>license</span>
+              <i class='fa fa-creative-commons'></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../assets/js/application.js"></script>
+    <link href="../assets/style/code.css" rel="stylesheet" />
+  </body>
+</html>

@@ -4,6 +4,8 @@
     <meta charset='utf-8'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href='/feed.xml' rel='alternate' type='application/atom+xml'>
+    <link href='favicon.ico' rel='icon' type='image/ico'>
     <title>The dusk of Twitter as a platform</title>
     <link href="../assets/style/application.css" rel="stylesheet" />
   </head>
@@ -17,66 +19,127 @@
             </h1>
             <ol>
               <li>
-                <a href='/work'>work</a>
+                <a href='/about_me'>about me</a>
               </li>
               <li>
                 <a class='-active' href='/notes'>notes</a>
               </li>
               <li>
-                <a href='/library'>reading</a>
-              </li>
-              <li>
-                <a href='/hire_me'>hire me</a>
+                <a href='https://www.goodreads.com/user/show/17488758-federico'>reading</a>
               </li>
             </ol>
             <div id='main_nav--marker'></div>
           </nav>
         </div>
       </header>
-      <div id='main_content'>
-        <p>Yesterday, <a href="https://twitter.com/sippey">Michael Sippey</a>, the Director of consumer product at Twitter, <a href="https://dev.twitter.com/blog/changes-coming-to-twitter-api">announced</a> some obscure changes in the upcoming v1.1 of the Twitter API.
-        The majority of which is related to limit the API availability to third party clients.</p>
-        
-        <h2 id="the-dusk-of-the-platform">The dusk of the platform</h2>
-        <p>What was great about Twitter was it’s openness, simplicity, and it’s reliability<sup id="fnref:data"><a href="#fn:data" class="footnote">1</a></sup>.
-        But right now, in order to be independent, Twitter have to make money. And in the process of reshaping the company they figured out that, to be appealing for advertisers, they have to control the entire user experience, becoming the endpoint of the discussion and not just the vector. They need to be sure that the advertisement they sell will arrive to the users and they can achieve this only with a strict control on what their users see. They decided to do so by prohibiting new third party clients.</p>
-        
-        <blockquote>
-          <p>Nearly eighteen months ago, we gave developers guidance that they should not build client apps that mimic or reproduce the mainstream Twitter consumer client experience.</p>
-        </blockquote>
-        
-        <p>As far as there is an existing Twitter interface for that specific platform. In fact Twitter is still welcoming to <em>officially approved</em>, native mobile client.</p>
-        
-        <blockquote>
+      <div class='main_content'>
+        <article class='note -single_note'>
+          <header class='note--header'>
+            <h1>
+              The dusk of Twitter as a platform
+            </h1>
+            <div class='note--meta'>
+              <time datetime='2012-08-17 00:00:00 UTC'>August 2012</time>
+            </div>
+          </header>
+          <p>Yesterday, <a href="https://twitter.com/sippey">Michael Sippey</a>, the Director of consumer product at Twitter, <a href="https://dev.twitter.com/blog/changes-coming-to-twitter-api">announced</a> some obscure changes in the upcoming v1.1 of the Twitter API.
+          The majority of which is related to limit the API availability to third party clients.</p>
+          
+          <h2>The dusk of the platform</h2>
+          
+          <p>What was great about Twitter was it’s openness, simplicity, and it’s reliability<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>.
+          But right now, in order to be independent, Twitter have to make money. And in the process of reshaping the company they figured out that, to be appealing for advertisers, they have to control the entire user experience, becoming the endpoint of the discussion and not just the vector. They need to be sure that the advertisement they sell will arrive to the users and they can achieve this only with a strict control on what their users see. They decided to do so by prohibiting new third party clients.</p>
+          
+          <blockquote>
+          <p>Nearly eighteen months ago, we gave developers guidance that they should not build client apps that mimic or reproduce the mainstream Twitter consumer client experience. </p>
+          </blockquote>
+          
+          <p>As far as there is an existing Twitter interface for that specific platform. In fact Twitter is still welcoming to <em>officially approved</em>, native mobile client.</p>
+          
+          <blockquote>
           <p>With v1.1 we will require developers that are building client applications that are pre-installed on mobile handsets, SIM cards, chipsets or other consumer electronics devices to have their application certified by Twitter.</p>
-        </blockquote>
-        
-        <p>By making the old ones choke in their user base</p>
-        
-        <blockquote>
+          </blockquote>
+          
+          <p>By making the old ones choke in their user base</p>
+          
+          <blockquote>
           <p>if you are building a Twitter client application that is accessing the home timeline, account settings or direct messages API endpoints (typically used by traditional client applications) or are using our User Streams product, you will need our permission if your application will require more than 100,000 individual user tokens.</p>
-        </blockquote>
-        
-        <blockquote>
-          <p>We will not be shutting down client applications that use those endpoints and are currently over those token limits. If your application already has more than 100,000 individual user tokens, you'll be able to maintain and add new users to your application until you reach 200% of your current user token count (as of today) — as long as you comply with our Rules of the Road. Once you reach 200% of your current user token count, you'll be able to maintain your application to serve your users, but you will not be able to add additional users without our permission.</p>
-        </blockquote>
-        
-        <p>And by prohibiting integration with different social networks
-        &gt; No other social or 3rd party actions may be attached to a Tweet.</p>
-        
-        <h2 id="the-dawn-of-the-apps">The dawn of the apps</h2>
-        <p>I consider myself more a Tweetbot user than a Twitter user, and I do believe that like me many other users are more tightened to the apps they do use daily to interact with twitter than with the platform itself. 
-        I would like to see what will happen if those apps implement support for other similar platforms [^app.net]. I will surely appreciate.</p>
-        
-        <div class="footnotes">
+          
+          <p>We will not be shutting down client applications that use those endpoints and are currently over those token limits. If your application already has more than 100,000 individual user tokens, you&rsquo;ll be able to maintain and add new users to your application until you reach 200% of your current user token count (as of today) — as long as you comply with our Rules of the Road. Once you reach 200% of your current user token count, you&rsquo;ll be able to maintain your application to serve your users, but you will not be able to add additional users without our permission.</p>
+          </blockquote>
+          
+          <p>And by prohibiting integration with different social networks</p>
+          
+          <blockquote>
+          <p>No other social or 3rd party actions may be attached to a Tweet. </p>
+          </blockquote>
+          
+          <h2>The dawn of the apps</h2>
+          
+          <p>I consider myself more a Tweetbot user than a Twitter user, and I do believe that like me many other users are more tightened to the apps they do use daily to interact with twitter than with the platform itself. 
+          I would like to see what will happen if those apps implement support for other similar platforms <sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup>. I will surely appreciate.</p>
+          
+          <p>The lightweight structure of the tweet data, make it extremely fast to load even on congested or slow network.</p>
+          
+          <p><a href="http://app.net">App.net</a> got founded in the last days, the alpha version is running and it&rsquo;s more than a valid candidate.</p>
+          
+          <div class="footnotes">
+          <hr>
           <ol>
-            <li id="fn:data">
-              <p>The lightweight structure of the tweet data, make it extremely fast to load even on congested or slow network. <a href="#fnref:data" class="reversefootnote">&#8617;</a></p>
-            </li>
+          
+          <li id="fn1">
+          </li>
+          
+          <li id="fn2">
+          </li>
+          
           </ol>
-        </div>
+          </div>
+        </article>
       </div>
+      <footer id='main_footer'>
+        <ul>
+          <li>
+            <a href='https://github.com/federicoweber' title='github'>
+              <i class='fa fa-github'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://instagram.com/federicoweber' title='instagram'>
+              <i class='fa fa-instagram'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://www.pinterest.com/federicoweber/' title='pinterest'>
+              <i class='fa fa-pinterest'></i>
+            </a>
+          </li>
+          <li>
+            <a href='https://twitter.com/federicoweber' title='twitter'>
+              <i class='fa fa-twitter'></i>
+            </a>
+          </li>
+          <li>
+            <a href='http://federicoweber.vsco.co' title='vsco'>
+              <img src='http://assets.vsco.co/assets/images/assets/Grid_black_16.png'>
+            </a>
+          </li>
+          <li class='-with_text -push_right'>
+            <a href='mailto:federicoweber@gmail.com' title='email'>
+              <span class='text'>email me</span>
+              <i class='fa fa-envelope-o'></i>
+            </a>
+          </li>
+          <li class='-with_text'>
+            <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike 4.0 International'>
+              <span class='text'>license</span>
+              <i class='fa fa-creative-commons'></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../assets/js/application.js"></script>
+    <link href="../assets/style/code.css" rel="stylesheet" />
   </body>
 </html>

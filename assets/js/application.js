@@ -1,5 +1,5 @@
 (function() {
-  var MOBILE_BREAK_POINT, bindMainNavMobilecollapse, mainNavMobileExpand, mainNavMobilecollapse, sizeAllThings, sizeHomepage, sizeSquareBlocks;
+  var MOBILE_BREAK_POINT, bindMainNavMobilecollapse, mainNavMobileExpand, mainNavMobilecollapse, sizeAllThings, sizeHomepage, sizeIframes, sizeSquareBlocks;
 
   MOBILE_BREAK_POINT = 768;
 
@@ -18,8 +18,29 @@
 
   sizeHomepage = function() {
     var height;
-    height = $(window).height() - $('#main_header').outerHeight(true);
+    height = $(window).height() - $('#main_header').outerHeight(true) - $('#main_footer').outerHeight(true);
     return $('#homepage--about').height(height);
+  };
+
+  sizeIframes = function() {
+    var targetWidth;
+    targetWidth = $('iframe').first().parent().width();
+    return $('iframe').each(function() {
+      var ratio, targetHeight;
+      ratio = $(this).data('ratio');
+      if (!ratio) {
+        ratio = $(this).width() / $(this).height();
+        $(this).data('ratio', ratio);
+      }
+      targetHeight = targetWidth / ratio;
+      return $(this).width(targetWidth).height(targetHeight);
+    });
+  };
+
+  sizeAllThings = function() {
+    sizeSquareBlocks();
+    sizeIframes();
+    return sizeHomepage();
   };
 
   mainNavMobileExpand = function() {
@@ -36,11 +57,6 @@
 
   bindMainNavMobilecollapse = function() {
     return $(window).on('scroll', mainNavMobilecollapse);
-  };
-
-  sizeAllThings = function() {
-    sizeSquareBlocks();
-    return sizeHomepage();
   };
 
   $(function() {
