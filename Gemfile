@@ -4,8 +4,10 @@ source "http://rubygems.org"
 
 gem 'font-awesome-sass'
 gem "bourbon"
+gem "builder"
 gem "middleman-blog"
 gem "middleman-deploy"
+gem "middleman-favicon-maker", "~> 3.7"
 gem "middleman-livereload"
 gem "middleman-syntax"
 gem "middleman"

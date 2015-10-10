@@ -7,12 +7,12 @@
       
       %ol
         %li
-          %a{class: [('-active' if current_page.url.split('/')[1] == 'work')], href: url_for("/work")} work
+          %a{class: [('-active' if current_page.url.split('/')[1] == 'about_me')], href: url_for("/about_me")} about me
         %li
           %a{class: [('-active' if current_page.url.split('/')[1] == 'notes')], href: url_for('/notes')} notes
         %li
-          %a{class: [('-active' if current_page.url.split('/')[1] == 'library')], href: url_for("/library")} reading
-        %li
-          %a{class: [('-active' if current_page.url.split('/')[1] == 'hire_me')], href: url_for("/hire_me")} hire me
+          %a{href: "https://www.goodreads.com/user/show/17488758-federico"} reading
+        -# %li
+        -#   %a{class: [('-active' if current_page.url.split('/')[1] == 'work')], href: url_for("/work")} work
       
       #main_nav--marker

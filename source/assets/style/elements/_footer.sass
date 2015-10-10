@@ -1,0 +1,61 @@
+#main_footer
+  +span-columns(12)
+  +omega
+  +display(flex)
+  +justify-content(center)
+  
+  background-color: $white
+  
+  ul
+    +span-columns(10 of 12)
+    +shift(1)
+    +display(flex)
+    +align-items(center)
+
+    margin: +modular-scale(-1) 0
+    
+    li
+      +font_size_1
+      +transition(color 250ms $ease-out-cubic)
+      display: block
+      margin-right: +modular-scale(1)
+      
+      &:last-child
+        margin-right: 0
+      
+      a
+        color: $gray
+        +transition(color 250ms $ease-out-cubic)
+        
+        +hover_on_desktop
+          color: $black
+          opacity: 1
+          
+        // this is needed only for vsco grid
+        img
+          +transition(opacity 250ms $ease-out-cubic)
+          opacity: .5
+          width: +modular-scale(-1)
+          
+          +hover_on_desktop
+            opacity: 1
+  
+      &.-push_right
+        margin-left: auto
+      
+      &.-with_text
+        @extend %font_monserrat
+        +font_size_1
+        +min_tablet
+          +font_size_-1
+        
+        a
+          @extend .-uppercase
+          .text
+            display: none
+            +min_tablet
+              display: inline
+          .fa
+            display: inline-block
+            +min_tablet
+              display: none

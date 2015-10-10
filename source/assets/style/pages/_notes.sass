@@ -8,8 +8,8 @@
 
 .note
   
-  +span-columns(10 of 12)
-  +shift(1)
+  +span-columns(10 of 10)
+  +shift(0)
   margin-bottom: +modular-scale(2)
   
   +min_tablet
@@ -20,7 +20,21 @@
   +min_desktop
     +span-columns(6 of 10)
     +shift(2)
-    margin-bottom: +modular-scale(10)
+    margin-bottom: +modular-scale(6)
+    
+  &.-single_note
+    +span-columns(10 of 12)
+    +shift(1)
+    margin-bottom: +modular-scale(1)
+    
+    +min_tablet
+      +span-columns(8 of 12)
+      +shift(2)
+    
+    +min_desktop
+      +span-columns(6 of 12)
+      +shift(3)
+    
   
   img
     max-width: 100%
@@ -31,30 +45,6 @@
     border-width: 1px
     border-color: $gray
     border-bottom: 0
-  
-  a
-    position: relative
-    display: inline-block
-    
-    &:after
-      content: ''
-      display: block
-      position: absolute
-      bottom: .15em
-      width: 99%
-      border-bottom: 1px dotted $red
-    &:visited, &:active
-      &:after
-        border-color: $gray
-    
-    &[rel=footnote],
-    &[rev=footnote]
-      color: $gray
-      &:after
-        display: none
-    
-    &[rel=footnote]
-      color: $red
   
   blockquote
     padding: 0 +modular-scale(0)
@@ -78,9 +68,6 @@
   .footnotes
     +font_size_-2
     +pad(0)
-    
-    +min_tablet
-      +pad(+modular-scale(2))
     
     margin-top: +modular-scale(4)
   

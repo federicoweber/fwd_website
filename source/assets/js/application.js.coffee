@@ -14,7 +14,7 @@ sizeSquareBlocks = ->
       
 # Size homepage--about 
 sizeHomepage = ->
-  height = $(window).height() - $('#main_header').outerHeight(true)
+  height = $(window).height() - $('#main_header').outerHeight(true) -  $('#main_footer').outerHeight(true) 
   $('#homepage--about').height height
 
 sizeIframes = ->

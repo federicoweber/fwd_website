@@ -79,11 +79,48 @@ ol, ul
   +span-columns(12)
   +transition(all 450ms $ease-out-cubic)
   
-  a 
+  p a
     color: $black
+    display: inline-block
+    position: relative
+    
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      bottom: .15em
+      width: 99%
+      border-bottom: 1px dotted $red
     
     &:visited, &:active
       color: $black
+      &:after
+        border-color: $gray
     
     +hover_on_desktop
       color: $red
+    
+    &[rel=footnote],
+    &[rev=footnote]
+      color: $gray
+      &:after
+        display: none
+    
+    &[rel=footnote]
+      color: $red
+  
+
+.about_me_index
+  .main_content
+    +span-columns(10 of 12)
+    +shift(1)
+    
+    margin-bottom: +modular-scale(1)
+    
+    +min_tablet
+      +span-columns(8 of 12)
+      +shift(2)
+    
+    +min_desktop
+      +span-columns(6 of 12)
+      +shift(3)
