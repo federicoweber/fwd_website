@@ -11,7 +11,7 @@
         %li
           %a{class: [('-active' if current_page.url.split('/')[1] == 'notes')], href: url_for('/notes')} notes
         %li
-          %a{href: "https://www.goodreads.com/user/show/17488758-federico"} reading
+          %a{href: "https://www.goodreads.com/user/show/17488758-federico", target: "_blank"} reading
         -# %li
         -#   %a{class: [('-active' if current_page.url.split('/')[1] == 'work')], href: url_for("/work")} work
       

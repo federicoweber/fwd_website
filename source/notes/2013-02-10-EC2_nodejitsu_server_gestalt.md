@@ -5,7 +5,7 @@ Last year I decided to renew my website, and cause I was also studying Node.js I
 
 As my first attempt to self manage a server, setting up the EC2 instance was far from an easy task for me. It took me a couple of days of studying official documentation and tutorials to successfully setup the EC2 instance, deploy Gestalt via GIT and have the server run it as a demon. 
 
-During this time, while Gestalt grown in capabilities and performance, I discovered myself to be a terrible SisAdmin. Therefor when I received the notification that my free tier[^1] was about to expire I quickly decided to migrate everything to a managed platform where my only concern would bee to work on the Gestalt.
+During this time, while Gestalt grown in capabilities and performance, I discovered myself to be a terrible SisAdmin. Therefor when I received the notification that my free tier was about to expire I quickly decided to migrate everything to a managed platform where my only concern would bee to work on the Gestalt.
 
 Looking for the perfect match for my needs I decided to give a try at [Nodejitsu's Platform as a Service](http://nodejitsu.com/paas.html) (Paas)—being attracted from their convenient fees, with the cheapest plan, for individuals, starting at $3 a month. 
 Prepared for a long and painful migration I created an account studied their documentation, installed jitsu CLI via npm and in **less then 10 minutes** Gestalt was running smoothly from their servers. Once I've been sure that everything was stable I update the DNS records and shutted down  the EC2 instance.
