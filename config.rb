@@ -24,6 +24,10 @@ activate :blog do |blog|
   blog.page_link = "p{num}"
 end
 
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-11721887-1'
+  ga.minify = true
+end
 
 configure :development do
  activate :livereload
