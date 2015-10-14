@@ -38,7 +38,7 @@ sizeAllThings = ->
 
 # mobile nav
 mainNavMobileExpand = ->
-  if $(window).width() <= MOBILE_BREAK_POINT
+  if $(window).width() < MOBILE_BREAK_POINT
     $('#main_nav > ol').addClass '-js-expand'
     bindMainNavMobilecollapse()
 
