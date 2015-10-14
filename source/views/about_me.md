@@ -11,7 +11,7 @@ That got me interested in **software development** and **generative design** and
 
 I've spent the last years honing my Designer and Developer skills. 
 Working at **[vanGoGh](http://www.vangogh-creative.it/)** ( _Feb 2010 - Feb 2014_ ), where starting as a junior developer I end up leading the development team. 
-And later working at **[IFTTT](https://ifttt.com)** ( _Sep 2013 - Jun 2015_ ) on good part of the front-end stack.
+And later working at **[IFTTT](https://ifttt.com)** ( _Sep 2013 - Jun 2015_ ) on a good part of the front-end stack.
 
 Nowadays I **freelance** for selected clients all over the world. You can reach me at [federicoweber@gmail.com](emailto:federicoweber@gmail.com).
 

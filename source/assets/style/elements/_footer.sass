@@ -17,7 +17,6 @@
     
     li
       +font_size_1
-      +transition(color 250ms $ease-out-cubic)
       display: block
       margin-right: +modular-scale(1)
       
@@ -25,22 +24,31 @@
         margin-right: 0
       
       a
-        color: $gray
         +transition(color 250ms $ease-out-cubic)
+        color: $gray
+        
+        i
+          +transition(color 250ms $ease-out-cubic)
+          color: $gray
         
         +hover_on_desktop
           color: $black
-          opacity: 1
           
-        // this is needed only for vsco grid
-        img
-          +transition(opacity 250ms $ease-out-cubic)
-          opacity: .5
-          width: +modular-scale(-1)
-          
-          +hover_on_desktop
-            opacity: 1
-  
+          i
+            color: $black
+            
+            &.fa-linkedin
+              color: #0076B7    
+            
+            &.fa-instagram
+              color: #00477B
+            
+            &.fa-twitter
+              color: #50ABF1
+            
+            &.fa-pinterest
+              color: #CD1B1F
+
       &.-push_right
         +min_tablet
           margin-left: auto
