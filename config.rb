@@ -12,6 +12,7 @@ set :layout, 'layouts/application'
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :footnotes => true
 activate :syntax
+page '/*.xml', layout: false
 
 activate :blog do |blog|
   blog.prefix = "notes"
