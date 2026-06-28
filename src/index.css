@@ -1,0 +1,292 @@
+/*
+ * Homepage styles, ported from the original Middleman SASS
+ * (Bourbon / Neat / modular-scale, minor-third ratio 1.2, base 16px).
+ *
+ * modular-scale reference (em):
+ *   ms(-2)=0.6944  ms(-1)=0.8333  ms(0)=1  ms(1)=1.2
+ *   ms(2)=1.44     ms(5)=2.48832  ms(6)=2.98598
+ */
+
+:root {
+  --white: #ffffff;
+  --red: #ff5335;
+  --blue: #1bb7cc;
+  --gray: #b0b0b0;
+  --black: #353940;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  color: var(--black);
+  background-color: var(--white);
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---- Layout: full-height column so the hero fills the viewport
+   (replaces the old jQuery sizeHomepage() hack) ---- */
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main_content {
+  flex: 1 0 auto;
+  display: flex;
+}
+
+/* ---- Header ---- */
+#main_header {
+  flex-shrink: 0;
+  padding: 1.618em 0;
+  background: var(--white);
+}
+
+#main_header--content {
+  width: 83.3333%;
+  margin: 0 auto;
+}
+
+#main_nav {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+
+#main_header--title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.8333em;
+  letter-spacing: 0.1618em;
+  text-transform: uppercase;
+  display: inline;
+  margin: 0;
+}
+
+#main_header--title a,
+#main_header--title a:visited,
+#main_header--title a:active {
+  color: var(--black);
+}
+
+/* ---- Hero ---- */
+#homepage--about {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--white);
+  background-image: url(/desk-1600x900.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  #homepage--about {
+    background-image: url(/desk-4896x3264.jpg);
+  }
+}
+
+#homepage--about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.homepage--about--content {
+  text-transform: uppercase;
+  border-width: 3px 0;
+  border-style: solid;
+  border-color: var(--white);
+  color: var(--white);
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .homepage--about--content {
+    border-width: 5px 0;
+  }
+}
+
+#about_plate {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.44em;
+  line-height: 1em;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin: 0.8333em 0;
+}
+
+@media (min-width: 768px) {
+  #about_plate {
+    font-size: 2.48832em;
+  }
+}
+
+@media (min-width: 1400px) {
+  #about_plate {
+    font-size: 2.98598em;
+  }
+}
+
+#about_plate b {
+  font-weight: 700;
+}
+
+#about_plate--content {
+  display: block;
+  margin-left: 0.6944em;
+}
+
+#about_plate--content span {
+  display: block;
+}
+
+#about_plate--des {
+  letter-spacing: 0.54em;
+}
+
+#about_plate--dev {
+  letter-spacing: 0.618em;
+  margin-top: 0.1em;
+}
+
+#about_plate--hand,
+#about_plate--web {
+  font-size: 0.6944em;
+}
+
+#about_plate--hand {
+  letter-spacing: 0.692em;
+}
+
+#about_plate--web {
+  letter-spacing: 0.435em;
+  margin-left: 0.1em;
+  margin-top: -0.2em;
+}
+
+/* ---- Footer ---- */
+#main_footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+}
+
+#main_footer ul {
+  width: 83.3333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8333em 0;
+}
+
+#main_footer li {
+  font-size: 1.2em;
+  display: block;
+  margin-right: 1.2em;
+}
+
+#main_footer li:last-child {
+  margin-right: 0;
+}
+
+#main_footer li a,
+#main_footer li a i {
+  color: var(--gray);
+  transition: color 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+#main_footer li.-push_right {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #main_footer li.-push_right {
+    margin-left: auto;
+  }
+}
+
+#main_footer li.-with_text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+}
+
+#main_footer li.-with_text a {
+  text-transform: uppercase;
+}
+
+#main_footer li.-with_text .text {
+  display: none;
+}
+
+#main_footer li.-with_text .fa {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  #main_footer li.-with_text {
+    font-size: 0.8333em;
+  }
+  #main_footer li.-with_text .text {
+    display: inline;
+  }
+  #main_footer li.-with_text .fa {
+    display: none;
+  }
+}
+
+/* Hover effects only on desktop (original used a 1023px breakpoint) */
+@media (min-width: 1023px) {
+  #main_footer li a:hover,
+  #main_footer li a:hover i {
+    color: var(--black);
+  }
+  #main_footer li a:hover i.fa-linkedin {
+    color: #0076b7;
+  }
+  #main_footer li a:hover i.fa-instagram {
+    color: #00477b;
+  }
+  #main_footer li a:hover i.fa-twitter {
+    color: #50abf1;
+  }
+  #main_footer li a:hover i.fa-pinterest {
+    color: #cd1b1f;
+  }
+}
