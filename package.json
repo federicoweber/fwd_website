@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b master -t true -r git@github.com:federicoweber/federicoweber.github.io.git"
+    "deploy": "gh-pages -d dist -b master -t -r git@github.com:federicoweber/federicoweber.github.io.git"
   },
   "dependencies": {
     "react": "^18.3.1",
