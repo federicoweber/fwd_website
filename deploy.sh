@@ -47,10 +47,13 @@ npm run build   # outputs to dist/ (incl. CNAME + .nojekyll from public/)
 
 build_subproject md_labels_maker minidisc-labels
 
-# Spotify: blank the personal Client ID and the 127.0.0.1 redirect URI so they
-# are not baked into the public bundle. Visitors supply their own via the app UI.
+# Spotify: bake in the app's Client ID (a public PKCE identifier, not a secret)
+# and the production redirect URI. The redirect URI must be registered in the
+# Spotify dashboard, and users must be allowlisted there until the app is granted
+# Extended Quota Mode.
 build_subproject spotify_recorder album-sequencer \
-  VITE_SPOTIFY_CLIENT_ID= VITE_SPOTIFY_REDIRECT_URI=
+  VITE_SPOTIFY_CLIENT_ID=7ba2eaae74b34bd2893189fbc03d4d1a \
+  VITE_SPOTIFY_REDIRECT_URI=https://federicoweber.com/projects/album-sequencer/
 
 if [ "${DRY_RUN:-}" = "1" ]; then
   echo "==> DRY_RUN=1: skipping push. Assembled site is in $DIST"

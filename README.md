@@ -44,10 +44,12 @@ copied into `dist/projects/<slug>/`, so it ships in the same commit:
 | `md_labels_maker`  | `https://federicoweber.com/projects/minidisc-labels/` |
 | `spotify_recorder` | `https://federicoweber.com/projects/album-sequencer/` |
 
-The Spotify build is sanitized at deploy time (`VITE_SPOTIFY_CLIENT_ID` and the
-`127.0.0.1` redirect URI are blanked) so no personal credentials end up in the
-public bundle — visitors enter their own Client ID via the app UI. To add or
-rename a sub-project, edit the `build_subproject` calls in `deploy.sh`.
+The Spotify build bakes in the app's Client ID (a public PKCE identifier, not a
+secret) and the production redirect URI. For login to work, the Spotify
+dashboard must list `https://federicoweber.com/projects/album-sequencer/` as a
+redirect URI, and — until the app has Extended Quota Mode — each user's email
+must be allowlisted there (max 25). To add or rename a sub-project, edit the
+`build_subproject` calls in `deploy.sh`.
 
 ---
 
