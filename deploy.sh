@@ -4,8 +4,8 @@
 # folder as sub-sites under /projects/<slug>/:
 #
 #   fwd_website       -> https://federicoweber.com/
-#   md_labels_maker   -> https://federicoweber.com/projects/minidisc-labels/
-#   spotify_recorder  -> https://federicoweber.com/projects/album-sequencer/
+#   md_labels_maker   -> https://federicoweber.com/projects/md_labels/
+#   spotify_recorder  -> https://federicoweber.com/projects/md_recorder/
 #
 # Each sub-project is built with its Vite `base` set to the sub-path (so asset
 # URLs resolve correctly), then its dist/ is copied into the main site's
@@ -45,15 +45,31 @@ build_subproject() {
 echo "==> building main site"
 npm run build   # outputs to dist/ (incl. CNAME + .nojekyll from public/)
 
-build_subproject md_labels_maker minidisc-labels
+build_subproject md_labels_maker md_labels
 
 # Spotify: bake in the app's Client ID (a public PKCE identifier, not a secret)
 # and the production redirect URI. The redirect URI must be registered in the
 # Spotify dashboard, and users must be allowlisted there until the app is granted
 # Extended Quota Mode.
-build_subproject spotify_recorder album-sequencer \
+build_subproject spotify_recorder md_recorder \
   VITE_SPOTIFY_CLIENT_ID=7ba2eaae74b34bd2893189fbc03d4d1a \
-  VITE_SPOTIFY_REDIRECT_URI=https://federicoweber.com/projects/album-sequencer/
+  VITE_SPOTIFY_REDIRECT_URI=https://federicoweber.com/projects/md_recorder/
+
+# Old slugs: leave a redirect page behind so previously shared links keep working.
+redirect_stub() {
+  local from="$1" to="$2"
+  mkdir -p "$DIST/projects/$from"
+  cat > "$DIST/projects/$from/index.html" <<EOF
+<!doctype html>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url=/projects/$to/">
+<link rel="canonical" href="https://federicoweber.com/projects/$to/">
+<title>Moved</title>
+<p>Moved to <a href="/projects/$to/">/projects/$to/</a>.</p>
+EOF
+}
+redirect_stub minidisc-labels md_labels
+redirect_stub album-sequencer md_recorder
 
 if [ "${DRY_RUN:-}" = "1" ]; then
   echo "==> DRY_RUN=1: skipping push. Assembled site is in $DIST"
@@ -65,5 +81,5 @@ npx gh-pages -d dist -b master -t -r git@github.com:federicoweber/federicoweber.
 
 echo "==> done"
 echo "    https://federicoweber.com/"
-echo "    https://federicoweber.com/projects/minidisc-labels/"
-echo "    https://federicoweber.com/projects/album-sequencer/"
+echo "    https://federicoweber.com/projects/md_labels/"
+echo "    https://federicoweber.com/projects/md_recorder/"
