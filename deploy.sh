@@ -45,7 +45,11 @@ build_subproject() {
 echo "==> building main site"
 npm run build   # outputs to dist/ (incl. CNAME + .nojekyll from public/)
 
-build_subproject md_labels_maker md_labels
+# Labels: bake in the same Spotify app for playlist/album imports. Its redirect
+# URI (the app's own URL) must be registered in the Spotify dashboard.
+build_subproject md_labels_maker md_labels \
+  VITE_SPOTIFY_CLIENT_ID=7ba2eaae74b34bd2893189fbc03d4d1a \
+  VITE_SPOTIFY_REDIRECT_URI=https://federicoweber.com/projects/md_labels/
 
 # Spotify: bake in the app's Client ID (a public PKCE identifier, not a secret)
 # and the production redirect URI. The redirect URI must be registered in the
