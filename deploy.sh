@@ -40,6 +40,13 @@ build_subproject() {
   rm -rf "$out"
   mkdir -p "$out"
   cp -R "$src/dist/." "$out/"
+
+  # GitHub Pages has no SPA fallback. Keep the recorder's relative library
+  # route reloadable by publishing the same entry point at /playlists/.
+  if [ "$slug" = "md_recorder" ]; then
+    mkdir -p "$out/playlists"
+    cp "$out/index.html" "$out/playlists/index.html"
+  fi
 }
 
 echo "==> building main site"
