@@ -41,14 +41,14 @@ copied into `dist/projects/<slug>/`, so it ships in the same commit:
 
 | Source folder      | Published at                                          |
 | ------------------ | ----------------------------------------------------- |
-| `md_labels_maker`  | `https://federicoweber.com/projects/minidisc-labels/` |
-| `spotify_recorder` | `https://federicoweber.com/projects/album-sequencer/` |
+| `md_labels_maker`  | `https://federicoweber.com/projects/md_labels/`       |
+| `spotify_recorder` | `https://federicoweber.com/projects/md_recorder/`     |
 
 The Spotify build bakes in the app's Client ID (a public PKCE identifier, not a
-secret) and the production redirect URI. For login to work, the Spotify
-dashboard must list `https://federicoweber.com/projects/album-sequencer/` as a
-redirect URI, and — until the app has Extended Quota Mode — each user's email
-must be allowlisted there (max 25). To add or rename a sub-project, edit the
+secret) and the production redirect URI. The Spotify dashboard must list
+`https://federicoweber.com/projects/md_recorder` exactly (with no trailing
+slash). Until the app has Extended Quota Mode, each user's Spotify account must
+also be on the app allowlist. To add or rename a sub-project, edit the
 `build_subproject` calls in `deploy.sh`.
 
 ---

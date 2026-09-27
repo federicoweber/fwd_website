@@ -59,12 +59,11 @@ build_subproject md_labels_maker md_labels \
   VITE_SPOTIFY_REDIRECT_URI=https://federicoweber.com/projects/md_labels/
 
 # Spotify: bake in the app's Client ID (a public PKCE identifier, not a secret)
-# and the production redirect URI. The redirect URI must be registered in the
-# Spotify dashboard, and users must be allowlisted there until the app is granted
-# Extended Quota Mode.
+# and the production redirect URI. Spotify requires this value to match the
+# dashboard entry exactly, including whether it has a trailing slash.
 build_subproject spotify_recorder md_recorder \
   VITE_SPOTIFY_CLIENT_ID=7ba2eaae74b34bd2893189fbc03d4d1a \
-  VITE_SPOTIFY_REDIRECT_URI=https://federicoweber.com/projects/md_recorder/
+  VITE_SPOTIFY_REDIRECT_URI=https://federicoweber.com/projects/md_recorder
 
 # Old slugs: leave a redirect page behind so previously shared links keep working.
 redirect_stub() {
